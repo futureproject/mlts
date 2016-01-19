@@ -1,0 +1,17 @@
+<section class="partners-container">
+  <ul class="partners-list">
+
+  <% @cms_page.children.each do |partner| %>
+    <li class="partner-item">
+        <div class="partner-logo">
+            <img src="/images/partners/partner-tfp.jpg">
+        </div>
+        <div class="partner-content">
+            <h3><%= partner.blocks.where(identifier: 'partner_name').first.content %></h3>
+            <p><%= partner.blocks.where(identifier: 'partner_description').first.content %></p>
+        </div>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
