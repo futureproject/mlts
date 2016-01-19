@@ -1,5 +1,5 @@
 default: &default
-  title: "CMS Fortress"
+  title: "Most Likely to Succeed"
   title_link: "#"
   use_tinymce: true
 
