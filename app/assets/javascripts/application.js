@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require join_us
+
+// Google analytics tracking with value
+function ganalytics(cat){
+  var label = $(cat).data('label');
+  if ($(cat).attr('alt')) {
+    var label = $(cat).attr('alt');
+  }else if ( $(cat).attr('placeholder')){
+    var label = $(cat).attr('placeholder');
+  }else{
+    var label = $(cat).html();
+  }
+  var category = $(cat).data('category');
+  // ga('send', 'event', category, 'click', label);
+}
