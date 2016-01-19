@@ -1,0 +1,58 @@
+.kys-video-grid {
+	h2:first-child, h2:nth-child(3) {
+		padding-bottom: 2em;
+	}
+}
+
+
+// =================
+// Grid Video Images
+//==================
+
+.laufenberg-vid {
+	background-image: url(../images/resources/diana-TED2.jpg);
+}
+
+.robinson-vid {
+	background-image: url(../images/resources/robinson-TED2.jpg);
+}
+
+.mcafee-vid {
+	background-image: url(../images/resources/andrew-TED2.jpg);
+}
+
+// =================
+// Article Specific
+// =================
+
+.know-your-stuff .article-section {
+	& .article-column .expert-list-item:last-child {
+		border-bottom: 1px solid lighten($text-grey, 30%) !important;
+	}
+	& .wrapper .mf-header {
+		padding-bottom: 0;
+	}
+
+}
+.more-articles-copy {
+	color: black;
+	text-align: center;
+}
+
+
+// ==================================================
+// Color Bar styling for article list column section
+// ==================================================
+
+.color-bar {
+	height: 7px;
+	&.bar-1 {
+		background-color: #9f5846;
+	}
+	&.bar-2 {
+		background-color: #46769e;
+	}
+	&.bar-3 {
+		background-color: #48a08b;
+	}
+}

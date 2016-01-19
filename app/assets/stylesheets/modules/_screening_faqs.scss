@@ -1,0 +1,107 @@
+// Screening FAQ Container
+.faq-container {
+
+  a {
+    text-decoration: underline;
+  }
+  color: black;
+  display: block;
+
+  .faq-wrapper {
+    @extend .expert-list-wrapper;
+    width: 95%;
+
+    .faq-heading {
+      h1 {
+        font-size: 3em;
+      }
+      padding-bottom: 40px;
+
+      @include larger-than(large) {
+        float: left;
+        width: 30%;
+      }
+    }
+
+    .faq-content {
+      @include larger-than(large) {
+        width: 65%;
+        float: right;
+      }
+
+      h2 {
+        color: black;
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: bolder;
+        padding: 0 0 10px 0;
+      }
+
+
+      p, li {
+        font-size: 1em;
+      }
+
+      p {
+        padding-bottom: 20px;
+      }
+    }
+
+    ol {
+      list-style-position: inside;
+    }
+  }
+}
+
+.testimonial-wrapper {
+  @extend .expert-list-wrapper;
+  width: 95%;
+  @include larger-than(medium) {
+    display: block;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.testimonial-item {
+  background-color: $testimonial-grey;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 20px;
+  @include larger-than(medium) {
+    width: 31%;
+  }
+}
+
+.testimonial-quote-person {
+  text-align: right;
+  font-size: 14px;
+}
+
+blockquote {
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+blockquote:before {
+  font-family: Georgia, serif;
+  color: #B4B4B3;
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  font-family: Georgia, serif;
+  color: #B4B4B3;
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em;
+}

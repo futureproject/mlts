@@ -1,0 +1,165 @@
+// =======================
+// Icons
+// =======================
+// GLOBAL ICON STYLES
+.icon{
+  position: relative;
+
+  .copy-social-icons &{
+    &:after{
+      font-size: 14px;
+      padding: 0.5em;
+      border: 1px solid $light-grey;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+
+.no-touch{
+  .social-icons .icon{
+    &:hover{
+      &:after{
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .copy-social-icons .icon{
+    &:hover{
+      &:after{
+        background: $light-grey;
+        color: white;
+      }
+    }
+  }
+}
+
+.icon-close{
+  @extend .transition;
+  opacity: 0.7;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+
+
+.icon:after {
+  @extend .transition;
+  display: inline-block;
+  content: attr(data-icon);
+  vertical-align: middle;
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-family: 'icomoon';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; //For custon icon fonts to appear correctly up in FF
+
+  @include smaller-than(large){
+    text-rendering: auto !important;
+  }
+}
+
+// To accompany all icons so screen readers communicate what icons mean.
+// Markup looks like <span class='screen-reader-text'>E-mail</span>
+.screen-reader-text{
+	position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+
+
+
+// UI ICONS
+.icon-heart:after{
+	content: '\e605';
+}
+
+.icon-play:after{
+	content: '\e606';
+}
+
+.icon-join-us:after{
+  content: '\e60a';
+}
+
+.icon-arrow-right:after{
+  content: '\e602';
+}
+
+.icon-close:after{
+  content: '\e117';
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.2em;
+}
+
+.icon-newspaper:after{
+  content: '\e603';
+}
+   
+.icon-camera:after{
+  content: '\e604';
+}
+
+.icon-arrow-right-circle:after{
+  content: '\ea42';
+}
+
+.icon-arrow-down-circle:after{
+  content: '\ea43';
+}
+
+.icon-moviereel:after {
+  content: "\e609";
+}
+
+.icon-next-left:after{      
+  content: "\f104";
+}
+
+.icon-next-right:after{
+  content: "\f105";
+}
+
+// SOCIAL ICONS
+.icon-facebook-fill:after{
+  content: '\e608';
+}
+
+.icon-twitter-fill:after{
+  content: '\e607';
+}
+
+.icon-facebook:after{
+  content: '\e601';
+}
+
+.icon-twitter:after{
+  content: '\e600';
+}
+
+.icon-twitter{
+  content: '\e600';
+}
+
+.icon-checkmark {
+  content: "\e60b";
+}
+
+.icon-facebook, .icon-facebook-fill, .icon-twitter, .icon-twitter-fill{
+  cursor: pointer;
+}
+
+.icon-home:after {
+  content: "\e641";
+}
+
+

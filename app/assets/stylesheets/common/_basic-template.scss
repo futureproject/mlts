@@ -1,0 +1,26 @@
+// =======================
+// Basic Template Styles
+// =======================
+.wrapper{
+	max-width: 1400px;
+	color: $light-grey;
+	padding: 4em 0;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+
+	@include larger-than(medium) {
+      padding: 6em 0;
+      width: 70%;
+    }
+}
+
+.big-wrapper{
+	@extend .wrapper;
+	max-width: 1800px;
+
+	@include larger-than(medium) {
+    width: 80%;
+    padding-bottom: 0;
+  }
+}

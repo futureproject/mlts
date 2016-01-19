@@ -1,0 +1,45 @@
+// =========================
+// Form Elements
+// =========================
+
+// Main Header Form
+#main-header-form {
+    width: 100%;
+    float: none;
+    height: auto;
+    position: static;
+}
+
+.header-input {
+    width: 100% !important;
+    padding-right: 0 !important;
+}
+
+.header-input-field {
+    font-family: "Helvetica Neue LT", helvetica, sans-serif;
+    background-color: white;
+  border: 1px solid #e4e4e2;
+}
+
+.header-form-close {
+    color: $text-grey;
+    position: absolute;
+  right: 25px;
+  top: 15px;
+}
+
+// Personal Info specific styles
+.personal-info {
+    & > .animate-input-container {
+        @include larger-than(mid-large) {
+            width: 49%;
+            float: left;
+            &:nth-child(2), &:nth-child(4) {
+                float: right;
+            }
+        }
+        &:last-child {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.partners-copy {
+  .wrapper {
+    padding: 6em 0;
+  }
+}
+
+.partners-container {
+  padding: 0 5em;
+}
+
+.partner-item {
+  padding: 20px 0;
+}
+
+.partners-title {
+  color: black;
+  margin-bottom: 1em;
+}
+
+.partner-logo {
+  img {
+    max-width: 180px;
+    max-height: 180px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    @include larger-than(medium) {
+      float: left;
+      margin-right: 50px;
+    }
+  }
+}
+
+.partner-content {
+  vertical-align: middle;
+  overflow: hidden;
+  h3 {
+    text-align: left;
+    line-height: 1;
+  }
+  p {
+    color: $light-grey;
+    text-align: left;
+    font-size: 1.1875em; // 19 / 16px
+  }
+}

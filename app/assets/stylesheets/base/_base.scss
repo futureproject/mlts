@@ -1,0 +1,29 @@
+// =======================
+// $Base Styles
+// =======================
+html{
+	height: 100%;
+
+	&.video-open{
+		overflow: hidden;
+	}
+}
+
+body{
+	font-family: $sans-ultra-light;
+	font-size: 90%;
+	height: 100%;
+	color: white;
+
+	@include larger-than(medium) {
+		font-size: 100%;
+    }
+}
+
+section{
+	margin: 0 auto;
+}
+
+h2 {
+	letter-spacing: 0.05em;
+}

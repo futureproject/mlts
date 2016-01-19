@@ -1,0 +1,113 @@
+// ========================
+// $Global Reusable Classes
+// ========================
+// $CLEARFIX
+.clearfix{
+	&:before, &:after{
+		display: table;
+		content: " ";
+		visibility: hidden;
+	}
+
+	&:after {
+		clear: both;  
+	}
+}
+
+
+
+
+// $TRANSITIONS
+.transition{
+	-webkit-transition: 0.2s all ease;
+	-moz-transition:		0.2s all ease;
+	-o-transition: 			0.2s all ease;
+	-ms-transition: 		0.2s all ease;
+	transition: 				0.2s all ease;
+}
+
+.touch.trailer-open{
+	position: fixed;
+}
+
+.touch.video-open{
+	position: fixed;
+}
+
+
+
+// hide classes
+.hide{
+	display: none!important;
+}
+
+
+
+//labels
+.sr-only{
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.animation-label {
+  position: absolute;
+  top: 0.8em;
+  left: 1em;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  cursor: text;
+  @include smaller-than(medium) {
+    top: 1em;
+  }
+}
+
+
+// Inline input fields
+.input-groups{
+	@extend .clearfix;
+}
+
+.input-inline{
+	width: 100%;
+  position: relative;
+	@include larger-than(extra-large) {
+		width: 50%;
+		float: left;
+
+		&:nth-child(even){
+			padding-right: 0.5em;
+		}
+
+		&:nth-child(odd){
+			padding-left: 0.5em;
+		}
+	}
+}
+
+.input-groups{
+	margin-bottom: 0.5em;
+}
+
+.input-textarea{
+	min-height: 100px;
+}
+
+.form-label{
+  font-size: 1em;
+  padding-bottom: 0.2em;
+}
+
+.submit-btn{
+	padding-top: 1em;
+}
+
+label.choice{
+	padding-left: 0.5em;
+}

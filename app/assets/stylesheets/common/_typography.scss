@@ -1,0 +1,82 @@
+// =======================
+// Typography
+// =======================
+$sans-ultra-light:	'helvetica-neue-thin', helvetica, sans-serif;
+$sans-light:				'Helvetica Neue LT', helvetica, sans-serif;
+$sans:							'Helvetica Neue Roman', helvetica, sans-serif;
+$sans-bold:					'Helvetica Neue Bold', helvetica, sans-serif;
+
+h1{
+	font-size: 3.5em;
+	font-family: $sans-light;
+	font-weight: 100;
+	margin: 0 0 0.25em;
+	line-height: 1;
+	@include smaller-than(medium) {
+		font-size: 3em;
+	}
+	@include larger-than(medium) {
+    font-size: 4.5em;
+  }
+
+  @include larger-than(extra-large) {
+		font-size: 5.5em;
+	}
+}
+
+h2, .mf-copy {
+	font-family: $sans-ultra-light;
+	font-size: 1.4em;
+	letter-spacing: 0.05em;
+	@include larger-than(medium) {
+      font-size: 1.8em;
+    }
+}
+
+h3{
+	font-size: 2em;
+	color: black;
+	margin-bottom: 0.5em;
+	font-family: $sans-light;
+	font-weight: 100;
+	text-align: center;
+
+	+p{
+		font-size: 1.4em;
+		margin: 0 auto;
+		width: 100%;
+		letter-spacing: 0.025em;
+
+		@include larger-than(medium) {
+	      font-size: 1.8em;
+	    }
+	}
+
+	.screening-wrapper &{
+		color: white;
+	}
+
+	@include larger-than(medium) {
+      font-size: 2.5em;
+    }
+}
+
+h4{
+	font-family: $sans-light;
+	font-size: 1em;
+	margin-bottom: 0.2em;
+	font-weight: normal;
+}
+
+h5{
+	font-size: 1em;
+	font-weight: 600;
+}
+
+p{
+	font-size: 0.95em;
+}
+
+b{
+	font-family: $sans-bold;
+}

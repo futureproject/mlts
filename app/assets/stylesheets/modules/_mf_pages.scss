@@ -1,0 +1,451 @@
+
+// ====================
+// MF Specific Classes
+// ====================
+.black-copy-link {
+	color: black;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.small-numbered-list {
+	max-width: 1015px;
+}
+
+.no-tpadding {
+	padding-top: 0 !important;
+}
+
+.no-bpadding {
+	padding-bottom: 0 !important;
+}
+
+// ========
+// Sub nav
+// ========
+.sub-nav	{
+	position: fixed;
+	top: 70px;
+	display: table;
+	height: 70px;
+	width: 100%;
+	background-color: $form-grey;
+	z-index: 1;
+	@include smaller-than(extra-large) {
+		display: none;
+	}
+}
+.sub-nav-list {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.sub-nav-list-item {
+	display: inline-block;
+	position: relative;
+	margin-left: 1.5em;
+	font-family: $sans;
+	&:before {
+		bottom: 0.1em;
+		left: -0.65em;
+	}
+	&.active a {
+		font-family: $sans-bold;
+	}
+}
+
+.sub-nav-mobile {
+	@include transition(opacity 0.2s);
+	top: 50px;
+	height: 50px;
+	left: 0;
+	&.mobile-form-expanded {
+		opacity: 0;
+	}
+	@include larger-than(extra-large) {
+		display: none;
+	}
+	@include smaller-than(extra-large) {
+		display: table;
+	}
+	.sub-nav-list-item {
+		color: black;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+// =============================
+// Global Moving Forward Styles
+// =============================
+
+.mf-header {
+	font-family: $sans;
+	color: black;
+	max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.mf-section-header {
+	font-size: 2.5em; // 40px / 16px
+	@include smaller-than(mid-large) {
+		font-size: 1.8em;
+	}
+}
+
+// Section container background color alternate
+.mf-body section {
+	&:nth-child(even) {
+		background-color: white;
+	}
+	&:nth-child(odd) {
+		background-color: $form-grey;
+	}
+}
+
+
+.mf-title {
+  @include larger-than(extra-large) {
+		font-size: 4.5em;
+	}
+}
+
+.mf-copy {
+	text-align: left;
+	color: $text-grey;
+	padding-bottom: 2em;
+	@include larger-than(more-large) {
+		width: 53.6875rem ; // 859px / 16px
+		width: 60rem ; 
+		margin: 0 auto;
+	}
+}
+// ==============
+// Survey Styles
+// ==============
+.survey-container {
+	@include larger-than(medium) {
+		& .wrapper {
+			padding-bottom: 2em !important;
+		}
+	}
+}
+
+.survey-question {
+	color: black;
+	font: $sans;
+}
+
+.survey-answers {
+	max-width: 618px;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+.answer-button {
+	@extend .transition;
+	display: inline-block;
+	width: 45%;
+	border: 1px solid $text-grey;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 1.5em; // 30px / 16px
+	@include smaller-than(small) {
+		&:first-child {
+			margin-bottom: 0.5em;
+		}
+		display: block;
+		width: 100%;
+	}
+	&:hover, &.selected {
+		background-color: $survey-button-green;
+		border-color: $survey-button-green;
+		color: white;
+		cursor: pointer;
+	}
+	&:before {
+		@extend .icon:after;
+		@extend .icon-checkmark;
+		transition: none;
+		display: none;
+		position: absolute;
+		left: 0.5em;
+		top: 0.69em;
+	}
+
+	&.selected:before {
+		display: inline-block;			
+	}
+	.answer-container & {
+		width: 100%;
+	}
+}
+
+.results-container {
+	@include transition(opacity 0.2s);
+	opacity: 0;
+	&.answered {
+		opacity: 1;
+	}
+	.survey-results {
+		font-size: 1.25em; // 20px / 16px
+	}
+}
+.result-value {
+	font-family:  $sans-bold;
+	color: $survey-button-green;
+}
+
+.survey-radio {
+	position: absolute;
+	left: -9999px;
+}
+.survey-name {
+	position: absolute;
+	left: -9999px;
+}
+
+// ======================
+// Article Section Styles
+// ====================== 
+.article-section {
+	@extend .expert-list-container;
+	h2 {
+		color: black;
+	}
+}
+
+.articles-container {
+	@extend .expert-lists;
+	@extend .expert-reading;
+	margin-bottom: 2em;
+}
+
+.article-list-column {
+	@include larger-than(extra-large) {
+		width: 33.333333% !important;
+		&:first-child {
+			padding-right: 2em !important;
+		}
+		&:last-child {
+			padding-left: 2em !important;
+		}
+	}
+}
+.article-column {
+	li {
+		color: black;
+		text-align: left;
+	}
+}
+
+.article-list {
+	margin-bottom: 2em;
+}
+
+.articles-button {
+	@extend .answer-button;
+	margin-top: 1em;
+	max-width: 432px;
+	@include smaller-than(extra-large) {
+		font-size: 1.2em;
+	}
+	@include smaller-than(large) {
+		width: 100%;
+	}
+}
+
+// ===================
+// Book Section Styles
+// ===================
+
+.book-list-container {
+	@extend .clearfix;
+	max-width: 1800px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 0;
+}
+
+.book-list {
+	font-size: 0;
+}
+
+.book {
+	font-size: 1em;
+	display: inline-block;
+	width: 24%;
+	padding-bottom: 4em;
+	@include smaller-than(more-large) {
+		width: 30%;
+	}
+	@include smaller-than(extra-large) {
+		width: 40%;
+	}
+	@include smaller-than(large) {
+		width: 100%;
+	}
+	.book-image {
+		display: inline-block;
+		max-width: $book-image-width;
+		height: 286px;
+		padding-bottom: 1em;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.title {
+		color: black;
+		font-family: $sans;
+	}
+	.author {
+		color: $text-grey
+	}
+}
+.book-link {
+	@extend .answer-button;
+	font-size: 1rem;
+	color: $text-grey;
+	border-radius: 5px;
+	margin-top: 1em;
+	&:hover {
+		color: white;
+	}
+	@include larger-than(larger) {
+		width: $book-image-width;
+	}
+	@include smaller-than(larger) {
+		width: 90%;
+		margin: 1em auto 0;
+	}
+}
+
+.column-copy {
+	color: black;
+	text-align: left;
+	padding: 0.6em 2em 0.6em 0.5em;
+	font-family: $sans-bold;
+	font-weight: bold;
+}
+
+// ============
+// Twitter List
+// ============
+
+.twitter-list-item {
+	text-align: left;
+	color: black;
+}
+
+.twitter-header {
+	&:before {
+		@extend .icon:after;
+		@extend .icon-twitter;
+		position: relative;
+		right: 16px;
+		bottom: 4px;
+		color: $text-grey;
+		font-size: 1.5em;
+	}
+}
+
+// ================
+// Horizontal List
+// ================
+
+.horizontal-list-container {
+	@extend .clearfix;
+}
+
+.horizontal-list-item {
+	display: inline-block;
+	float: none;
+	width: 100%;
+	padding-bottom: 3em;
+	max-width: 400px;
+	&:last-child {
+		padding-bottom: 0;
+	}
+	@include larger-than(extra-large) {
+		width: 25%;
+		float: left;
+		padding: 0 0.75em 3em;
+	}
+	@include smaller-than(more-large) {
+		display: block;
+		margin: 0 auto;
+	}
+	@include smaller-than(extra-large) {
+		&:nth-child(2), &:nth-child(3), &:nth-child(4) {
+			padding-top: 2em;
+		}
+	}
+	@include smaller-than(mid-large) {
+		&:nth-child(3), &:nth-child(4) {
+			padding-top: 0;
+		}
+	}
+}
+.list-copy {
+	width: 100%;
+	font-size: 1.5em;
+	@include smaller-than(more-large) {
+		font-size: 1.3em;
+	}
+}
+.list-order-indicator {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	margin-bottom: 0.5em;
+	border-radius: 50%;
+	border: 2px solid black;
+	font-family: $sans;
+	font-size: 1.3em;
+	color: black;
+	@include smaller-than(more-large) {
+		width: 28px;
+		height: 28px;
+		font-size: 1em;
+	}
+}
+
+// ==============
+// Numbered List
+// ==============
+.numbered-item-copy {
+	padding-left: 3em;
+	text-align: left;
+	@include smaller-than(mid-large) {
+		padding-left: 2.5em;
+	}
+}
+
+.item-content-container {
+	position: relative;
+}
+
+.numbered-list-item {
+	padding-bottom: 2em;
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.list-order-indicator.number {
+	position: absolute;
+	left: 1em;
+	top: 0.3em;
+	@include smaller-than(mid-large) {
+		left: 0;
+	}
+}
+
+.sub-num-copy {
+	padding-top: 1em;
+}
