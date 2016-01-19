@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 ComfortableMexicanSofa.configure do |config|
-  # Use psych for moving CMSdata between local and production environments
-  YAML::ENGINE.yamler = 'psych'
+  # Use syck for moving CMSdata between local and production environments
+  YAML::ENGINE.yamler = 'syck'
 
   # Title of the admin area
   #   config.cms_title = 'ComfortableMexicanSofa CMS Engine'
