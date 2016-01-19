@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
+gem 'cms-fortress', '~> 1.3.12'
 gem 'kaminari'
 
 # Use ActiveModel has_secure_password

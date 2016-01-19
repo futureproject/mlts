@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  cms_fortress_routes :path => '/cms-admin'
+
   comfy_route :cms_admin, :path => '/admin'
 
   # Make sure this routeset is defined last
@@ -8,7 +10,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root :to => "cms/content#show"
+  # root to: "home#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
