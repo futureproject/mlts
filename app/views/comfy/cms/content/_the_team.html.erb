@@ -1,0 +1,18 @@
+<section id="the-team" class="the-team-container">
+  <div class="the-team-wrapper">
+    <div class="the-team-heading">
+      <h1><%= cms_block_content('the_team.heading') %></h1>
+      <p><%= cms_block_content('the_team.copy') %></p>
+    </div>
+    <div class="the-team-content">
+      <% @cms_page.children.each do |team_member| %>
+        <div class="team-member selected">
+            <img class="team-member-photo" src="/images/team/ted_dintersmith.jpg"></img>
+            <h2 class="team-member-name"><%= team_member.blocks.where(identifier: 'name').first.content %></h2>
+            <p class="team-member-title"><%= team_member.blocks.where(identifier: 'business_title').first.content %></p>
+            <p class="team-member-bio"><%= team_member.blocks.where(identifier: 'bio').first.content %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
