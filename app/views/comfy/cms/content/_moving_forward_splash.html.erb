@@ -1,8 +1,8 @@
 <!-- Moving Forward Container -->
 <section class="mf-splash-container" id="moving-forward">
     <div class="mf-splash-wrapper">
-        <h1 class="mf-splash-title"><%= @cms_page.blocks.where(identifier: 'moving_forward.title').first.content %></h1>
-        <h2 class="mf-splash-copy"><%= @cms_page.blocks.where(identifier: 'moving_forward.content').first.content %></h2>
+        <h1 class="mf-splash-title"><%= cms_block_content('moving_forward.title') %></h1>
+        <h2 class="mf-splash-copy"><%= cms_block_content('moving_forward.content') %></h2>
 
         <center>
             <button class="mf-learn-more-button"><a href="/moving-forward">Learn More</a></button>
