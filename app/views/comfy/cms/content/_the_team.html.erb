@@ -7,10 +7,11 @@
     <div class="the-team-content">
       <% @cms_page.children.each do |team_member| %>
         <div class="team-member selected">
-            <img class="team-member-photo" src="/images/team/ted_dintersmith.jpg"></img>
-            <h2 class="team-member-name"><%= team_member.blocks.where(identifier: 'name').first.content %></h2>
-            <p class="team-member-title"><%= team_member.blocks.where(identifier: 'business_title').first.content %></p>
-            <p class="team-member-bio"><%= team_member.blocks.where(identifier: 'bio').first.content %></p>
+
+            <img class="team-member-photo" src=<%= cms_block_render('headshot', team_member) %>></img>
+            <h2 class="team-member-name"><%= cms_block_content('name', team_member) %></h2>
+            <p class="team-member-title"><%= cms_block_content('business_title', team_member) %></p>
+            <p class="team-member-bio"><%= cms_block_content('bio', team_member) %></p>
         </div>
       <% end %>
     </div>
