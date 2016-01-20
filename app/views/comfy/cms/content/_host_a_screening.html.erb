@@ -1,0 +1,106 @@
+<!-- Host a Screening Container -->
+<section class="host-a-screening-container" id="host-a-screening">
+    <div class="host-a-screening-wrapper">
+        <h1 class="host-screening-title"><%= @cms_page.blocks.where(identifier: 'host_a_screening.title').first.content %></h1>
+        <h2 class="host-screening-copy"><%= @cms_page.blocks.where(identifier: 'host_a_screening.copy').first.content %></h2>
+
+        <div class="screening-form-background">
+            <div class="screening-form-text">
+                <h2 class="screening-form-title"><%= @cms_page.blocks.where(identifier: 'host_a_screening.form_title').first.content %></h2>
+                <p class="screening-form-description"><%= @cms_page.blocks.where(identifier: 'host_a_screening.form_copy').first.content %></p>
+            </div>
+            <div class="screening-request-form">
+              <form method="post" novalidate enctype="multipart/form-data" action="https://www.formstack.com/forms/index.php" class="fsForm fsSingleColumn fsMaxCol1" id="fsForm2069567">
+              <input type="hidden" name="form" value="2069567" />
+              <input type="hidden" name="viewkey" value="tiS5trpR5f" />
+              <input type="hidden" name="hidden_fields" id="hidden_fields2069567" value="" />
+              <input type="hidden" name="_submit" value="1" />
+              <input type="hidden" name="incomplete" id="incomplete2069567" value="" />
+              <input type="hidden" name="style_version" value="3" />
+              <input type="hidden" id="viewparam" name="viewparam" value="619368" />
+              <div role="alert" id="requiredFieldsError" style="display:none;">Please fill in a valid value for all required fields</div>
+              <div role="alert" id="invalidFormatError" style="display:none;">Please ensure all values are in a proper format.</div>
+              <div role="alert" id="resumeConfirm" style="display:none;">Are you sure you want to leave this form and resume later?</div>
+              <div role="alert" id="saveAndResume" style="display: none;">Save and Resume Later</div>
+              <div role="alert" id="saveResumeProcess" style="display: none;">Save and get link</div>
+              <div role="alert" id="fileTypeAlert" style="display:none;">You must upload one of the following file types for the selected field:</div>
+              <div role="alert" id="embedError" style="display:none;">There was an error displaying the form. Please copy and paste the embed code again.</div>
+              <div role="alert" id="applyDiscountButton" style="display:none;">Apply Discount</div>
+              <div role="alert" id="dcmYouSaved" style="display:none;">You saved</div>
+              <div role="alert" id="dcmWithCode" style="display:none;">with code</div>
+              <div role="alert" id="submitButtonText" style="display:none;">Submit Form</div>
+              <div role="alert" id="submittingText" style="display:none;">Submitting</div>
+              <div role="alert" id="validatingText" style="display:none;">Validating</div>
+              <div role="alert" id="autocaptureDisabledText" style="display:none;"></div>
+              <div role="alert" id="paymentInitError" style="display:none;">There was an error initializing the payment processor on this form. Please contact the form owner to correct this issue.</div>
+              <div role="alert" id="checkFieldPrompt" style="display:none;">Please check the field: </div>
+              <div class="fsPage" id="fsPage2069567-1">
+              <div class="fsSection fs1Col">
+              <div id="fsRow2069567-1" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36969687" lang="en">
+              <label id="label36969687" class="fsLabel fsRequiredLabel" for="field36969687">First Name<span class="fsRequiredMarker">*</span>                    </label>
+              <input type="text" id="field36969687" name="field36969687" size="25" required placeholder="First Name" title="First Name" value="" class="fsField fsRequired" aria-required="true" />
+              </div>
+              </div>
+              <div id="fsRow2069567-2" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36969702" lang="en">
+              <label id="label36969702" class="fsLabel fsRequiredLabel" for="field36969702">Last Name<span class="fsRequiredMarker">*</span>                    </label>
+              <input type="text" id="field36969702" name="field36969702" size="25" required placeholder="Last Name" title="Last Name" value="" class="fsField fsRequired" aria-required="true" />
+              </div>
+              </div>
+              <div id="fsRow2069567-3" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36965581" lang="en">
+              <label id="label36965581" class="fsLabel" for="field36965581">Email                    </label>
+              <input type="email" id="field36965581" name="field36965581" size="50" placeholder="Email" title="Email" value="" class="fsField fsFormatEmail" />
+              </div>
+              </div>
+              <div id="fsRow2069567-4" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36965586" lang="en">
+              <label id="label36965586" class="fsLabel fsRequiredLabel" for="field36965586">School/Organization<span class="fsRequiredMarker">*</span>                    </label>
+              <input type="text" id="field36965586" name="field36965586" size="50" required placeholder="School/Organization" title="School/Organization" value="" class="fsField fsRequired" aria-required="true" />
+              </div>
+              </div>
+              <div id="fsRow2069567-5" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36965714" lang="en">
+              <label id="label36965714" class="fsLabel fsRequiredLabel" for="field36965714">Zip Code<span class="fsRequiredMarker">*</span>                    </label>
+              <span class="fsCurrency"></span>
+              <input type="number" step="any" id="field36965714" name="field36965714"  required class="fsField fsFormatNumber fsNumberDecimals-0 fsRequired" placeholder="Zip Code" title="Zip Code" aria-required="true" />
+              </div>
+              </div>
+              <div id="fsRow2069567-6" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36965591" lang="en">
+              <label id="label36965591" class="fsLabel" for="field36965591">Phone                    </label>
+              <input type="tel" id="field36965591" name="field36965591" size="20" placeholder="Phone" title="Phone" value="" class="fsField fsFormatPhoneUS " data-country="US" data-format="national" />
+              </div>
+              </div>
+              <div id="fsRow2069567-7" class="fsRow fsFieldRow fsLastRow">
+              <div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell36965597" lang="en">
+              <fieldset id="label36965597">
+              <div class="fieldset-content">
+              <label class="fsOptionLabel horizontal" for="field36965597_1"><input type="checkbox" id="field36965597_1" name="field36965597[]" value="Sign me up for the MLTS mailing list" class="fsField horizontal" />Sign me up for the MLTS mailing list</label>
+              </div></fieldset>
+              </div>
+              </div>
+              </div>
+              </div>
+              <div id="fsSubmit2069567" class="fsSubmit fsPagination">
+              <button type="button" id="fsPreviousButton2069567" class="fsPreviousButton" value="Previous Page" style="display:none;"><span class="fsFull">Previous</span><span class="fsSlim">←</span></button>
+              <button type="button" id="fsNextButton2069567" class="fsNextButton" value="Next Page" style="display:none;"><span class="fsFull">Next</span><span class="fsSlim">→</span></button>
+              <input id="fsSubmitButton2069567"
+              class="fsSubmitButton"
+              style="display: block;"
+              type="submit"
+              value="Submit Form" />
+              <div class="clear"></div>
+              </div>
+              </form>
+              </br>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Host a Screening Container -->
+
+
+
+

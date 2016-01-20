@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
   // Google spreadsheet as a CMS for Screenings
   // ID of the Google Spreadsheet
