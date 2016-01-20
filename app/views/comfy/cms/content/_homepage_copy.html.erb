@@ -1,0 +1,35 @@
+<!-- Copy Container -->
+<section class="copy-container">
+    <div class="wrapper">
+      <h2><%= @cms_page.blocks.where(identifier: 'copy.film_description').first.content %></h2>
+      <span class="copy-social-icons">
+        <span class="icon icon-twitter twitter-copy-share" onclick="ganalytics(this);" data-category="Laurel-section" data-label="Twitter Share"></span>
+        <span class="icon icon-facebook facebook-copy-share" data-poster="mltsposter4-small_thumb.jpg" onclick="ganalytics(this);" data-category="Laurel-section" data-label="FB Share"></span>
+      </span>
+    </h2>
+    </div>
+    <div class="quote-carousel-wrapper">
+        <!-- Carousel -->
+        <div id="hero-quote-carousel" class="carousel slide carousel-fade header-reviews">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <ul></ul>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control hero-control" href="#hero-quote-carousel" role="button" data-slide="prev">
+                <span class="icon icon-next-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control hero-control" href="#hero-quote-carousel" role="button" data-slide="next">
+                <span class="icon icon-next-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="carousel-wrapper">
+            <!-- end of Carousel -->
+        </div>
+</section>
+<!-- End of Copy Container -->
+

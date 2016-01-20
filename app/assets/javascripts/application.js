@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require join_us
+//= require upcoming_screenings
 
 // Google analytics tracking with value
 function ganalytics(cat){
