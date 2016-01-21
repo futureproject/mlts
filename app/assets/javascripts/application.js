@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require join_us
 //= require quote_carousel
+//= require the_team
 //= require upcoming_screenings
 
 // Google analytics tracking with value
