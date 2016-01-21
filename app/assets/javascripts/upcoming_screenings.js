@@ -119,5 +119,17 @@ $(document).ready(function() {
       $link.click();
   });
 
+  // Hide labels and auto-select mailing list subscription checkbox in "Host a Screening" form
+  $(".fsLabel").hide();
+  $("#field36965597_1").click();
+
+  // Listeners for "Host a Screening" form field animation
+  $(".fsField").on('focus', function() {
+    $(this).parent().find(".fsLabel").css( "display", "block");
+  });
+
+  $(".fsField").on('blur', function() {
+    $(this).parent().find(".fsLabel").hide();
+  });
 
 });
