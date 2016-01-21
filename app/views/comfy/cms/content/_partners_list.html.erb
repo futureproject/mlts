@@ -4,11 +4,11 @@
   <% @cms_page.children.each do |partner| %>
     <li class="partner-item">
         <div class="partner-logo">
-            <img src="/images/partners/partner-tfp.jpg">
+            <img src=<%= cms_block_render('headshot', partner) %>>
         </div>
         <div class="partner-content">
-            <h3><%= partner.blocks.where(identifier: 'partner_name').first.content %></h3>
-            <p><%= partner.blocks.where(identifier: 'partner_description').first.content %></p>
+            <h3><%= cms_block_content('partner_name', partner) %></h3>
+            <p><%= cms_block_content('partner_description', partner) %></p>
         </div>
     </li>
   <% end %>
