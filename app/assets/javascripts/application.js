@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr
+//= require bootstrap_carousel
 //= require turbolinks
 //= require join_us
+//= require quote_carousel
 //= require upcoming_screenings
 
 // Google analytics tracking with value
