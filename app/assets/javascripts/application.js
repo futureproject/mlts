@@ -18,6 +18,7 @@
 //= require join_us
 //= require quote_carousel
 //= require the_team
+//= require video_grid
 //= require upcoming_screenings
 
 // Google analytics tracking with value
