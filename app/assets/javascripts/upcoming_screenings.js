@@ -1,4 +1,4 @@
-$(document).ready(function() {
+var upcoming_screenings = function() {
 
   // Google spreadsheet as a CMS for Screenings
   // ID of the Google Spreadsheet
@@ -132,4 +132,7 @@ $(document).ready(function() {
     $(this).parent().find(".fsLabel").hide();
   });
 
-});
+}
+
+$(document).ready(upcoming_screenings);
+$(window).bind('page:change', upcoming_screenings);

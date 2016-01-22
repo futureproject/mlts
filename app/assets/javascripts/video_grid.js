@@ -1,4 +1,4 @@
-$(document).ready(function() {
+var video_grid = function() {
   //Random Videos on load
   var videoArray =
   [
@@ -46,6 +46,79 @@ $(document).ready(function() {
   $('.grid-5').css('background-image', 'url(../images/'+ quotePosterArrayRandom[0] + ')');
   $('.facebook-poster-share').data('poster', quotePosterArrayRandom[0]);
 
+  // Will store the scrolltop position of div when play is clicked
+  var videoTop;
+
+  // Scrolls to scrolltop position on click
+  function mobileScrollOnClose(){
+      $(".touch body").animate({
+              scrollTop: videoTop
+          }, 100);
+      return false;
+  }
+
+  // Desktop grid Video Close
+  $('.no-touch .close').on('click',function(){
+      var iframe = 'player';
+      var player = $f(iframe);
+      player.api('pause');
+      $('.grid-video-container').fadeOut(1000, function(){
+          $('#player').remove('iframe');
+      });
+      $('html').removeClass('video-open');
+  });
+
+  // Mobile grid video close, calls mobileScrollOnClose() function
+  $('.touch .close').on('click',function(){
+      var iframe = 'player';
+      var player = $f(iframe);
+      player.api('pause');
+      $('.grid-video-container').fadeOut(1000, function(){
+          $('#player').remove('iframe');
+      });
+      $('html').removeClass('video-open');
+      mobileScrollOnClose();
+  });
+
+  // grid desktop play buttons
+  $('.no-touch .grid-play-video').click(function() {
+      var $this = $(this),
+          videoID = $this.data('id'),
+          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="http://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+      videoTop = $this.offset().top;
+      $('.grid-video-container').append(iframeLink);
+      var iframe = 'player';
+      var player = $f(iframe);
+      player.addEvent('ready', function() {
+        player.api('play');
+      });
+      $('html').addClass('video-open');
+      $('.grid-video-container').fadeIn(1000);
+      $('.trailer-video-container').fadeOut(1000, function(){
+          $('#trailerplayer').remove('iframe');
+      });
+  });
+
+  // grid mobile play buttons
+  $('.touch .grid-play-video').click(function() {
+      var $this = $(this),
+          videoID = $this.data('id'),
+          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="http://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+      videoTop = $this.offset().top;
+      $('.grid-video-container').append(iframeLink);
+      var iframe = 'player';
+      var player = $f(iframe);
+      $('.grid-video-container').fadeIn(1000, function(){
+          $(".touch body").animate({
+              scrollTop: 0
+          }, 100, function(){
+              $('html').addClass('video-open');
+          });
+      });
+      $('.trailer-video-container').fadeOut(1000, function(){
+          $('#trailerplayer').remove('iframe');
+      });
+  });
 
   // Google analytics for Grid Videos
   function ganalyticsGridVideo(cat){
@@ -54,7 +127,7 @@ $(document).ready(function() {
     var videoId = $(cat).parents('.grid-item').data('id');
     var label = videoName + " - " + videoId;
 
-    ga('send', 'event', category, 'click', label);
+    // ga('send', 'event', category, 'click', label);
   }
 
   // Google analytics for Grid Quotes
@@ -62,8 +135,16 @@ $(document).ready(function() {
     var category = $(cat).data('category');
     var label = $(cat).parents('.grid-text-center').find('.grid-text-copy').html();
 
-    ga('send', 'event', category, 'click', label);
+    // ga('send', 'event', category, 'click', label);
   }
+
+  $('.grid-item-container').click(function() {
+    ganalyticsGridVideo(this);
+  });
+
+  $('.social-icon-items').click(function(){
+    ganalyticsGridQuote(this)
+  });
 
 
   // Twitter Share Link function
@@ -147,6 +228,7 @@ $(document).ready(function() {
       }
       return array;
   }
+}
 
-
-});
+$(document).ready(video_grid);
+$(window).bind('page:change', video_grid);

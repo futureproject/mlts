@@ -1,4 +1,4 @@
-$ ->
+join_us_listeners = ->
   # Join Us overlay
   $('.join-us-link').click ->
     # Add the mask to body
@@ -21,3 +21,6 @@ $ ->
   ), ->
     $(this).removeClass('tooltip-open')
   return
+
+$ -> join_us_listeners()
+$(window).bind('page:change', join_us_listeners)
