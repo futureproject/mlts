@@ -13,6 +13,11 @@ $ ->
   $('body').on 'click', 'a.close, #mask', ->
     $('#mask , .join-us-form-overlay').fadeOut 300, ->
       $('#mask').remove()
-    return false
+    false
 
+  # Tooltip for Join Us button on homepage
+  $('.join-us').hover (->
+    $(this).addClass 'tooltip-open'
+  ), ->
+    $(this).removeClass('tooltip-open')
   return
