@@ -165,111 +165,52 @@
 // Main Header
 .main-header{
 	width: 100%;
-	height: 100%;
-  padding-bottom:100px;
-  margin-bottom:100px;
+  // height: 100%;
+  // padding-bottom:100px;
 	background-image: url('/images/mobile-header-background.jpg');
 	background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
   overflow: hidden;
-  min-height: 700px;
+  // min-height: 700px;
 
 	@include larger-than(extra-large) {
-    background: black;
+    background: none;
   }
 }
 
-// Header Form
-
-.header-form {
-	display: none;
-	text-align: center;
-	vertical-align: middle;
-	@include smaller-than(ex-large) {
-		padding-bottom: 1em;
-		padding-top: 0.5em;
-	}
-	&.active {
-		display: table-cell;
-	}
-}
-
-.header-form-container {
-	width: 482px;
-  display: inline-block;
-  position: relative;
-	border-radius: 8px;
-	background-color: white;
-	@include smaller-than(medium) {
-		width: 100%;
-	}
-}
-
-.header-form-copy {
-	padding: 4em;
-	p {
-		color: black;
-		font-size: 1.7em;
-		line-height: 1.2;
-		@include smaller-than(small) {
-			font-size: 1.5em;
-		}
-	}
-	@include smaller-than(huge) {
-		padding: 1em 2em;
-	}
-	@include smaller-than(more-large) {
-		padding-bottom: 1em;
-	}
-	@include smaller-than(small) {
-		padding-left: 2em;
-		padding-right: 2em;
-	}
-}
-
-.header-form-input {
-	padding: 0 7em 4em;
-	@include smaller-than(huge) {
-		padding-bottom: 2em;
-	}
-	@include smaller-than(large) {
-		padding-left: 4em;
-		padding-right: 4em;
-	}
-	@include smaller-than(small) {
-		padding-left: 2em;
-		padding-right: 2em;
-	}
-}
-
-
 // Video
-video.preview{
-	opacity: 0.6;
-	width: 100%;
-	position: absolute;
-  top: 50%;
+.video-wrapper {
+  display: block;
+  background: black;
+  position: absolute;
+  top: 415px;
   left: 50%;
+  background-size: cover;
+  background: black;
   min-width: 100%;
-  min-height: 100%;
   width: auto;
-  height: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-	display: none;
+  display: none;
 
-	@include larger-than(extra-large) {
-      display: block;
-    }
+  @include larger-than(extra-large) {
+    display: block;
+  }
+
+  video.preview{
+    opacity: 0.6;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
-
 
 
 // Header Wrapper
