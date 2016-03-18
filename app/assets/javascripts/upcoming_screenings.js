@@ -30,7 +30,7 @@ var upcoming_screenings = function() {
         screeningRow += '<td class="icon icon-arrow-right-circle"></td>';
       }
       else {
-        screeningRow += '<td class="icon-disabled icon-arrow-right-circle"></td>';
+        screeningRow += '<td class="icon"></td>';
       }
 
       $screeningContainer.append(screeningRow);
