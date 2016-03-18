@@ -84,7 +84,7 @@ var video_grid = function() {
   $('.no-touch .grid-play-video').click(function() {
       var $this = $(this),
           videoID = $this.data('id'),
-          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="http://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
       videoTop = $this.offset().top;
       $('.grid-video-container').append(iframeLink);
       var iframe = 'player';
@@ -103,7 +103,7 @@ var video_grid = function() {
   $('.touch .grid-play-video').click(function() {
       var $this = $(this),
           videoID = $this.data('id'),
-          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="http://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+          iframeLink = '<iframe class="vimeo-video" id="player" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?api=1&player_id=player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
       videoTop = $this.offset().top;
       $('.grid-video-container').append(iframeLink);
       var iframe = 'player';
