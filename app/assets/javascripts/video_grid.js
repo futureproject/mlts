@@ -1,4 +1,43 @@
 var video_grid = function() {
+
+  // Trailer play button
+  $('.no-touch .play-trailer').on('click', function(){
+      var $this = $(this),
+          videoID = $this.data('id'),
+          iframeLink = '<iframe class="vimeo-trailer" id="trailerplayer" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?api=1&player_id=trailerplayer" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+      $('.trailer-video-container').append(iframeLink);
+      var iframe = 'trailerplayer';
+      var player = $f(iframe);
+      player.addEvent('ready', function() {
+        player.api('play');
+      });
+      $('html').addClass('trailer-open');
+      $('.trailer-video-container').fadeIn(1000);
+  });
+
+  // Trailer play button (touch)
+  $('.touch .play-trailer').on('click', function(){
+      var $this = $(this),
+          videoID = $this.data('id'),
+          iframeLink = '<iframe class="vimeo-trailer" id="trailerplayer" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?api=1&player_id=trailerplayer" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+      $('.trailer-video-container').append(iframeLink);
+      var iframe = 'trailerplayer';
+      var player = $f(iframe);
+      $('html').addClass('trailer-open');
+      $('.trailer-video-container').fadeIn(1000);
+  });
+
+  // Trailer close
+  $('.trailer-close').on('click',function(){
+      var iframe = 'trailerplayer';
+      var player = $f(iframe);
+      player.api('pause');
+      $('.trailer-video-container').fadeOut(1000, function(){
+          $('#trailerplayer').remove('iframe');
+      });
+      $('html').removeClass('trailer-open');
+  });
+
   //Random Videos on load
   var videoArray =
   [
