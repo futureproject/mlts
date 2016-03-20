@@ -186,76 +186,7 @@ var video_grid = function() {
   });
 
 
-  // Twitter Share Link function
-  function twitterShare(text){
-
-      var fact = characterCheck(text);
-
-      var url = window.location.href,
-          hashtag = encodeURIComponent('#mltsfilm'),
-          textLink = '&text="' + fact + '..." ' + hashtag,
-          urlLink = '?url=' + encodeURIComponent(url),
-          link = 'https://twitter.com/intent/tweet' + urlLink + textLink;
-
-      window.open(link, '_blank', 'width=600, height=250, resizable,scrollbars=yes');
-  }
-
-  // Facebook Share Link function
-  function facebookShare(text, img){
-
-      var fact = characterCheck(text);
-
-      var url = 'http://www.mltsfilm.org/',
-          imageurl = window.location.origin + '/images/' + img,
-          picture = '&picture=' + encodeURIComponent(imageurl),
-          redirect = encodeURIComponent(url),
-          urlLink = '&link=' + encodeURIComponent(url),
-          hashtag = encodeURIComponent('#mltsfilm'),
-          caption = '&caption=MLTS',
-          redirectUrl = '&redirect_uri=' + redirect,
-          description = '&description=' + hashtag,
-          name = '&name="' + fact + '" ' + hashtag,
-          link = 'https://www.facebook.com/dialog/feed?app_id=573229176144322&display=popup' + picture + redirectUrl + urlLink + caption + description + name;
-      window.open(link, '_blank', 'width=600, height=250, resizable,scrollbars=yes');
-  }
-
-  // When Twitter share icon is clicked in the grid
-  $('.twitter-grid-share').on('click', function(){
-      var $this = $(this),
-      fact = $this.parents('.grid-text-container').find('p').html(),
-      factGrab = fact.substring(0, 85);
-      twitterShare(factGrab);
-  });
-
-  // When Twitter share icon is clicked in the copy container
-  $('.twitter-copy-share').on('click', function(){
-      var $this = $(this),
-      fact = $this.parents('.wrapper').find('h2').html(),
-      factGrab = fact.substring(0, 85);
-      twitterShare(factGrab);
-  });
-
-  // When fb share icon is clicked in the grid
-  $('.facebook-grid-share').on('click', function(){
-      var $this = $(this),
-      fact = $this.parents('.grid-text-container').find('p'),
-      factGrab = fact.html(),
-      img = 'mobile-header-background.jpg';
-      facebookShare(factGrab, img);
-  });
-
   // Helper functions:
-
-  // Check if there are any disallowed characters in the string then replace with the UTF-8 encoding of the character
-  function characterCheck(text){
-    var regex = /[^\w\-]/;
-
-    if(regex.test(text) == true) {
-      return encodeURIComponent(text);
-    }else{
-      return text;
-    }
-  }
 
   // Randomize order of array
   function shuffleArray(array) {
