@@ -354,18 +354,13 @@
 		font-size: 30px;
 	}
 
-  .icon-join-us:after{
-    left: -1em;
-    font-size: 22px;
-  }
-
-	.icon-heart:after{
+	.icon-moviereel:after{
 		left: -1em;
 		top: 0em;
 		font-size: 20px;
 	}
 
-	.icon-moviereel:after{
+	.icon-facebook:after{
 		left: -1em;
 		top: 0em;
 		font-size: 20px;
@@ -447,41 +442,3 @@
 	height: 100%;
 	z-index: 1;
 }
-
-// 'Join Us' tooltip
-
-.join-us-tooltip {
-	@include transition(opacity .2s);
-  position: absolute;
-  top: -9.3em;
-  right: -9999px;
-  z-index: 10;
-  opacity: 0;
-  margin: 1em 0 0 -100px;
-  padding:  1.5em 2.5em;
-  width: 255px;
-  background: white;
-  color: black;
-  text-align: center;
-  border-radius: 8px;
-  p {
-  	font-size: 1em;
-  }
-  &:before {
-  	content: '';
-  	position: absolute;
-  	bottom: -1em;
-  	display: block;
-  	left: 42%;
-  	width: 0;
-  	height: 0;
-  	border-left: 20px solid transparent;
-  	border-right: 20px solid transparent;
-  	border-top: 20px solid white;
-  }
-  .tooltip-open & {
-    right: -3.6em;
-    opacity: 1;
-  }
-}
-
