@@ -2,31 +2,12 @@
 
 .header-container{
 	display: inline-block;
-  height: 120%;
 	width: 100%;
 	padding-top: $mobile-nav-height;
   position: relative;
 
 	@include larger-than(extra-large) {
     padding-top: $nav-height;
-  }
-	@include larger-than(medium) {
-    height: 100%;
-  }
-}
-
-.hero-button .header-container {
-  @include smaller-than(extra-large) {
-  	height: 80%;
-  }
-	@include smaller-than(mid-large) {
-    height: 100%;
-  }
-	@include smaller-than(small) {
-    height: 80%;
-  }
-  @include larger-than(extra-large) {
-  	height: auto;
   }
 }
 
@@ -165,8 +146,6 @@
 // Main Header
 .main-header{
 	width: 100%;
-  // height: 100%;
-  // padding-bottom:100px;
 	background-image: url('/images/mobile-header-background.jpg');
 	background-position: 50%;
   background-repeat: no-repeat;
@@ -217,8 +196,7 @@
 .header-wrapper{
 	display: block;
 	width: 90%;
-	height: 100%;
-	margin: 100px auto;
+	margin: 100px auto 0 auto;
 	text-align: center;
 	position: relative;
 }
