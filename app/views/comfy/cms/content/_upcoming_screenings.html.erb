@@ -4,6 +4,17 @@
     <div id="communityscreenings"></div>
     <div class="screening-wrapper">
         <h3>Upcoming Screenings</h3>
+        <div id="map"></div>
+        <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %>
+        <div>
+          <p><%= cms_block_content('city', screening) %></p>
+          <p><%= cms_block_content('venue_name', screening) %></p>
+          <p><%= cms_block_content('address', screening) %></p>
+          <p><%= cms_block_content('eventbrite_link', screening) %></p>
+          </br>
+        </div>
+        <% end %>
+
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
