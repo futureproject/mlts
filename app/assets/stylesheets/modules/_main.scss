@@ -27,6 +27,7 @@ _::-webkit-full-page-media, _:future, :root {
 
 	@include larger-than(large){
 		margin-bottom: 3em;
+  max-width: 90%;
 	}
 }
 
@@ -36,7 +37,7 @@ _::-webkit-full-page-media, _:future, :root {
   margin-top: 1em;
   position: relative;
 
-	@include larger-than(medium) {
+	@include larger-than(large) {
     width: 18%;
 	}
 
@@ -47,7 +48,7 @@ _::-webkit-full-page-media, _:future, :root {
 
 .mlts-laurel{
 	max-height: 100px;
-	max-width: 75%;
+	max-width: 65%;
 	vertical-align: middle;
 }
 
