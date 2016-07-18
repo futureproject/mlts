@@ -4,23 +4,44 @@
     <div id="communityscreenings"></div>
     <div class="screening-wrapper">
         <h3>Upcoming Screenings</h3>
-        <div id="map"></div>
-        <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %>
-        <div>
-          <p><%= cms_block_content('city', screening) %></p>
-          <p><%= cms_block_content('venue_name', screening) %></p>
-          <p><%= cms_block_content('address', screening) %></p>
-          <p><%= cms_block_content('eventbrite_link', screening) %></p>
-          </br>
-        </div>
-        <% end %>
-
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
+                  <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %>
+                    <tr class="screening-row community-screening-row" data-href=<%= cms_block_content('eventbrite_link', screening) %>>
+                      <td data-label="Date" class="screening-date">
+                        <%= cms_block_content('date_and_time', screening) %>
+                      </td>
+                      <td data-label="City" class="screening-location">
+                        <%= cms_block_content('city', screening) %>,
+                        <%= cms_block_content('country', screening) %>
+                      </td>
+                      <td data-label="Location" class="screening-name">
+                        <%= cms_block_content('venue_name', screening) %>,
+                        <%= cms_block_content('address', screening) %>
+                      </td>
+                      <td class="icon"></td>
+                    </tr>
+
+                    </br>
                 </tbody>
             </table>
         </div>
+        <% end %>
+
+        <%# <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %> %>
+        <%# <div> %>
+          <%# <tr class="screening-row community-screening-row" data-href=""><td data-label="Date" class="screening-date">7/11/2016</td><td data-label="City" class="screening-location">Memphis, TN</td><td data-label="Location" class="screening-name">Memphis Grizzlies Preparatory Charter School - 168 Jefferson Avenue at 7:00 PM</td><td class="icon"></td></tr>` %>
+          <%# <p><%= cms_block_content('city', screening) %></p> %>
+          <%# <p><%= cms_block_content('venue_name', screening) %></p> %>
+          <%# <p><%= cms_block_content('address', screening) %></p> %>
+          <%# <p><%= cms_block_content('eventbrite_link', screening) %></p> %>
+          <%# </br> %>
+        <%# </div> %>
+        <%# </div> %>
+        <%# <% end %> %>
+
+        <div id="map"></div>
     </div>
 </section>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFUNlvJlxVV7ahDAV4kWLB3vom6Ttr9w&callback=initMap"
