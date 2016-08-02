@@ -11,7 +11,7 @@
                   <% @screenings.each.with_index do |screening, i| %>
                     <tr class="screening-row community-screening-row" data-href=<%= cms_block_content('eventbrite_link', screening) %>>
                       <td data-label="Date" class="screening-date">
-                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%x %l:%M %p') %>
+                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%x') %>
                       </td>
                       <td data-label="City" class="screening-location">
                         <% city = cms_block_content('city', screening) %>
@@ -25,6 +25,8 @@
                       <td data-label="Location" class="screening-name">
                         <%= cms_block_content('venue_name', screening) %>,
                         <%= cms_block_content('address', screening) %>
+                        at
+                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%l:%M %p') %>
                       </td>
                       <td class="icon"></td>
                     </tr>
