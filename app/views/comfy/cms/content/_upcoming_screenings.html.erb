@@ -7,10 +7,11 @@
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
-                  <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %>
+                  <% @screenings = @cms_page.children.find_by_slug('screenings').children %>
+                  <% @screenings.each.with_index do |screening, i| %>
                     <tr class="screening-row community-screening-row" data-href=<%= cms_block_content('eventbrite_link', screening) %>>
                       <td data-label="Date" class="screening-date">
-                        <%= cms_block_content('date_and_time', screening) %>
+                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%x %l:%M %p') %>
                       </td>
                       <td data-label="City" class="screening-location">
                         <%= cms_block_content('city', screening) %>,
@@ -23,23 +24,11 @@
                       <td class="icon"></td>
                     </tr>
 
-                    </br>
+                    <% end -%>
                 </tbody>
             </table>
         </div>
-        <% end %>
 
-        <%# <% @cms_page.children.find_by_slug('screenings').children.each.with_index do |screening, i| %> %>
-        <%# <div> %>
-          <%# <tr class="screening-row community-screening-row" data-href=""><td data-label="Date" class="screening-date">7/11/2016</td><td data-label="City" class="screening-location">Memphis, TN</td><td data-label="Location" class="screening-name">Memphis Grizzlies Preparatory Charter School - 168 Jefferson Avenue at 7:00 PM</td><td class="icon"></td></tr>` %>
-          <%# <p><%= cms_block_content('city', screening) %></p> %>
-          <%# <p><%= cms_block_content('venue_name', screening) %></p> %>
-          <%# <p><%= cms_block_content('address', screening) %></p> %>
-          <%# <p><%= cms_block_content('eventbrite_link', screening) %></p> %>
-          <%# </br> %>
-        <%# </div> %>
-        <%# </div> %>
-        <%# <% end %> %>
 
         <div id="map"></div>
     </div>

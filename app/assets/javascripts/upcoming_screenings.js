@@ -15,39 +15,6 @@ var upcoming_screenings = function() {
   // ID of the Google Spreadsheet
   var spreadsheetID = "1umoL078h5Y_LNz4iV6KK5Q06_0H-9PESDTYsU4axib8";
 
-  // Make sure it is public or set to Anyone with link can view
-  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
-
-  $.getJSON(url, function(data) {
-
-    var entry = data.feed.entry;
-    var $screeningContainer = $('.screening-table tbody');
-
-    $(entry).each(function(){
-
-      var screeningUrl = this.gsx$screeningurl.$t;
-      var isTourScreening = this.gsx$tourscreening.$t == "TRUE";
-      if (isTourScreening) {
-        var screeningRow = '<tr class="screening-row tour-screening-row" data-href="'+screeningUrl+'">';
-      }
-      else {
-        var screeningRow = '<tr class="screening-row community-screening-row" data-href="'+screeningUrl+'">';
-      }
-
-      screeningRow += '<td data-label="Date" class="screening-date">'+this.gsx$screeningdate.$t+'</td>';
-      screeningRow += '<td data-label="City" class="screening-location">'+this.gsx$screeninglocation.$t+'</td>';
-      screeningRow += '<td data-label="Location" class="screening-name">'+this.gsx$screeningname.$t+'</td>';
-      if (screeningUrl) {
-        screeningRow += '<td class="icon icon-arrow-right-circle"></td>';
-      }
-      else {
-        screeningRow += '<td class="icon"></td>';
-      }
-
-      $screeningContainer.append(screeningRow);
-    });
-  });
-
   // Table Links
   $('#screenings').on('click', '*[data-href]', function(){
     if ($(this).data('href') != "") {
