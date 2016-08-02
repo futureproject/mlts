@@ -21,6 +21,7 @@
                         <% else %>
                           <%= "#{city}, #{country}" %>
                         <% end %>
+
                       </td>
                       <td data-label="Location" class="screening-name">
                         <%= cms_block_content('venue_name', screening) %>,
@@ -28,7 +29,11 @@
                         at
                         <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%l:%M %p') %>
                       </td>
-                      <td class="icon"></td>
+                      <% if cms_block_content('eventbrite_link', screening) != "" %>
+                        <td class="icon icon-arrow-right-circle"></td>
+                      <% else %>
+                        <td class="icon"></td>
+                      <% end %>
                     </tr>
 
                     <% end -%>
