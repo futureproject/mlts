@@ -14,8 +14,13 @@
                         <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%x %l:%M %p') %>
                       </td>
                       <td data-label="City" class="screening-location">
-                        <%= cms_block_content('city', screening) %>,
-                        <%= cms_block_content('country', screening) %>
+                        <% city = cms_block_content('city', screening) %>
+                        <% country = cms_block_content('country', screening) %>
+                        <% if country == "" %>
+                          <%= "#{city}" %>
+                        <% else %>
+                          <%= "#{city}, #{country}" %>
+                        <% end %>
                       </td>
                       <td data-label="Location" class="screening-name">
                         <%= cms_block_content('venue_name', screening) %>,
