@@ -7,32 +7,31 @@
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
-                  <% @screenings = @cms_page.children.find_by_slug('screenings').children %>
-                  <% @screenings.each.with_index do |screening, i| %>
-                    <tr class="screening-row community-screening-row" data-href=<%= cms_block_content('eventbrite_link', screening) %>>
-                      <td data-label="Date" class="screening-date">
-                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%x') %>
-                      </td>
-                      <td data-label="City" class="screening-location">
-                        <% city = cms_block_content('city', screening) %>
-                        <% country = cms_block_content('country', screening) %>
-                        <% if country == "" %>
-                          <%= "#{city}" %>
-                        <% else %>
-                          <%= "#{city}, #{country}" %>
-                        <% end %>
+                  <% screenings.each.with_index do |screening, i| %>
+                      <tr class="screening-row community-screening-row" data-href=<%= screening["eventbrite_link"] %>>
+                        <td data-label="Date" class="screening-date">
+                          <%= screening["date_and_time"].to_time.strftime('%x') %>
+                        </td>
+                        <td data-label="City" class="screening-location">
+                          <% city = screening["city"] %>
+                          <% country = screening["country"] %>
+                          <% if country == "" %>
+                            <%= "#{city}" %>
+                          <% else %>
+                            <%= "#{city}, #{country}" %>
+                          <% end %>
 
-                      </td>
-                      <td data-label="Location" class="screening-name">
-                        <%= cms_block_content('venue_name', screening) %>,
-                        <%= cms_block_content('address', screening) %>
-                        at
-                        <%= a = cms_block_content('date_and_time', screening).to_time.strftime('%l:%M %p') %>
-                      </td>
-                      <% if cms_block_content('eventbrite_link', screening) != "" %>
-                        <td class="icon icon-arrow-right-circle"></td>
-                      <% else %>
-                        <td class="icon"></td>
+                        </td>
+                        <td data-label="Location" class="screening-name">
+                          <%= screening["venue_name"] %>,
+                          <%= screening["address"] %>
+                          at
+                          <%= a = screening["date_and_time"].to_time.strftime('%l:%M %p') %>
+                        </td>
+                        <% if screening["eventbrite_link"] != "" %>
+                          <td class="icon icon-arrow-right-circle"></td>
+                        <% else %>
+                          <td class="icon"></td>
                       <% end %>
                     </tr>
 
