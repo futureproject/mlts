@@ -7,45 +7,12 @@
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
-                  <% screenings.each.with_index do |screening, i| %>
-                      <tr class="screening-row community-screening-row" data-href=<%= screening["eventbrite_link"] %>>
-                        <td data-label="Date" class="screening-date">
-                          <%= screening["date_and_time"].to_time.strftime('%x') %>
-                        </td>
-                        <td data-label="City" class="screening-location">
-                          <% city = screening["city"] %>
-                          <% country = screening["country"] %>
-                          <% if country == "" %>
-                            <%= "#{city}" %>
-                          <% else %>
-                            <%= "#{city}, #{country}" %>
-                          <% end %>
-
-                        </td>
-                        <td data-label="Location" class="screening-name">
-                          <%= screening["venue_name"] %>,
-                          <%= screening["address"] %>
-                          at
-                          <%= a = screening["date_and_time"].to_time.strftime('%l:%M %p') %>
-                        </td>
-                        <% if screening["eventbrite_link"] != "" %>
-                          <td class="icon icon-arrow-right-circle"></td>
-                        <% else %>
-                          <td class="icon"></td>
-                      <% end %>
-                    </tr>
-
-                    <% end -%>
+                  <%= render partial: 'screening', collection: screenings, cached: true %>
                 </tbody>
             </table>
         </div>
-
-
-        <div id="map"></div>
     </div>
 </section>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFUNlvJlxVV7ahDAV4kWLB3vom6Ttr9w&callback=initMap"
-    async defer></script>
-  <script>
-  </script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFUNlvJlxVV7ahDAV4kWLB3vom6Ttr9w&callback=initMap"
+async defer></script> -->
 <!-- End of Screenings Container -->
