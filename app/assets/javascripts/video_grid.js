@@ -128,9 +128,6 @@ var video_grid = function() {
       $('.grid-video-container').append(iframeLink);
       var iframe = 'player';
       var player = $f(iframe);
-      player.addEvent('ready', function() {
-        player.api('play');
-      });
       $('html').addClass('video-open');
       $('.grid-video-container').fadeIn(1000);
       $('.trailer-video-container').fadeOut(1000, function(){
