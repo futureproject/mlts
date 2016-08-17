@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :screenings
+  caches_action :screenings, layout: false, expires_in: 1.hour
   include Comfy::CmsHelper
   def screenings
     screenings_data = @cms_page.children.find_by_slug('screenings').children
@@ -18,6 +19,6 @@ class ApplicationController < ActionController::Base
         "address" => cms_block_content('address', screening)
       }
     end
-    return @screenings
+    @screenings
   end
 end
