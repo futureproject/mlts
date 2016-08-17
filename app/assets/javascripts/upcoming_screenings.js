@@ -1,13 +1,13 @@
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-  $('#map').on('shown', function () {
-    google.maps.event.trigger(map, 'resize');
-    map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
-  })
-}
+// function initMap() {
+  // map = new google.maps.Map(document.getElementById('map'), {
+    // center: {lat: -34.397, lng: 150.644},
+    // zoom: 8
+  // });
+  // $('#map').on('shown', function () {
+    // google.maps.event.trigger(map, 'resize');
+    // map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
+  // })
+// }
 
 var upcoming_screenings = function() {
 
