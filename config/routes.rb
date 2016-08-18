@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :screenings
   cms_fortress_routes :path => '/cms-admin'
 
   comfy_route :cms_admin, :path => '/admin'

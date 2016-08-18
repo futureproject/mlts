@@ -1,0 +1,31 @@
+%h1 Listing screenings
+
+%table
+  %thead
+    %tr
+      %th Screening time
+      %th City
+      %th Country
+      %th Link
+      %th Venue name
+      %th Street address
+      %th
+      %th
+      %th
+
+  %tbody
+    - @screenings.each do |screening|
+      %tr
+        %td= screening.screening_time
+        %td= screening.city
+        %td= screening.country
+        %td= screening.link
+        %td= screening.venue_name
+        %td= screening.street_address
+        %td= link_to 'Show', screening
+        %td= link_to 'Edit', edit_screening_path(screening)
+        %td= link_to 'Destroy', screening, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Screening', new_screening_path

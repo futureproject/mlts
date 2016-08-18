@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Screening time:
+  = @screening.screening_time
+%p
+  %b City:
+  = @screening.city
+%p
+  %b Country:
+  = @screening.country
+%p
+  %b Link:
+  = @screening.link
+%p
+  %b Venue name:
+  = @screening.venue_name
+%p
+  %b Street address:
+  = @screening.street_address
+
+= link_to 'Edit', edit_screening_path(@screening)
+\|
+= link_to 'Back', screenings_path
