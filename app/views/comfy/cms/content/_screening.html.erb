@@ -1,10 +1,10 @@
-<tr class="screening-row community-screening-row" data-href=<%= screening["eventbrite_link"] %>>
+<tr class="screening-row community-screening-row" data-href=<%= screening.link %>>
   <td data-label="Date" class="screening-date">
-    <%= screening["date_and_time"].to_time.strftime('%x') %>
+    <%= screening.screening_time.strftime('%x') %>
   </td>
   <td data-label="City" class="screening-location">
-    <% city = screening["city"] %>
-    <% country = screening["country"] %>
+    <% city = screening.city %>
+    <% country = screening.country %>
     <% if country == "" %>
       <%= "#{city}" %>
     <% else %>
@@ -13,12 +13,12 @@
 
   </td>
   <td data-label="Location" class="screening-name">
-    <%= screening["venue_name"] %>,
-    <%= screening["address"] %>
+    <%= screening.venue_name %>,
+    <%= screening.street_address %>
     at
-    <%= a = screening["date_and_time"].to_time.strftime('%l:%M %p') %>
+    <%= a = screening.screening_time.strftime('%l:%M %p') %>
   </td>
-  <% if screening["eventbrite_link"] != "" %>
+  <% if screening.link != "" %>
     <td class="icon icon-arrow-right-circle"></td>
   <% else %>
     <td class="icon"></td>
