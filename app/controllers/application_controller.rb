@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     length = screenings_data.length
     @screenings = Array.new(length) { Hash.new }
     screenings_data.each_with_index do |screening, i|
+      save_screening(screening)
       @screenings[i] = {
         "city" => cms_block_content('city', screening),
         "date_and_time" => cms_block_content('date_and_time', screening),
@@ -20,5 +21,16 @@ class ApplicationController < ActionController::Base
       }
     end
     @screenings
+  end
+
+  def save_screening(screening)
+    Screening.create({
+      city: cms_block_content('city', screening),
+      screening_time: cms_block_content('date_and_time', screening),
+      country: cms_block_content('country', screening),
+      link: cms_block_content('eventbrite_link', screening),
+      venue_name: cms_block_content('venue_name', screening),
+      street_address: cms_block_content('address', screening)
+    })
   end
 end
