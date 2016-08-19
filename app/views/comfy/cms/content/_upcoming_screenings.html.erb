@@ -7,7 +7,8 @@
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
                 <tbody>
-                  <%= render partial: 'screening', collection: Screening.all, cached: true %>
+                  <% @screenings = Screening.all.sort_by &:screening_time %>
+                  <%= render partial: 'screening', collection: @screenings, cached: true %>
                 </tbody>
             </table>
         </div>
