@@ -22,6 +22,7 @@ gem 'puma'
 gem 'dalli'
 gem 'actionpack-action_caching'
 gem 'connection_pool'
+gem 'rails-observers'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

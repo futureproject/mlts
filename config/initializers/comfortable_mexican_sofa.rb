@@ -66,7 +66,7 @@ ComfortableMexicanSofa.configure do |config|
   #   config.admin_locale = nil
 
   # A class that is included as a sweeper to admin base controller if it's set
-  #   config.admin_cache_sweeper = nil
+  config.admin_cache_sweeper = CmsAdminSweeper
 
   # By default you cannot have irb code inside your layouts/pages/snippets.
   # Generally this is to prevent putting something like this:
