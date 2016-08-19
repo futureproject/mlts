@@ -24,6 +24,9 @@ gem 'actionpack-action_caching'
 gem 'connection_pool'
 gem 'rails-observers'
 
+# New Relic
+gem 'newrelic_rpm'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
