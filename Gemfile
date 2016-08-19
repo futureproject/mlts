@@ -24,7 +24,8 @@ gem 'actionpack-action_caching'
 gem 'connection_pool'
 gem 'rails-observers'
 
-# New Relic
+# Heroku and New Relic
+gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
