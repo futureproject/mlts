@@ -14,15 +14,14 @@
     <div id="hero-quote-carousel" class="carousel slide carousel-fade header-reviews">
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <% @quotes = @cms_page.children.where(label: "Quotes").first.children.each_slice(3).to_a %>
         <% @quotes.each_with_index do |quote, i| %>
           <div class="<%= i==0 ? "item active" : "item review-carousel-row js-item#{i}" %>">
             <ul>
               <% quote.each do |quote| %>
               <li class="review-item">
-                <a href=<%= cms_block_content('quote_url', quote) %> target="_blank" data-category="Hero-section" data-label="hero-quotes" onclick="ganalytics(this);">
-                  <blockquote><%= cms_block_content('quote_text', quote) %></blockquote>
-                  <p class="quote-author"><%= cms_block_content('quote_author', quote) %></p>
+                <a href=<%= quote.link %> target="_blank" data-category="Hero-section" data-label="hero-quotes" onclick="ganalytics(this);">
+                  <blockquote><%= quote.quote_text %></blockquote>
+                  <p class="quote-author"><%= quote.author %></p>
                 </a>
               </li>
               <% end %>
