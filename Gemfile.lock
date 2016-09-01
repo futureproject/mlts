@@ -315,6 +315,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   newrelic_rpm
+  paperclip
   pg
   pry-rails
   puma

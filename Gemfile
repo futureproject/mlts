@@ -43,6 +43,9 @@ gem 'kaminari'
 
 gem 'rails_admin'
 
+# Image uploads for Rails Admin
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901210158) do
+ActiveRecord::Schema.define(version: 20160901212203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -203,8 +203,15 @@ ActiveRecord::Schema.define(version: 20160901210158) do
   end
 
   create_table "team_members", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "business_title"
+    t.text     "bio"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "headshot_file_name"
+    t.string   "headshot_content_type"
+    t.integer  "headshot_file_size"
+    t.datetime "headshot_updated_at"
   end
 
 end
