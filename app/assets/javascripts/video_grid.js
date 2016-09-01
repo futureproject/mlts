@@ -8,9 +8,6 @@ var video_grid = function() {
       $('.trailer-video-container').append(iframeLink);
       var iframe = 'trailerplayer';
       var player = $f(iframe);
-      player.addEvent('ready', function() {
-        player.api('play');
-      });
       $('html').addClass('trailer-open');
       $('.trailer-video-container').fadeIn(1000);
   });
