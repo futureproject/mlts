@@ -4,18 +4,22 @@ Rails.application.routes.draw do
 
   comfy_route :cms_admin, :path => '/admin'
 
-  # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  # Make sure this routeset is defined last
+  # comfy_route :cms, :path => '/', :sitemap => false
+
   # You can have the root of your site routed with "root"
-  root :to => "cms/content#show"
-  # root to: "home#index"
+  # root :to => "cms/content#show"
+  root to: "pages#show", page: 'homepage'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'pages/:page' => 'pages#show'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
