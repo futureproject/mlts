@@ -41,6 +41,8 @@ gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'cms-fortress', '~> 1.3.12'
 gem 'kaminari'
 
+gem 'rails_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

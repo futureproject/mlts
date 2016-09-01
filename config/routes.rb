@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :screenings
   cms_fortress_routes :path => '/cms-admin'
 
-  comfy_route :cms_admin, :path => '/admin'
+  comfy_route :cms_admin, :path => '/comfy-admin'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
