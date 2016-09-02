@@ -9,10 +9,8 @@
     - @partners.each do |partner|
       %li.partner-item
         .partner-logo
-          %a{:href => "<haml_loud"}
-            partner.link >
-            %img{:src => "<haml_loud"}/
-            partner.logo >
+          %a{:href => partner.link}
+            %img{:src => partner.logo}
         .partner-content
           %h3
             %a{href: partner.link}
