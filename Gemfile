@@ -37,13 +37,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'comfortable_mexican_sofa', '~> 1.12.0'
-gem 'cms-fortress', '~> 1.3.12'
-gem 'kaminari'
-
+# Rails Admin
 gem 'rails_admin'
-
-# Image uploads for Rails Admin
 gem 'paperclip'
 
 # Use ActiveModel has_secure_password

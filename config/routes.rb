@@ -4,19 +4,11 @@ Rails.application.routes.draw do
   resources :team_members
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :screenings
-  cms_fortress_routes :path => '/cms-admin'
-
-  comfy_route :cms_admin, :path => '/comfy-admin'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # Make sure this routeset is defined last
-  # comfy_route :cms, :path => '/', :sitemap => false
-
   # You can have the root of your site routed with "root"
-  # root :to => "cms/content#show"
   root to: "pages#show", page: 'homepage'
 
 
