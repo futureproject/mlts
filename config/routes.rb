@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get ':page' => 'pages#show'
+  get 'moving-forward/:page' => 'moving_forward#show'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
