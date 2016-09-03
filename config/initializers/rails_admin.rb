@@ -19,6 +19,8 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  config.main_app_name = ["Most Likely to Succeed", "Admin"]
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
