@@ -42,6 +42,9 @@ gem 'rails_admin'
 gem 'paperclip'
 gem 'aws-sdk'
 
+# For storing AWS security credentials locally
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
