@@ -195,4 +195,3 @@ var video_grid = function() {
 }
 
 $(document).ready(video_grid);
-$(window).bind('page:change', video_grid);
