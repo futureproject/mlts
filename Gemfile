@@ -41,6 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_admin'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'devise'
 
 # For storing AWS security credentials locally
 gem 'dotenv-rails', :groups => [:development, :test]
