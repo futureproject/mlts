@@ -15,7 +15,6 @@
 //= require modernizr
 //= require froogaloop.min
 //= require bootstrap_carousel
-//= require turbolinks
 //= require join_us
 //= require social_links
 //= require quote_carousel
