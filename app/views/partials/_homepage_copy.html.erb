@@ -19,10 +19,10 @@
             <ul>
               <% quote.each do |quote| %>
               <li class="review-item">
-                <a href=<%= quote.link %> target="_blank" data-category="Hero-section" data-label="hero-quotes" onclick="ganalytics(this);">
+                <% if quote.link? %><a href=<%= quote.link %>><% end %>
                   <blockquote><%= quote.quote_text %></blockquote>
                   <p class="quote-author"><%= quote.author %></p>
-                </a>
+                <% if quote.link? %></a><% end %>
               </li>
               <% end %>
             </ul>
