@@ -1,0 +1,25 @@
+%h1 Listing quotes
+
+%table
+  %thead
+    %tr
+      %th Author
+      %th Quote text
+      %th Link
+      %th
+      %th
+      %th
+
+  %tbody
+    - @quotes.each do |quote|
+      %tr
+        %td= quote.author
+        %td= quote.quote_text
+        %td= quote.link
+        %td= link_to 'Show', quote
+        %td= link_to 'Edit', edit_quote_path(quote)
+        %td= link_to 'Destroy', quote, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Quote', new_quote_path

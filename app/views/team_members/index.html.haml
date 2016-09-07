@@ -1,0 +1,18 @@
+%section.copy-container.partners-copy
+  .wrapper
+    %h1.partners-title Our Mission
+    %h2.partners-subtitle
+      Most Likely to Succeed is the first national campaign to inspire – and empower – communities across the country to revolutionize their schools for the 21st Century. Through a fifty state tour; community screenings; and a call to action to students, parents, educators, policymakers, and organizations to take a stand for the potential of every young person, we are uniting millions to revolutionize education once and for all.
+
+%section#the-team.the-team-container
+  .the-team-wrapper
+    .the-team-heading
+      %h1 The Team
+      %p We’ve assembled a team of passionate changemakers ready to lead the charge forward.
+    .the-team-content
+      - @team_members.each.with_index do |team_member, i|
+        %div{:class => "team-member #{" selected" if i==0}"}
+          = image_tag team_member.headshot, class: "team-member-photo"
+          %h2.team-member-name= team_member.name
+          %p.team-member-title= team_member.business_title
+          %p.team-member-bio= team_member.bio

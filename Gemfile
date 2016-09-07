@@ -31,15 +31,22 @@ gem 'newrelic_rpm'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
+# gem 'jquery-turbolinks'
+#
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'comfortable_mexican_sofa', '~> 1.12.0'
-gem 'cms-fortress', '~> 1.3.12'
-gem 'kaminari'
+# Rails Admin
+gem 'rails_admin'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'devise'
+
+# For storing AWS security credentials locally
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,18 @@
+%section.copy-container.partners-copy
+  .wrapper
+    %h1.partners-title Our Partners
+    %h2.partners-subtitle
+      Change is only possible when we work together. That’s why we’re partnering with organizations across the country who are leading the way with innovative solutions to reimagine education for the 21st century.
+
+%section.partners-container
+  %ul.partners-list
+    - @partners.each do |partner|
+      %li.partner-item
+        .partner-logo
+          %a{:href => partner.link}
+            %img{:src => partner.logo}
+        .partner-content
+          %h3
+            %a{href: partner.link}
+              =partner.name
+          %p= partner.description

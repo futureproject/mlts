@@ -1,21 +1,23 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  resources :quotes
+  resources :partners
+  resources :team_members
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :screenings
-  cms_fortress_routes :path => '/cms-admin'
-
-  comfy_route :cms_admin, :path => '/admin'
-
-  # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => "cms/content#show"
-  # root to: "home#index"
+  root to: "pages#show", page: 'homepage'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get ':page' => 'pages#show'
+  get 'moving-forward/:page' => 'moving_forward#show'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

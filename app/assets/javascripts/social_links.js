@@ -1,4 +1,4 @@
-var social_links = function() {
+function social_links() {
 
   // Copy Container social icons
   $('.facebook-copy-share').on('click', function(){
@@ -79,4 +79,3 @@ var social_links = function() {
 }
 
 $(document).ready(social_links);
-$(window).bind('page:change', social_links);

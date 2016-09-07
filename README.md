@@ -12,7 +12,7 @@ heroku pg:reset postgresql-angular-7650 --app mlts --confirm mlts && heroku pg:p
 ###### Transferring data from Heroku to local dev database:
 ```bash
 dropdb mlts_development
-heroku pg:pull postgresql-angular-7650 mlts_development
+heroku pg:pull postgresql-angular-7650 mlts_development --app mlts
 ```
 
 ###### Transferring data from local dev database to Heroku (Staging):
@@ -23,5 +23,5 @@ heroku pg:reset postgresql-infinite-58961 --app mlts-staging --confirm mlts-stag
 ###### Transferring data from Heroku to local dev database:
 ```bash
 dropdb mlts_development
-heroku pg:pull postgresql-infinite-58961 mlts_development
+heroku pg:pull postgresql-infinite-58961 mlts_development --app mlts-staging
 ```
