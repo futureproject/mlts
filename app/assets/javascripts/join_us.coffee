@@ -1,6 +1,5 @@
 # Join Us overlay
 
-# $(document).ready ->
 $ ->
   $('.join-us-link').click ->
     $('#mask').fadeIn 300

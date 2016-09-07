@@ -78,7 +78,4 @@ function social_links() {
   }
 }
 
-// $(document).ready(social_links);
-// $(window).bind('page:change', social_links);
-// $(document).on('page:load', social_links);
 $(document).ready(social_links);
