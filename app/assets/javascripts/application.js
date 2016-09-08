@@ -15,6 +15,8 @@
 //= require modernizr
 //= require froogaloop.min
 //= require bootstrap_carousel
+//= require underscore
+//= require gmaps/google
 //= require join_us
 //= require social_links
 //= require quote_carousel

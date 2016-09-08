@@ -47,6 +47,8 @@ gem 'devise'
 
 # Google Maps
 gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 # For storing AWS security credentials locally
 gem 'dotenv-rails', :groups => [:development, :test]
