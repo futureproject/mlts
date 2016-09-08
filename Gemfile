@@ -45,6 +45,9 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
 
+# Google Maps
+gem 'geocoder'
+
 # For storing AWS security credentials locally
 gem 'dotenv-rails', :groups => [:development, :test]
 
