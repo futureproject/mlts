@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @screenings_hash = Gmaps4rails.build_markers(@screenings) do |screening, marker|
       marker.lat screening.latitude
       marker.lng screening.longitude
+      marker.infowindow screening.map_label
     end
     render template: "pages/#{params[:page]}"
   end
