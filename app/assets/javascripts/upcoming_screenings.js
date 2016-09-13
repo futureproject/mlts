@@ -44,7 +44,7 @@ var upcoming_screenings = function() {
     $(this).parent().find(".fsLabel").hide();
   });
 
-  handler = Gmaps.build('Google');
+  handler = Gmaps.build('Google', { markers: { clusterer: undefined  }});
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(markers);
     handler.bounds.extendWith(markers);
