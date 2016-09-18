@@ -19,6 +19,10 @@
 	padding-bottom: 5.75em;
 }
 
+strong {
+  text-decoration: underline;
+}
+
 .mf-page-item {
 	@extend .clearfix;
 	@extend .transition;
