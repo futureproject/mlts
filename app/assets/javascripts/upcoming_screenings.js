@@ -34,7 +34,7 @@ var upcoming_screenings = function() {
   });
 
   handler = Gmaps.build('Google', { markers: { clusterer: undefined  }});
-  handler.buildMap({ provider: {minZoom: 3}, internal: {id: 'map'}}, function(){
+  handler.buildMap({ provider: {minZoom: 3, scrollwheel: false}, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(markers);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
