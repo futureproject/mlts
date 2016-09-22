@@ -19,8 +19,8 @@
 
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
             <table class="screening-tablerow">
-                <tbody>
-                  <%= render partial: 'screening', collection: @screenings, cached: true %>
+              <tbody>
+                  <%= render partial: 'screening', collection: @screenings %>
                 </tbody>
             </table>
         </div>
