@@ -1,5 +1,4 @@
 class Screening < ActiveRecord::Base
-  validates :screening_time, :uniqueness => true
   geocoded_by :full_street_address
   after_validation :geocode
 
