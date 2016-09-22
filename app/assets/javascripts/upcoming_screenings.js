@@ -40,5 +40,4 @@ var upcoming_screenings = function() {
     handler.fitMapToBounds();
   });
 }
-
 $(document).ready(upcoming_screenings);
