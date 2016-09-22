@@ -4,11 +4,15 @@ class Screening < ActiveRecord::Base
   after_validation :geocode
 
   def map_label
-    "<h2>#{city}</h2>
+    label_html = "<h2>#{city}</h2>
     <p>#{screening_time.strftime('%A, %B %e at %l:%M %p')}</p>
     <p>#{venue_name}</p>
     <p>#{street_address}</p>
     "
+    if link?
+      label_html = label_html + "<p><a href=#{link}>RSVP</a></p>"
+    end
+    label_html
   end
 
   private
