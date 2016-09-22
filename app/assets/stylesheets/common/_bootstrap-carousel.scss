@@ -15,7 +15,7 @@
 
 .review-item {
   margin: 0 10px;
-  min-height: 250px;
+  min-height: 350px;
   float: left;
   background-color: $testimonial-grey;
   border-radius: 5px;
@@ -65,7 +65,13 @@ blockquote:after {
   width: 100%;
 
   .header-reviews &{
-    min-height: 180px;
+    min-height: 625px;
+    @include larger-than(larger) {
+      min-height:525px;
+    }
+    @include larger-than(more-large) {
+      min-height: 400px;
+    }
   }
 
 }
