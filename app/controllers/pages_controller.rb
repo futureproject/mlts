@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def show
-    @quotes = Quote.all.each_slice(3).to_a
+    @quotes = quotes_hash
     @screenings = all_future_screenings
     @screenings_gmaps_hash = screenings_gmaps_hash
     render template: "pages/#{params[:page]}"
@@ -11,14 +11,20 @@ class PagesController < ApplicationController
 
   private
 
+  def quotes_hash
+    Rails.cache.fetch("quotes", expires_in: 12.hours) do
+      @quotes = Quote.all.each_slice(3).to_a
+    end
+  end
+
   def all_future_screenings
-    Rails.cache.fetch("screenings", expires_in: 5.minutes) do
+    Rails.cache.fetch("screenings", expires_in: 12.hours) do
       @screenings = Screening.where('screening_time > ?', DateTime.now).sort_by &:screening_time
     end
   end
 
   def screenings_gmaps_hash
-    Rails.cache.fetch("screenings_gmaps_hash", expires_in: 5.minutes) do
+    Rails.cache.fetch("screenings_gmaps_hash", expires_in: 12.hours) do
       Gmaps4rails.build_markers(all_future_screenings) do |screening, marker|
         marker.lat screening.latitude
         marker.lng screening.longitude
