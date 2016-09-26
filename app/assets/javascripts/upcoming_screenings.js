@@ -1,9 +1,5 @@
 var upcoming_screenings = function() {
 
-  // Google spreadsheet as a CMS for Screenings
-  // ID of the Google Spreadsheet
-  var spreadsheetID = "1umoL078h5Y_LNz4iV6KK5Q06_0H-9PESDTYsU4axib8";
-
   // Table Links
   $('#screenings').on('click', '*[data-href]', function(){
     if ($(this).data('href') != "") {
@@ -11,7 +7,6 @@ var upcoming_screenings = function() {
     }
     return false;
   });
-
 
   // Hero button event
   $('.screening-item').on('click', function(e) {
@@ -33,11 +28,5 @@ var upcoming_screenings = function() {
     $(this).parent().find(".fsLabel").hide();
   });
 
-  handler = Gmaps.build('Google', { markers: { clusterer: undefined  }});
-  handler.buildMap({ provider: {minZoom: 3, scrollwheel: false}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(markers);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  });
 }
 $(document).ready(upcoming_screenings);
