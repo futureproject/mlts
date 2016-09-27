@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     @screenings = all_future_screenings
     @screenings_gmaps_hash = screenings_gmaps_hash
     render template: "pages/#{params[:page]}"
+    expires_in 15.minutes, :public => true
   end
 
   def about
