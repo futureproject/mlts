@@ -16,6 +16,7 @@
 //= require froogaloop.min
 //= require bootstrap_carousel
 //= require underscore
+//= require markerclusterer.min
 //= require gmaps/google
 //= require join_us
 //= require social_links

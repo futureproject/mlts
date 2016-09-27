@@ -1,9 +1,6 @@
-<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-<script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 <script>
     var drawGoogleMap = function() {
-      console.log('hello!');
       var markers = <%=raw @screenings_gmaps_hash.to_json %>;
       handler = Gmaps.build('Google', { markers: { clusterer: undefined  }});
       handler.buildMap({ provider: {scrollwheel: false}, internal: {id: 'map'}}, function(){
