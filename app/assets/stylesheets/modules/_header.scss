@@ -43,7 +43,6 @@
     display: block;
   }
 
-  // specific for 'Contact Us' placement in man nav header
   .nav-items.float-right-nav {
     float: right;
     right: 3em;
@@ -81,21 +80,44 @@
   }
 }
 
-#home-main-nav .nav-items {
-  @include smaller-than(ex-large) {
-    &:not(:first-child) {
-      display: none;
-    }
-    &:first-child a, &:nth-child(5) {
-      bottom:  5px;
-      &:before {
-        display: none;
-      }
-    }
-    &:first-child, &:nth-child(5) {
-      margin-left: 1em;
-      z-index: 1;
-    }
+ul.main-nav-list {
+  list-style-type: none;
+  overflow: hidden;
+
+  li {
+    float: left;
+  }
+}
+
+ul.main-nav-list li a {
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+ul.main-nav-list li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.main-nav-list li:not(:first-child) {display: none;}
+  ul.main-nav-list li.icon {
+    float: right;
+    padding-right: 20px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.main-nav-list.responsive {position: relative;}
+  ul.main-nav-list.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+  ul.main-nav-list.responsive li {
+    float: none;
+    width: 100%;
+    display: block;
   }
 }
 
