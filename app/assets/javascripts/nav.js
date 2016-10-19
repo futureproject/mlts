@@ -1,11 +1,8 @@
 $(document).ready(function() {
-
-  $('#nav-expand-icon').click(function() {
-      var x = document.getElementById("home-main-nav");
-      if (x.className === "main-nav-list") {
-          x.className += " responsive";
-      } else {
-          x.className = "main-nav-list";
-      }
-  });
+  var nav = responsiveNav("#main-nav");
+  var toggle = document.getElementById("mobile-nav-toggle");
+  toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    nav.toggle();
+  }, false);
 });

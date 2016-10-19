@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr
+//= require responsive-nav.min
 //= require nav
 //= require froogaloop.min
 //= require bootstrap_carousel
