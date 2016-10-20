@@ -13,18 +13,30 @@
 
 // Navigation
 
-.nav-items{
-	font-family: $sans-light;
-  float: left;
-  margin: 0 0 0 1.5em;
-  position: relative;
-	@extend .transition;
-
-	&:hover{
-		opacity: 0.7;
-	}
+.mlts-nav {
+  background: $dark-blue !important;
+  font-size: 15px !important;
+  a {
+    font-family: $sans-light !important;
+    color: white !important;
+    @extend .transition;
+    &:hover {
+      opacity: 0.7 !important;
+    }
+  }
 }
 
+.icon-home {
+  font-size: 1.5em !important;
+}
+
+.navbar-brand {
+  margin-left: 0px !important;
+}
+
+.navbar-right {
+  margin-right: 0px !important;
+}
 .separator:before{
 	content: '\00B7';
 	position: absolute;
