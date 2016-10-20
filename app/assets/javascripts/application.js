@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require modernizr
 //= require froogaloop.min
+//= require bootstrap.min
 //= require bootstrap_carousel
 //= require underscore
 //= require markerclusterer.min

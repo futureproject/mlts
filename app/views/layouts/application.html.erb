@@ -24,23 +24,42 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand icon icon-home" href="/"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="nav-scroll screenings-nav-link" href="/#host-a-screening">Host a Screening</a></li>
+        <li><a href="http://prompts.mltsfilm.org/">Next-Step Prompts</a></li>
+        <li><a href="http://www.amazon.com/Most-Likely-Succeed-Preparing-Innovation/dp/1501104314/ref=sr_1_1?ie=UTF8&amp;qid=1457310377&amp;sr=8-1&amp;keywords=ted+dintersmith">Book</a></li>
+        <li><a href="/moving-forward/index">Other Resources</a></li>
+        <li><a href="/#screenings">Upcoming Screenings</a></li>
+        <li><a class="nav-scroll screenings-nav-link" href="/faq">FAQs</a></li>
+        <li><a href="/team_members">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="join-us-link"><a>Join Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-  <nav class="main-nav">
-  <ul class="main-nav-list" id="home-main-nav">
-    <li class="nav-items nav-scroll home-nav"><a class="icon icon-home" href="/" data-category="Navigation" onclick="ganalytics(this);"></a></li>
-    <li class="nav-items"><a class="nav-scroll screenings-nav-link" href="/#host-a-screening" data-category="Navigation" onclick="ganalytics(this);">Host a Screening</a></li>
-    <li class="nav-items separator"><a href="http://prompts.mltsfilm.org/" data-category="Navigation" onclick="ganalytics(this);">Next-Step Prompts</a></li>
-    <li class="nav-items separator"><a href="http://www.amazon.com/Most-Likely-Succeed-Preparing-Innovation/dp/1501104314/ref=sr_1_1?ie=UTF8&amp;qid=1457310377&amp;sr=8-1&amp;keywords=ted+dintersmith" data-category="Navigation" onclick="ganalytics(this);">Book</a></li>
-    <li class="nav-items separator"><a href="/moving-forward/index" data-category="Navigation" onclick="ganalytics(this);">Other Resources</a></li>
-    <li class="nav-items separator"><a href="/#screenings" data-category="Navigation" onclick="ganalytics(this);">Upcoming Screenings</a></li>
-    <li class="nav-items separator"><a class="nav-scroll screenings-nav-link" href="/faq" data-category="Navigation" onclick="ganalytics(this);">FAQs</a></li>
-    <li class="nav-items separator"><a href="/team_members" data-category="Navigation" onclick="ganalytics(this);">About Us</a></li>
-    <li class="nav-items join-us-link float-right-nav"><a data-category="Navigation" onclick="ganalytics(this);">Join Us</a></li>
-  </ul>
-</nav>
 
 <%= render partial: "partials/join_us_overlay" %>
 
