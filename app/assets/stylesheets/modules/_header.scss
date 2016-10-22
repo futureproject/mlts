@@ -14,7 +14,6 @@
   font-size: 15px !important;
   a {
     font-family: $sans-light !important;
-    padding: 17px 10px !important;
     color: white !important;
     @extend .transition;
     &:hover {
@@ -24,7 +23,8 @@
 }
 
 .icon-home {
-  font-size: 1.5em !important;
+  font-size: 2em !important;
+  padding-top: 10px !important;
 }
 
 .navbar-brand {
