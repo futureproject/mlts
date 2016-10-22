@@ -573,7 +573,7 @@ td{
 	@include smaller-than(large){
 		.nav-items{
 			margin: 0.2em 0;
-			display: block;
+      display: block;
 			float: none;
 		}
 	}

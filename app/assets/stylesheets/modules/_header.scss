@@ -3,12 +3,8 @@
 .header-container{
 	display: inline-block;
 	width: 100%;
-	padding-top: $mobile-nav-height;
+	padding-top: $nav-height;
   position: relative;
-
-	@include larger-than(extra-large) {
-    padding-top: $nav-height;
-  }
 }
 
 // Navigation
@@ -94,7 +90,6 @@
 	bottom: 0;
 	right: 0;
   overflow: hidden;
-  // min-height: 700px;
 
 	@include larger-than(extra-large) {
     background: none;

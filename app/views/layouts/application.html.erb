@@ -25,6 +25,7 @@
   <%= csrf_meta_tags %>
 </head>
 
+<body>
 <header>
   <nav class="mlts-nav navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
@@ -57,13 +58,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 </header>
-<body>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
 <%= render partial: "partials/join_us_overlay" %>
 
 <%= yield %>
+
+
+<div id="mask"></div>
 
 <footer class="main-footer">
   <nav>
@@ -75,8 +79,5 @@
     </ul>
   </nav>
 </footer>
-
-<div id="mask"></div>
-
 </body>
 </html>

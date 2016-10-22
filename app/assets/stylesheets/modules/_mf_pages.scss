@@ -26,7 +26,7 @@
 // ========
 .sub-nav	{
 	position: fixed;
-	top: 70px;
+	top: $nav-height;
 	display: table;
 	height: 70px;
 	width: 100%;
@@ -120,7 +120,7 @@
 	padding-bottom: 2em;
 	@include larger-than(more-large) {
 		width: 53.6875rem ; // 859px / 16px
-		width: 60rem ; 
+		width: 60rem ;
 		margin: 0 auto;
 	}
 }
@@ -178,7 +178,7 @@
 	}
 
 	&.selected:before {
-		display: inline-block;			
+		display: inline-block;
 	}
 	.answer-container & {
 		width: 100%;
