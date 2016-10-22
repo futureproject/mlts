@@ -577,16 +577,14 @@ td{
 			float: none;
 		}
 	}
-
-	.separator:before{
-		@include smaller-than(large){
-			content: '';
-		}
-	}
 }
 
 .footer-nav-links{
-	@extend .clearfix;
-	display: inline-block;
-	text-align: center;
+  text-align: center;
+  @include larger-than(extra-large) {
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
 }
