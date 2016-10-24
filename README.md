@@ -1,6 +1,6 @@
 ## Most Likely To Succeed
 
-This is a Rails App using Comfortable Mexican Sofa for CMS functionality.
+This is a Rails App for the MLTS main website, using Rails Admin for basic CMS functionality.
 
 ## Deployment Info
 
