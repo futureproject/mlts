@@ -22,6 +22,7 @@
 .screening-form-background {
   @extend .expert-list-wrapper;
   background-image: url("/images/host-a-screening-background.jpg");
+  background-size: cover;
 }
 
 .screening-form-text {
