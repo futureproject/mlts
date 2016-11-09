@@ -10,28 +10,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <div />
-  <div class="header-container mf-header">
-      <header>
-          <nav class="sub-nav">
-              <ul class="sub-nav-list">
-                  <li class="sub-nav-list-item "><a href="/moving-forward/know-your-stuff/">Know Your Stuff</a></li>
-                  <li class="sub-nav-list-item separator"><a href="/moving-forward/for-parents/">For Parents</a></li>
-                  <li class="sub-nav-list-item separator"><a href="/moving-forward/for-teachers/">For Teachers</a></li>
-                  <li class="sub-nav-list-item separator active"><a href="/moving-forward/for-school-leaders/">For School Leaders</a></li>
-                  <li class="sub-nav-list-item separator"><a href="/moving-forward/for-students/">For Students</a></li>
-                  <li class="sub-nav-list-item separator"><a href="/moving-forward/for-change-agents/">For Change Agents</a></li>
-              </ul>
-          </nav>
-          <nav class="sub-nav sub-nav-mobile">
-              <ul class="sub-nav-list">
-                  <li class="sub-nav-list-item "><a href="/">Home</a></li>
-                  <li class="sub-nav-list-item separator"><a href="/moving-forward/index">Moving Forward</a></li>
-              </ul>
-          </nav>
-
-      </header>
-  </div>
-
+    <%= render partial: "partials/mf_nav", locals: {current_page: "for-school-leaders"} %>
   <section class="copy-container moving-forward-copy">
     <div class="wrapper">
       <h1 class="mf-title">For School Leaders</h1>

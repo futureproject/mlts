@@ -1,0 +1,22 @@
+<%- current_page ||= "index" %>
+<div class="header-container navigation mf-header">
+  <header>
+      <nav class="sub-nav">
+          <ul class="sub-nav-list">
+              <li class="sub-nav-list-item <%="active" if current_page == "know-your-stuff"%>"><a href="/moving-forward/know-your-stuff/">Know Your Stuff</a></li>
+              <li class="sub-nav-list-item separator <%="active" if current_page == "for-parents"%>"><a href="/moving-forward/for-parents/">For Parents</a></li>
+              <li class="sub-nav-list-item separator <%="active" if current_page == "for-teachers"%>"><a href="/moving-forward/for-teachers/">For Teachers</a></li>
+              <li class="sub-nav-list-item separator <%="active" if current_page == "for-school-leaders"%>"><a href="/moving-forward/for-school-leaders/">For School Leaders</a></li>
+              <li class="sub-nav-list-item separator <%="active" if current_page == "for-students"%>"><a href="/moving-forward/for-students/">For Students</a></li>
+              <li class="sub-nav-list-item separator <%="active" if current_page == "for-change-agents"%>"><a href="/moving-forward/for-change-agents/">For Change Agents</a></li>
+          </ul>
+      </nav>
+      <nav class="sub-nav sub-nav-mobile">
+          <ul class="sub-nav-list">
+              <li class="sub-nav-list-item "><a href="/">Home</a></li>
+              <li class="sub-nav-list-item separator"><a href="/moving-forward/index">Moving Forward</a></li>
+          </ul>
+      </nav>
+
+  </header>
+</div>
