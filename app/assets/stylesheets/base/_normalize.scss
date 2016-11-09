@@ -71,8 +71,11 @@ body{
 // Remove the gray background color from active links in IE 10.
 a{
   background: transparent;
-  text-decoration: none;
   color: inherit;
+}
+
+a:not(.underline) {
+    text-decoration: none;
 }
 
 // Address `outline` inconsistency between Chrome and other browsers.
