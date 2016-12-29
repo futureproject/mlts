@@ -1,7 +1,7 @@
-
+<% cache @screenings do %>
 <script>
     var drawGoogleMap = function() {
-      var markers = <%=raw @screenings_gmaps_hash.to_json %>;
+      var markers = <%=raw @markers.to_json %>;
       handler = Gmaps.build('Google', { markers: { clusterer: undefined  }});
       handler.buildMap({ provider: {scrollwheel: false}, internal: {id: 'map'}}, function(){
         markers = handler.addMarkers(markers);
@@ -17,19 +17,20 @@
     <div id="tourscreenings"></div>
     <div id="communityscreenings"></div>
     <div class="screening-wrapper">
-        <h3>Upcoming Screenings</h3>
+      <h3>Upcoming Screenings</h3>
 
-        <div class='screening-map' style='width: 100%;'>
-          <div id="map" style='width: 100%; height: 400px;'></div>
-        </div>
+      <div class='screening-map' style='width: 100%;'>
+        <div id="map" style='width: 100%; height: 400px;'></div>
+      </div>
 
-        <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List" onclick="ganalytics(this);">
+        <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List">
             <table class="screening-tablerow">
               <tbody>
-                  <%= render partial: 'screening', collection: @screenings %>
+                  <%= render @screenings %>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
 <!-- End of Screenings Container -->
+<% end %>
