@@ -27,7 +27,7 @@
         <div class="screening-table" data-category="Screening Section" data-label="Host Screenings List">
             <table class="screening-tablerow">
               <tbody>
-                  <%= render @screenings %>
+                  <%= render @screenings.sort_by(&:screening_time) %>
                 </tbody>
             </table>
         </div>
