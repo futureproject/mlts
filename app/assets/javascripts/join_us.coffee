@@ -4,6 +4,8 @@ $ ->
   $('.join-us-link').click ->
     $('#mask').fadeIn 300
     $('.join-us-form-overlay').fadeIn 300
+    unless $(".navbar-toggle").hasClass("collapsed")
+      $(".navbar-toggle").click()
     false
 
   # Hide when the close button or the mask layer is clicked
