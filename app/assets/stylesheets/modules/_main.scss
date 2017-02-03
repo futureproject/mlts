@@ -22,13 +22,22 @@ _::-webkit-full-page-media, _:future, :root {
 
 .award-show-laurels{
   // @extend .clearfix;
-	margin: 1em auto 4em;
-	text-align: center;
+  margin: 1em auto 4em;
+  text-align: center;
 
 	@include larger-than(large){
-		margin-bottom: 3em;
+  margin-bottom: 3em;
   max-width: 90%;
 	}
+}
+
+// pseudo element for hash link positioning
+.award-show-laurels:before {
+  display: block;
+  content: " ";
+  margin-top: -90px;
+  height: 90px;
+  visibility: hidden;
 }
 
 .award-show-laurel{
