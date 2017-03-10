@@ -42,12 +42,12 @@ _::-webkit-full-page-media, _:future, :root {
 
 .award-show-laurel{
 	display: inline-block;
-  width: 32%;
+  width: 23%;
   margin-top: 1em;
   position: relative;
 
 	@include larger-than(large) {
-    width: 18%;
+    width: 13%;
 	}
 
 	a{
