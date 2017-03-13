@@ -4,15 +4,7 @@
   display: block;
 
   .film-description {
-    // padding: 4em 0 5em;
     display: block;
-  }
-}
-
-// Safari Only:
-_::-webkit-full-page-media, _:future, :root {
-  .film-description {
-    margin-top: 200px;
   }
 }
 
