@@ -35,45 +35,38 @@ var video_grid = function() {
       $('html').removeClass('trailer-open');
   });
 
+  // Commented out for temporary "quick fix" to remove quotes from video grid.
   //Random Videos on load
-  var videoArray =
-  [
-      ['116808028', 'robinson1.jpg', 'Sir Ken Robinson' , 'Author, speaker and international advisor on education' ],
-      ['116807992', 'robinson2.jpg', 'Sir Ken Robinson' , 'Author, speaker and international advisor on education'],
-      ['116807934', 'friedman.jpg', 'Thomas Friedman', 'American journalist, columnist and author'],
-      ['116810316', 'silverstein.jpg', 'Jed Silverstein', 'English & Philosophy teacher at Riverdale Country School'],
-      ['116809426', 'khan.jpg', 'Sal Khan', 'Founder of Khan Academy'],
-      ['116809099', 'mazur.jpg', 'Eric Mazur', 'Physicist and educator at Harvard University'],
-      ['116808046', 'macafee.jpg', 'Andrew MacAfee', 'Associate director of the Center for Digital Business at the MIT Sloan School of Management'],
-      ['117011883', 'wagner.jpg', 'Tony Wagner', 'Expert In Residence at Harvard University’s new Innovation Lab'],
-      ['117016471', 'bruett.jpg', 'Karen Bruett', 'Special Advisor for EdLeader21'],
-      ['117058811', 'zhao.jpg', 'Yong Zhao', 'Presidential Chair at the University of Oregon'],
-      ['117058806', 'hrabowski.jpg', 'Freeman Hrabowski', 'President of the University of Maryland, Baltimore County'],
-      ['117059210', 'dintersmith.jpg' , 'Ted Dintersmith', 'Venture capitalist focused on education issues']
-  ];
+  // var videoArray =
+  // [
+      // ['116808028', 'robinson1.jpg', 'Sir Ken Robinson' , 'Author, speaker and international advisor on education' ],
+      // ['116807992', 'robinson2.jpg', 'Sir Ken Robinson' , 'Author, speaker and international advisor on education'],
+      // ['116807934', 'friedman.jpg', 'Thomas Friedman', 'American journalist, columnist and author'],
+      // ['116810316', 'silverstein.jpg', 'Jed Silverstein', 'English & Philosophy teacher at Riverdale Country School'],
+      // ['116809426', 'khan.jpg', 'Sal Khan', 'Founder of Khan Academy'],
+      // ['116809099', 'mazur.jpg', 'Eric Mazur', 'Physicist and educator at Harvard University'],
+      // ['116808046', 'macafee.jpg', 'Andrew MacAfee', 'Associate director of the Center for Digital Business at the MIT Sloan School of Management'],
+      // ['117011883', 'wagner.jpg', 'Tony Wagner', 'Expert In Residence at Harvard University’s new Innovation Lab'],
+      // ['117016471', 'bruett.jpg', 'Karen Bruett', 'Special Advisor for EdLeader21'],
+      // ['117058811', 'zhao.jpg', 'Yong Zhao', 'Presidential Chair at the University of Oregon'],
+      // ['117058806', 'hrabowski.jpg', 'Freeman Hrabowski', 'President of the University of Maryland, Baltimore County'],
+      // ['117059210', 'dintersmith.jpg' , 'Ted Dintersmith', 'Venture capitalist focused on education issues']
+  // ];
 
-  var videoResult = shuffleArray(videoArray);
   var video1, video2, video3, video4, video5;
 
   $('.grid-1').css('background-image', 'url(../images/sundance-recap.jpg)');
   $('.grid-3').css('background-image', 'url(../images/hammond.jpg)');
-  $('.grid-9').css('background-image', 'url(../images/'+ videoResult[3][1] + ')');
-  $('.grid-7').css('background-image', 'url(../images/'+ videoResult[4][1] + ')');
-  $('.grid-11').css('background-image', 'url(../images/'+ videoResult[2][1] + ')');
+  $('.grid-9').css('background-image', 'url(../images/bruett.jpg)');
+  $('.grid-7').css('background-image', 'url(../images/dintersmith.jpg)');
+  $('.grid-11').css('background-image', 'url(../images/hrabowski.jpg)');
 
   $(".video2").data('id', 120585562);
   $(".video3").data('id', 116810306);
-  $(".video4").data('id', videoResult[3][0]);
-  $(".video5").data('id', videoResult[4][0]);
-  $(".video6").data('id', videoResult[2][0]);
+  $(".video4").data('id', 117016471);
+  $(".video5").data('id', 117059210);
+  $(".video6").data('id', 117058806);
 
-  $('.grid-9 .video-name').html(videoResult[3][2]);
-  $('.grid-7 .video-name').html(videoResult[4][2]);
-  $('.grid-11 .video-name').html(videoResult[2][2]);
-
-  $('.grid-9 .video-descript').html(videoResult[3][3]);
-  $('.grid-7 .video-descript').html(videoResult[4][3]);
-  $('.grid-11 .video-descript').html(videoResult[2][3]);
 
   //Random Videos on load
   var quotePosterArray = ['mltsposter1.png','mltsposter2.png','mltsposter3.png','mltsposter4.png'];
