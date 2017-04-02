@@ -190,19 +190,6 @@
 		}
 	}
 
-  &:nth-child(2) {
-    @include larger-than(medium){
-      border-right: 0;
-      border-left: 0;
-    }
-    @include smaller-than(medium) {
-    	border-right: 1px solid $transwhite;
-    	border-left: 1px solid $transwhite;
-    	border-top: 0;
-    	border-bottom: 0;
-    }
-  }
-
 	&:last-child{
 		@include larger-than(medium){
 			display: inline-block !important;
@@ -296,37 +283,6 @@
   }
 }
 
-.review-item {
-	// // width: 25%;
-	// padding: 1em;
-  // font-family: $sans;
-  // font-size: 0.95em;
-	// a, span{
-		// // display: block;
-	// }
-
-  // a[href=""]{
-    // pointer-events: none;
-    // cursor: text;
-  // }
-
-	// span{
-		// font-family: $sans-bold;
-	// }
-
-  // @include smaller-than(huge) {
-    // font-size: 0.9em;
-  // }
-  // @include smaller-than(more-large) {
-    // font-size: 0.85em;
-  // }
-	// @include smaller-than(large) {
-		// display: none;
-	// }
-}
-
-
-
 
 // Carousel
 .hero-control{
@@ -338,9 +294,6 @@
   }
 
 }
-
-
-
 
 // Vimeo video
 .trailer-video-container{
