@@ -1,6 +1,6 @@
 $ ->
   $('.carousel-control').css('display', 'block')
   $('#hero-quote-carousel').carousel({
-    interval: 5000
+    interval: 7000
   })
   return false
