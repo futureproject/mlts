@@ -34,7 +34,7 @@ h2, .mf-copy {
 }
 
 h3{
-	font-size: 2em;
+	font-size: 2.8em;
 	color: black;
 	margin-bottom: 0.5em;
 	font-family: $sans-light;
@@ -42,13 +42,12 @@ h3{
 	text-align: center;
 
 	+p{
-		font-size: 1.4em;
 		margin: 0 auto;
 		width: 100%;
 		letter-spacing: 0.025em;
 
 		@include larger-than(medium) {
-	      font-size: 1.8em;
+	      font-size: 3.2em;
 	    }
 	}
 
@@ -57,7 +56,7 @@ h3{
 	}
 
 	@include larger-than(medium) {
-      font-size: 2.5em;
+      font-size: 3.4em;
     }
 }
 
