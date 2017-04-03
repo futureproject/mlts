@@ -1,20 +1,5 @@
 function social_links() {
 
-  // Copy Container social icons
-  $('.facebook-copy-share').on('click', function(){
-      var $this = $(this),
-      fact = $this.parents('.wrapper').find('h2').html(),
-      img = $this.data('poster');
-      facebookShare(fact, img);
-  });
-
-  $('.twitter-grid-share').on('click', function(){
-      var $this = $(this),
-      fact = $this.parents('.grid-text-container').find('p').html(),
-      factGrab = fact.substring(0, 85);
-      twitterShare(factGrab);
-  });
-
   // Video Grid social icons
   $('.facebook-grid-share').on('click', function(){
       var $this = $(this),
@@ -23,9 +8,9 @@ function social_links() {
       facebookShare(fact, img);
   });
 
-  $('.twitter-copy-share').on('click', function(){
+  $('.twitter-grid-share').on('click', function(){
       var $this = $(this),
-      fact = $this.parents('.wrapper').find('h2').html(),
+      fact = $this.parents('.grid-text-container').find('p').html(),
       factGrab = fact.substring(0, 85);
       twitterShare(factGrab);
   });
