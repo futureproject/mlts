@@ -2,19 +2,10 @@
   cursor: pointer;
 }
 
-// Standalone join us page
-.join-us-standalone {
-  text-align: center;
-  padding: 10px;
-  float: left;
-  font-size: 1.2em;
-  top: 0;
-  left: 0;
-  margin: 10%;
-}
-
-// Overlay form for other pages
-.join-us-form-overlay {
+.lightbox-overlay {
+  h3 {
+    color: white;
+  }
   display: none;
   color: white;
   text-align: center;
@@ -29,7 +20,7 @@
   z-index: 99999;
 }
 
-// Join Us overlay (enabled by 'Join Us' links in nav and on pages)
+// Join Us and Contact Us lightbox overlays
 #mask {
     display: none;
     background: #000;

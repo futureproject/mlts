@@ -14,12 +14,22 @@
       border-radius: 50%;
     }
   }
+
+  .overlay-social-icons &{
+    padding-bottom: 1em;
+    &:after{
+      font-size: 1em;
+      padding: 0.5em;
+      border: 1px solid $light-grey;
+      border-radius: 50%;
+    }
+  }
 }
 
 
 
 .no-touch{
-  .social-icons .icon{
+  .social-icons {
     &:hover{
       &:after{
         opacity: 0.4;
@@ -35,6 +45,7 @@
       }
     }
   }
+
 }
 
 .icon-close{
