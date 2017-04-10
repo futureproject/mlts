@@ -73,7 +73,7 @@
           <ul class="dropdown-menu mlts-nav">
             <li><a href="/team_members">Team</a></li>
             <li><a href="/#quotes">What People Are Saying</a></li>
-            <li><a href="mailto:info@mltsfilm.org">Contact Us</a></li>
+            <li class="contact-us-link"><a href="#">Contact Us</a></li>
           </ul>
         </li>
       </ul>
@@ -90,6 +90,7 @@
   <p class="alert"><%= alert %></p>
 
 <%= render partial: "partials/join_us_overlay" %>
+<%= render partial: "partials/contact_us_overlay" %>
 
 <%= yield %>
 
