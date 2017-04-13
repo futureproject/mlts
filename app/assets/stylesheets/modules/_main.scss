@@ -7,10 +7,20 @@
     padding: 4em 0;
     display: block;
   }
+
+  .call-to-action {
+    font-size: 1.2em;
+  }
 }
 
 .mlts-blue {
   color: $mlts-blue;
+}
+
+a.mlts-blue {
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .header-text-shadow {
