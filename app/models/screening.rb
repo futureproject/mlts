@@ -3,7 +3,7 @@ class Screening < ActiveRecord::Base
   after_validation :geocode
 
   def map_label
-    label_html = "<h2>#{city}</h2>
+    label_html = "<h2>#{city}, #{state}</h2>
     <p>#{screening_time.strftime('%A, %B %e at %l:%M %p')}</p>
     <p>#{venue_name}</p>
     <p>#{street_address}</p>
@@ -17,9 +17,9 @@ class Screening < ActiveRecord::Base
   private
   def full_street_address
     if country?
-      street_address.strip + ', ' + city + ', ' + country
+      street_address.strip + ', ' + city + ', ' + state + ', ' + country
     else
-      street_address.strip + ', ' + city
+      street_address.strip + ', ' + city + ', ' + state
     end
   end
 end
