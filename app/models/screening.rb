@@ -1,7 +1,8 @@
 class Screening < ActiveRecord::Base
   validates_uniqueness_of :identifier
+  validates :street_address, :city, :state, presence: true
+  after_validation :geocode, if: ->(screening){screening.street_address.present? && screening.city.present? && screening.state.present?}
   geocoded_by :full_street_address
-  after_validation :geocode
 
   def map_label
     label_html = "<h2>#{city}, #{state}</h2>
@@ -18,9 +19,9 @@ class Screening < ActiveRecord::Base
   private
   def full_street_address
     if country?
-      street_address.strip + ', ' + city + ', ' + state + ', ' + country
+      street_address + ', ' + city + ', ' + state + ', ' + country
     else
-      street_address.strip + ', ' + city + ', ' + state
+      street_address + ', ' + city + ', ' + state
     end
   end
 end
