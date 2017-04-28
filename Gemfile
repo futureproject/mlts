@@ -50,6 +50,9 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 
+# Screening import
+gem 'roo', '~> 2.5.0'
+
 # For storing AWS security credentials locally
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -63,6 +66,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
