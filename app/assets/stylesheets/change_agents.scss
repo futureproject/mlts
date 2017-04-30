@@ -8,12 +8,9 @@
   width:90%;
 }
 
-.change-agents-heading {
-    h1 {
-      font-size: 3em;
-    }
-    padding-bottom: 40px;
-}
+  .change-agents-copy {
+    font-size: 1.2em;
+  }
 
 .change-agent {
   margin-bottom: 20px;
@@ -21,7 +18,7 @@
 
   .change-agent-title {
     text-align: center;
-    color: $light-grey;
+    color: $dark-grey;
     font-size: 0.75em;
   }
 
