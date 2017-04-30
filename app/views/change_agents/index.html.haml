@@ -1,16 +1,17 @@
-.change-agents-wrapper
-  %h3
-    Change
-    %span.mlts-blue Agents
-  %h2.change-agents-copy
-    MLTS Change Agents are past screening hosts who are continuing to spread the film and its message throughout their communities. With our support, Change Agents engage other stakeholders in ongoing screening events and follow up discussions, activities and initiatives. MLTS Change Agents are our thought partners - their input shapes the way we work to transform schools across the world. To learn more about the program, please submit an inquiry below.
+%section.copy-container.partners-copy
+  .wrapper
+    %h1.partners-title
+      Change
+      %span.mlts-blue Agents
+    %h2.partners-subtitle
+      MLTS Change Agents are past screening hosts who are continuing to spread the film and its message throughout their communities. With our support, Change Agents engage other stakeholders in ongoing screening events and follow up discussions, activities and initiatives. MLTS Change Agents are our thought partners - their input shapes the way we work to transform schools across the world. To learn more about the program, please submit an inquiry below:
+    = render partial: "partials/host_a_screening_form"
 
-.change-agents-container
+%section#change-agents.change-agents-container
   .change-agents-wrapper
     - @change_agents.each.with_index do |change_agent, i|
-      - if i == 0 || i % 3 == 0
-        .row
-      .col-sm-4.change-agent
+      -# %div{:class => "change-agent #{" selected" if i==0}"}
+      %div.col-md-4
         %h2.change-agent-name= link_to(change_agent.name, change_agent.link)
         %p.change-agent-title= change_agent.title
         %p.change-agent-title= change_agent.location
