@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :change_agents
   devise_for :admins
   resources :quotes
   resources :partners
