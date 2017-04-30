@@ -13,26 +13,11 @@
       font-size: 3em;
     }
     padding-bottom: 40px;
-
-    @include larger-than(medium) {
-      float: left;
-      width: 20%;
-    }
 }
 
 .change-agent {
-  display: inline-block;
-  width: 100%;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  @include larger-than(medium) {
-    width: 30%;
-  }
-
-  .change-agent-name {
-    color: black;
-    font-size: 1em;
-  }
 
   .change-agent-title {
     text-align: center;
@@ -40,22 +25,20 @@
     font-size: 0.75em;
   }
 
-  // display quote & image border for selected team member
-  &.selected {
-     margin-bottom: 300px;
-    .change-agent-quote {
-      display: block;
-    }
-  }
-
-  // full-width speech bubbles for quotes
+  // Speech bubbles
   .change-agent-quote {
     display: block;
-    position:absolute;
     margin:30px 15px 0.5em;
     padding:15px;
     color:#333;
     background:#eee;
+    -webkit-transition: 1s;
+    &:hover {
+      background: $mlts-blue;
+      &:after {
+      border-bottom-color: $mlts-blue;
+      }
+    }
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
@@ -65,40 +48,22 @@
     }
   }
 
-
-  // speech bubble traingles
+  // Speech bubble traingles
   .change-agent-quote:after {
-    left:50%;
     content:"";
-    position:absolute;
-    top:-30px;
+    position: absolute;
+    left: 45%;
+    top: 60px;
+    @include larger-than(medium) {
+      top: 76px;
+    }
     border:15px solid transparent;
     border-bottom-color:#eee;
+    -webkit-transition: 1s;
     /* reduce the damage in FF3.0 */
     display:block;
     width:0;
   }
-
-
-  @include larger-than(medium) {
-    // align triangles to match grid with rows of 3
-    &:nth-child(3n+1) {
-      .change-agent-quote:after {
-        left:12%;
-      }
-    }
-    &:nth-child(3n+2) {
-      .change-agent-quote:after {
-        left:47%;
-      }
-    }
-    &:nth-child(3n+3) {
-      .change-agent-quote:after {
-        left:86%;
-      }
-    }
-  }
-
 }
 
 
