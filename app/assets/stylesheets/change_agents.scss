@@ -1,12 +1,14 @@
-// Place all the styles related to the team_members controller here.
+// Place all the styles related to the change_agents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.the-team-wrapper {
+
+.change-agents-wrapper {
   @extend .expert-list-wrapper;
+  width:90%;
 }
 
-.the-team-heading {
+.change-agents-heading {
     h1 {
       font-size: 3em;
     }
@@ -18,58 +20,37 @@
     }
 }
 
-.the-team-content {
-    @include larger-than(medium) {
-      width: 75%;
-      float: right;
-    }
-}
-
-.team-member {
+.change-agent {
   display: inline-block;
   width: 100%;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   @include larger-than(medium) {
     width: 30%;
   }
 
-  .team-member-name {
-    cursor: pointer;
+  .change-agent-name {
     color: black;
     font-size: 1em;
   }
 
-  .team-member-title {
-    cursor: pointer;
+  .change-agent-title {
     text-align: center;
     color: $light-grey;
     font-size: 0.75em;
   }
 
-  .team-member-photo {
-    cursor: pointer;
-    display:block;
-    margin:auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-
-  // display bio & image border for selected team member
+  // display quote & image border for selected team member
   &.selected {
      margin-bottom: 300px;
-    .team-member-bio {
+    .change-agent-quote {
       display: block;
-    }
-
-    .team-member-photo {
-      border: 5px solid $image-border-grey;
     }
   }
 
-  // full-width speech bubbles for bios
-  .team-member-bio {
-    display: none;
+  // full-width speech bubbles for quotes
+  .change-agent-quote {
+    display: block;
     position:absolute;
     margin:30px 15px 0.5em;
     padding:15px;
@@ -86,7 +67,7 @@
 
 
   // speech bubble traingles
-  .team-member-bio:after {
+  .change-agent-quote:after {
     left:50%;
     content:"";
     position:absolute;
@@ -102,21 +83,22 @@
   @include larger-than(medium) {
     // align triangles to match grid with rows of 3
     &:nth-child(3n+1) {
-      .team-member-bio:after {
+      .change-agent-quote:after {
         left:12%;
       }
     }
     &:nth-child(3n+2) {
-      .team-member-bio:after {
+      .change-agent-quote:after {
         left:47%;
       }
     }
     &:nth-child(3n+3) {
-      .team-member-bio:after {
+      .change-agent-quote:after {
         left:86%;
       }
     }
   }
 
 }
+
 
