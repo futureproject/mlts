@@ -3,8 +3,10 @@ class CreateChangeAgents < ActiveRecord::Migration
     create_table :change_agents do |t|
       t.string :name
       t.string :title
-      t.string :bio
-      t.string :link
+      t.string :location
+      t.string :quote
+
+      t.timestamps null: false
     end
   end
 end
