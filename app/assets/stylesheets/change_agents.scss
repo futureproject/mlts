@@ -14,9 +14,8 @@
   }
 
 .change-agent {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   -webkit-transition: 1s;
   &:hover {
     .change-agent-name, .change-agent-title {
@@ -47,21 +46,18 @@
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
-    @include larger-than(medium) {
-      left: 30%;
-      right: 12%;
-    }
   }
 
   // Speech bubble traingles
   .change-agent-quote:after {
     content:"";
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: 65px;
     -webkit-transition: 1s;
     @include larger-than(medium) {
-      top: 76px;
+      top: 80px;
+      left: 45%;
     }
     border:15px solid transparent;
     border-bottom-color:#eee;

@@ -10,9 +10,10 @@
 .change-agents-container
   .change-agents-wrapper
     - @change_agents.each.with_index do |change_agent, i|
-      .col-md-4
-        .change-agent
-          %h2.change-agent-name= link_to(change_agent.name, change_agent.link)
-          %p.change-agent-title= change_agent.title
-          %p.change-agent-title= change_agent.location
-          %p.change-agent-quote= change_agent.quote
+      - if i == 0 || i % 3 == 0
+        .row
+      .col-sm-4.change-agent
+        %h2.change-agent-name= link_to(change_agent.name, change_agent.link)
+        %p.change-agent-title= change_agent.title
+        %p.change-agent-title= change_agent.location
+        %p.change-agent-quote= change_agent.quote
