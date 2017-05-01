@@ -48,7 +48,7 @@ var video_grid = function() {
   $(".video6").data('id', 117058806);
 
 
-  //Random Videos on load
+  //Random poster background
   var quotePosterArray = ['mltsposter1.png','mltsposter2.png','mltsposter3.png','mltsposter4.png'];
   var quotePosterArrayRandom = shuffleArray(quotePosterArray);
 
@@ -125,33 +125,6 @@ var video_grid = function() {
           $('#trailerplayer').remove('iframe');
       });
   });
-
-  // Google analytics for Grid Videos
-  function ganalyticsGridVideo(cat){
-    var category = $(cat).data('category');
-    var videoName = $(cat).find('.video-name').html();
-    var videoId = $(cat).parents('.grid-item').data('id');
-    var label = videoName + " - " + videoId;
-
-    // ga('send', 'event', category, 'click', label);
-  }
-
-  // Google analytics for Grid Quotes
-  function ganalyticsGridQuote(cat){
-    var category = $(cat).data('category');
-    var label = $(cat).parents('.grid-text-center').find('.grid-text-copy').html();
-
-    // ga('send', 'event', category, 'click', label);
-  }
-
-  $('.grid-item-container').click(function() {
-    ganalyticsGridVideo(this);
-  });
-
-  $('.social-icon-items').click(function(){
-    ganalyticsGridQuote(this)
-  });
-
 
   // Helper functions:
 
