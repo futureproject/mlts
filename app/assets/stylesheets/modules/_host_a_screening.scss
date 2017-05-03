@@ -105,12 +105,10 @@ fieldset {
   padding: 2em;
 }
 
-.fsRowBody {
-  .fsField {
-    &:focus {
-      border: 2px solid $darker-grey;
-      padding-bottom: 10px;
-    }
+.fsField {
+  &:focus {
+    border: 2px solid $darker-grey;
+    padding-bottom: 10px;
   }
 }
 
