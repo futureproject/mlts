@@ -4,7 +4,7 @@
     <%= screening.screening_time.strftime('%x') %>
   </td>
   <td data-label="City" class="screening-location">
-    <% if screening.country == "" %>
+    <% if screening.country.blank? %>
       <%= "#{screening.city}, #{screening.state}" %>
     <% else %>
       <%= "#{screening.city}, #{screening.state}, #{screening.country}" %>
