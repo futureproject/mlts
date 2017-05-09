@@ -12,43 +12,29 @@
  *
  */
 
-// Bootstrap
+// Bootstrap (custom build defined in vendor/assets/stylesheets/_bootstrap.scss)
 @import "bootstrap";
 
-// Compass
-@import "compass";
-@import "compass/css3/transition";
-
-// Common
-@import "common/variables";
-@import "common/media-queries";
-@import "common/webfonts";
-@import "common/typography";
-@import "common/classes";
-@import "common/colors";
-@import "common/icons";
-@import "common/basic-template";
-@import "common/form-elements";
-@import "common/bootstrap-carousel";
-@import "forms";
-
-// Base
+// Base styles
+@import "base/variables";
+@import "base/media-queries";
+@import "base/webfonts";
+@import "base/typography";
+@import "base/classes";
+@import "base/colors";
+@import "base/icons";
+@import "base/forms";
 @import "base/normalize";
 @import "base/base";
 
-// Modules
-@import "modules/host_a_screening";
-@import "modules/screening_faqs";
-@import "modules/header";
+// Shared Modules
+@import "modules/screenings";
+@import "modules/carousel";
 @import "modules/join_us";
-@import "modules/main";
-@import "modules/moving_forward";
-@import "modules/partners";
-@import "modules/mf_pages";
-@import "modules/know_your_stuff";
-@import "modules/change_agents";
-@import "modules/students";
-@import "modules/teachers";
-@import "modules/school_leaders";
-@import "team_members";
-@import "change_agents";
+
+// Pages
+@import "pages/homepage";
+@import "pages/team_members";
+@import "pages/change_agents";
+@import "pages/moving_forward";
+@import "pages/partners";

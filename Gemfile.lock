@@ -50,7 +50,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.5)
-    chunky_png (1.3.7)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -63,22 +62,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    compass (1.0.3)
-      chunky_png (~> 1.2)
-      compass-core (~> 1.0.2)
-      compass-import-once (~> 1.0.5)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
-      sass (>= 3.3.13, < 3.5)
-    compass-core (1.0.3)
-      multi_json (~> 1.0)
-      sass (>= 3.3.0, < 3.5)
-    compass-import-once (1.0.5)
-      sass (>= 3.2, < 3.5)
-    compass-rails (2.0.5)
-      compass (~> 1.0.0)
-      sass-rails (< 5.1)
-      sprockets (< 2.13)
     connection_pool (2.2.0)
     dalli (2.7.6)
     debug_inspector (0.0.2)
@@ -96,7 +79,6 @@ GEM
       railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.9.14)
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     geocoder (1.3.7)
@@ -206,9 +188,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
-    rb-fsevent (0.9.7)
-    rb-inotify (0.9.7)
-      ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
     remotipart (1.2.1)
@@ -285,7 +264,6 @@ DEPENDENCIES
   aws-sdk
   byebug
   coffee-rails (~> 4.1.0)
-  compass-rails (~> 2.0.4)
   connection_pool
   dalli
   devise

@@ -1,0 +1,1007 @@
+.mf-header {
+  height: auto;
+}
+
+.moving-forward-copy {
+  .wrapper {
+    padding: 6em 0;
+  }
+}
+
+.mf-title {
+  color: black;
+  margin-bottom: 1em;
+}
+
+.mf-page-list {
+  @extend .clearfix;
+  padding-bottom: 5.75em;
+}
+
+strong {
+  text-decoration: underline;
+}
+
+.mf-page-item {
+  @extend .clearfix;
+  @extend .transition;
+  border-top: 1px solid lighten($text-grey, 30%);
+  position: relative;
+  display: inline-block;
+  width: 33.333333%;
+  height: 520px;
+  float: left;
+  &:hover {
+    cursor: pointer;
+    background-color: $form-grey;
+  }
+
+  // Border styles for grid items
+  &:nth-child(2), &:nth-child(5)  {
+    border-left: 1px solid lighten($text-grey, 30%);
+    border-right: 1px solid lighten($text-grey, 30%);
+  }
+  &:nth-child(4),  &:nth-child(5),  &:nth-child(6) {
+    border-bottom: 1px solid lighten($text-grey, 30%);
+  }
+  @include smaller-than(larger) {
+    height: 470px;
+  }
+  @include smaller-than(ex-large) {
+    width: 50%;
+    height: 400px;
+    &:nth-child(3) {
+      border-right: 1px solid lighten($text-grey, 30%);
+    }
+  }
+  @include smaller-than(medium) {
+    width: 100%;
+    height: 320px;
+  }
+}
+
+.mf-page-content {
+  padding: 3.75em;
+  @include smaller-than(larger) {
+    padding: 0 2em;
+    padding-top: 1.5em;
+  }
+  @include smaller-than(extra-large) {
+    padding: 0 1.5em;
+    padding-top: 1em;
+  }
+  h3 {
+    text-align: left;
+    line-height: 1;
+    @include smaller-than(extra-large) {
+      font-size: 2em;
+    }
+  }
+  p {
+    color: $light-grey;
+    text-align: left;
+    font-size: 1.1875em; // 19 / 16px
+    @include smaller-than(more-large) {
+      font-size: 1.2em;
+    }
+    @include smaller-than(larger) {
+      font-size: 1em;
+    }
+  }
+}
+
+.mf-page-button-container {
+  position: absolute;
+  bottom: 0; // (38px / 16px)em;
+  left: 0;
+  width: 100%;
+  padding: 2.375em 3.75em;
+  @include smaller-than(larger) {
+    padding: 2em;
+  }
+  @include smaller-than(extra-large) {
+    padding: 1.5em;
+  }
+}
+.mf-page-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.5em 0;
+}
+
+// Specific Link Coloring
+
+.know-your-stuff-button {
+  background-color: #603d45;
+}
+
+.for-parents-button {
+  background-color: #2c353c;
+}
+
+.for-teachers-button {
+  background-color: #2a6557;
+}
+
+.for-school-leaders-button {
+  background-color: #504945;
+}
+
+.for-students-button {
+  background-color: #74473c;
+}
+
+.for-change-agents-button {
+  background-color: #466985;
+}
+
+// ====================
+// MF Specific Classes
+// ====================
+.black-copy-link {
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.small-numbered-list {
+  max-width: 1015px;
+}
+
+.no-tpadding {
+  padding-top: 0 !important;
+}
+
+.no-bpadding {
+  padding-bottom: 0 !important;
+}
+
+// ========
+// Sub nav
+// ========
+.sub-nav{
+  position: fixed;
+  top: $nav-height;
+  display: table;
+  height: 70px;
+  width: 100%;
+  background-color: $form-grey;
+  z-index: 1;
+  @include smaller-than(extra-large) {
+    display: none;
+  }
+}
+
+.sub-nav-list {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.sub-nav-list-item {
+  display: inline-block;
+  position: relative;
+  margin-left: 1.5em;
+  font-family: $sans;
+  &:before {
+    bottom: 0.1em;
+    left: -0.65em;
+  }
+  &.active a {
+    font-family: $sans-bold;
+  }
+}
+
+.sub-nav-mobile {
+  @include transition(opacity 0.2s);
+  top: 50px;
+  height: 50px;
+  left: 0;
+  &.mobile-form-expanded {
+    opacity: 0;
+  }
+  @include larger-than(extra-large) {
+    display: none;
+  }
+  @include smaller-than(extra-large) {
+    display: table;
+  }
+  .sub-nav-list-item {
+    color: black;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+// =============================
+// Global Moving Forward Styles
+// =============================
+
+.mf-header {
+  font-family: $sans;
+  color: black;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.mf-section-header {
+  font-size: 2.5em; // 40px / 16px
+  @include smaller-than(mid-large) {
+    font-size: 1.8em;
+  }
+}
+
+// Section container background color alternate
+.mf-body section {
+  &:nth-child(even) {
+    background-color: white;
+  }
+  &:nth-child(odd) {
+    background-color: $form-grey;
+  }
+}
+
+
+.mf-title {
+  @include larger-than(extra-large) {
+    font-size: 4.5em;
+  }
+}
+
+.mf-copy {
+  text-align: left;
+  color: $text-grey;
+  padding-bottom: 2em;
+  @include larger-than(more-large) {
+    width: 53.6875rem ; // 859px / 16px
+    width: 60rem ;
+    margin: 0 auto;
+  }
+}
+// ==============
+// Survey Styles
+// ==============
+.survey-container {
+  @include larger-than(medium) {
+    & .wrapper {
+      padding-bottom: 2em !important;
+    }
+  }
+}
+
+.survey-question {
+  color: black;
+  font: $sans;
+}
+
+.survey-answers {
+  max-width: 618px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.answer-button {
+  @extend .transition;
+  display: inline-block;
+  width: 45%;
+  border: 1px solid $text-grey;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 1.5em; // 30px / 16px
+  @include smaller-than(small) {
+    &:first-child {
+      margin-bottom: 0.5em;
+    }
+    display: block;
+    width: 100%;
+  }
+  &:hover, &.selected {
+    background-color: $survey-button-green;
+    border-color: $survey-button-green;
+    color: white;
+    cursor: pointer;
+  }
+  &:before {
+    @extend .icon:after;
+    @extend .icon-checkmark;
+    transition: none;
+    display: none;
+    position: absolute;
+    left: 0.5em;
+    top: 0.69em;
+  }
+
+  &.selected:before {
+    display: inline-block;
+  }
+  .answer-container & {
+    width: 100%;
+  }
+}
+
+.results-container {
+  @include transition(opacity 0.2s);
+  opacity: 0;
+  &.answered {
+    opacity: 1;
+  }
+  .survey-results {
+    font-size: 1.25em; // 20px / 16px
+  }
+}
+.result-value {
+  font-family:  $sans-bold;
+  color: $survey-button-green;
+}
+
+.survey-radio {
+  position: absolute;
+  left: -9999px;
+}
+.survey-name {
+  position: absolute;
+  left: -9999px;
+}
+
+// ======================
+// Article Section Styles
+// ======================
+.article-section {
+  @extend .expert-list-container;
+  h2 {
+    color: black;
+  }
+}
+
+.articles-container {
+  @extend .expert-lists;
+  @extend .expert-reading;
+  margin-bottom: 2em;
+}
+
+.article-list-column {
+  @include larger-than(extra-large) {
+    width: 33.333333% !important;
+    &:first-child {
+      padding-right: 2em !important;
+    }
+    &:last-child {
+      padding-left: 2em !important;
+    }
+  }
+}
+.article-column {
+  li {
+    color: black;
+    text-align: left;
+  }
+}
+
+.article-list {
+  margin-bottom: 2em;
+}
+
+.articles-button {
+  @extend .answer-button;
+  margin-top: 1em;
+  max-width: 432px;
+  @include smaller-than(extra-large) {
+    font-size: 1.2em;
+  }
+  @include smaller-than(large) {
+    width: 100%;
+  }
+}
+
+// ===================
+// Book Section Styles
+// ===================
+
+.book-list-container {
+  @extend .clearfix;
+  max-width: 1800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0;
+}
+
+.book-list {
+  font-size: 0;
+}
+
+.book {
+  font-size: 1em;
+  display: inline-block;
+  width: 24%;
+  padding-bottom: 4em;
+  @include smaller-than(more-large) {
+    width: 30%;
+  }
+  @include smaller-than(extra-large) {
+    width: 40%;
+  }
+  @include smaller-than(large) {
+    width: 100%;
+  }
+  .book-image {
+    display: inline-block;
+    max-width: $book-image-width;
+    height: 286px;
+    padding-bottom: 1em;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title {
+    color: black;
+    font-family: $sans;
+  }
+  .author {
+    color: $text-grey
+  }
+}
+.book-link {
+  @extend .answer-button;
+  font-size: 1rem;
+  color: $text-grey;
+  border-radius: 5px;
+  margin-top: 1em;
+  &:hover {
+    color: white;
+  }
+  @include larger-than(larger) {
+    width: $book-image-width;
+  }
+  @include smaller-than(larger) {
+    width: 90%;
+    margin: 1em auto 0;
+  }
+}
+
+.column-copy {
+  color: black;
+  text-align: left;
+  padding: 0.6em 2em 0.6em 0.5em;
+  font-family: $sans-bold;
+  font-weight: bold;
+}
+
+// ============
+// Twitter List
+// ============
+
+.twitter-list-item {
+  text-align: left;
+  color: black;
+}
+
+.twitter-header {
+  &:before {
+    @extend .icon:after;
+    @extend .icon-twitter;
+    position: relative;
+    right: 16px;
+    bottom: 4px;
+    color: $text-grey;
+    font-size: 1.5em;
+  }
+}
+
+// ================
+// Horizontal List
+// ================
+
+.horizontal-list-container {
+  @extend .clearfix;
+}
+
+.horizontal-list-item {
+  display: inline-block;
+  float: none;
+  width: 100%;
+  padding-bottom: 3em;
+  max-width: 400px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  @include larger-than(extra-large) {
+    width: 25%;
+    float: left;
+    padding: 0 0.75em 3em;
+  }
+  @include smaller-than(more-large) {
+    display: block;
+    margin: 0 auto;
+  }
+  @include smaller-than(extra-large) {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      padding-top: 2em;
+    }
+  }
+  @include smaller-than(mid-large) {
+    &:nth-child(3), &:nth-child(4) {
+      padding-top: 0;
+    }
+  }
+}
+.list-copy {
+  width: 100%;
+  font-size: 1.5em;
+  @include smaller-than(more-large) {
+    font-size: 1.3em;
+  }
+}
+.list-order-indicator {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-family: $sans;
+  font-size: 1.3em;
+  color: black;
+  @include smaller-than(more-large) {
+    width: 28px;
+    height: 28px;
+    font-size: 1em;
+  }
+}
+
+// ==============
+// Numbered List
+// ==============
+.numbered-item-copy {
+  padding-left: 3em;
+  text-align: left;
+  @include smaller-than(mid-large) {
+    padding-left: 2.5em;
+  }
+}
+
+.item-content-container {
+  position: relative;
+}
+
+.numbered-list-item {
+  padding-bottom: 2em;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.list-order-indicator.number {
+  position: absolute;
+  left: 1em;
+  top: 0.3em;
+  @include smaller-than(mid-large) {
+    left: 0;
+  }
+}
+
+.sub-num-copy {
+  padding-top: 1em;
+}
+
+// ==============
+// Expert List Classes
+// ==============
+
+// Expert Section
+.expert-list-container{
+  background-color: $form-grey;
+}
+
+.expert-list-wrapper{
+  @extend .clearfix;
+  color: black;
+  padding: 5em 1em;
+  max-width: 1100px;
+  margin: 0 auto;
+  h2 {
+    color: $text-grey;
+    text-align: center;
+    padding: 0 1em;
+  }
+}
+
+.expert-lists-container{
+  @extend .clearfix;
+  padding-top: 3em;
+
+}
+
+.expert-heading{
+  font-family: $sans;
+  font-size: 1.3em;
+  padding-left: 1.5em;
+  position: relative;
+  margin: 0 1.2em 0.5em;
+}
+
+.expert-lists{
+  font-family: $sans;
+  @extend .clearfix;
+}
+
+.expert-list{
+  @extend .clearfix;
+}
+
+.expert-list-item{
+  float: left;
+  position: relative;
+  cursor: pointer;
+  @extend .transition;
+
+  &:after{
+    display: none;
+  }
+}
+
+.icon-expert:after{
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.expert-videos{
+  .expert-list-item{
+    width: 100%;
+    padding: 1.5em;
+    border-radius: 5px;
+
+    @include larger-than(medium) {
+      width: 50%;
+    }
+
+    @include larger-than(extra-large) {
+      width: 25%;
+    }
+
+    &:hover{
+      .no-touch &{
+        background-color: darken($form-grey, 10%);
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.expert-reading{
+  margin-top: 2em;
+
+  .expert-list{
+    margin-top: 2em;
+    padding: 0 1.5em;
+  }
+
+  .expert-list-column{
+    @extend .clearfix;
+    width: 100%;
+    float: left;
+
+    &:first-child{
+          border-bottom: 0;
+          padding-right: 0;
+        }
+
+        &:last-child{
+          padding-left: 0;
+
+          .expert-list-item:last-child{
+          border-bottom: 1px solid lighten($text-grey, 30%);
+        }
+        }
+
+    @include larger-than(extra-large) {
+          width: 50%;
+
+          &:first-child{
+            padding-right: 1em;
+
+            .expert-list-item:last-child{
+              border-bottom: 1px solid lighten($text-grey, 30%);
+            }
+          }
+
+          &:last-child{
+            padding-left: 1em;
+          }
+        }
+  }
+
+  .expert-list-item{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    float: none;
+    border-top: 1px solid lighten($text-grey, 30%);
+    @extend .transition;
+  }
+
+  .expert-list-item-link{
+    display: block;
+    padding: 0.6em 2em 0.6em 0.5em;
+    @extend .transition;
+
+    &:hover{
+      .no-touch &{
+        background-color: darken($form-grey, 10%);
+
+        &:after{
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 10px;
+          font-size: 1.2em;
+          bottom: 0;
+          margin: auto;
+          height: 17px;
+        }
+      }
+    }
+
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.kys-video-grid {
+  h2:first-child, h2:nth-child(3) {
+    padding-bottom: 2em;
+  }
+}
+
+
+// =================
+// Grid Video Images
+//==================
+
+.laufenberg-vid {
+  background-image: url(../images/resources/diana-TED2.jpg);
+}
+
+.robinson-vid {
+  background-image: url(../images/resources/robinson-TED2.jpg);
+}
+
+.mcafee-vid {
+  background-image: url(../images/resources/andrew-TED2.jpg);
+}
+
+// =================
+// Article Specific
+// =================
+
+.know-your-stuff .article-section {
+  & .article-column .expert-list-item:last-child {
+    border-bottom: 1px solid lighten($text-grey, 30%) !important;
+  }
+  & .wrapper .mf-header {
+    padding-bottom: 0;
+  }
+
+}
+.more-articles-copy {
+  color: black;
+  text-align: center;
+}
+
+// ==================================================
+// Color Bar styling for article list column section
+// ==================================================
+
+.color-bar {
+  height: 7px;
+  &.bar-1 {
+    background-color: #9f5846;
+  }
+  &.bar-2 {
+    background-color: #46769e;
+  }
+  &.bar-3 {
+    background-color: #48a08b;
+  }
+}
+
+#build-consensus .mf-header {
+  padding-bottom: 2em;
+}
+
+#districts-and-states .button-container {
+  padding-bottom: 5em;
+  .articles-button {
+    &:first-child {
+      @include larger-than(extra-large) {
+        margin-right: 3em;
+      }
+    }
+  }
+  @include smaller-than(large) {
+    .articles-button {
+      display: block;
+      margin: 0 auto;
+      &:first-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+#districts-and-states  {
+  .mf-header {
+    padding-bottom: 2em;
+  }
+  .big-wrapper {
+    padding-top: 3em;
+  }
+}
+
+.dlns-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.for-students .wrapper {
+  a {
+    color: black;
+  }
+}
+
+.for-teachers .survey-answers {
+  @extend .clearfix;
+  width: 100%;
+  max-width: none;
+}
+
+.for-teachers .survey-container .big-wrapper {
+  padding-top: 0em;
+}
+
+
+.for-teachers .survey-container .survey-question {
+  padding-bottom: 0em;
+}
+
+.for-teachers .big-wrapper {
+  padding-bottom: 0;
+}
+
+.for-teachers .answer-selection-container {
+  position: relative;
+  @include larger-than(extra-large) {
+    height: 325px;
+  }
+  &:first-child {
+    @include larger-than(extra-large) {
+      float: left;
+    }
+  }
+  &:last-child {
+    @include larger-than(extra-large) {
+      float: right;
+    }
+  }
+  .answer-button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include smaller-than (extra-large) {
+      position: static;
+      text-align: center;
+    }
+  }
+  .answer-button {
+    width: 100%;
+    @include larger-than(medium) {
+      width: 50%;
+    }
+  }
+}
+
+.ft-list-one .ft-list-column, .ft-list-two .ft-list-column  {
+  &:first-child {
+    @include larger-than(extra-large) {
+      padding-right: 3em;
+    }
+  }
+  &:last-child {
+    @include larger-than(extra-large) {
+      padding-left: 3em;
+    }
+  }
+}
+
+.teacher-book-list .book-info {
+  @include larger-than(large) {
+    height: 5em;
+  }
+}
+
+.teacher-book-list .book {
+  @include larger-than(large) {
+    width: 35%;
+  }
+}
+
+.teacher-article-list .article-list-column {
+  &:nth-child(2) {
+    border-bottom: 1px solid lighten($text-grey, 30%);
+  }
+}
+
+.teacher-article-section {
+  .articles-container {
+    margin: 0;
+  }
+  a {
+    color: black;
+  }
+  .mf-copy {
+    color: $text-grey;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .big-wrapper {
+    padding-bottom: 6em;
+  }
+}
+
+.teachers-numbered-list-header {
+  padding-bottom: 0 !important;
+}
+
+// ===============
+// Teacher Survey
+// ===============
+
+.teacher-answer {
+  font-size: 1.2em;
+  vertical-align: top;
+  padding: 3em;
+  max-width: 500px;
+  margin-right: 1em;
+  &.selected:before {
+    font-size: 1.5em;
+    top: 86%;
+    left: 47%;
+  }
+  &:first-child {
+    @include larger-than(huge) {
+      margin-right: 5em;  
+    }
+    @include smaller-than(mid-large) {
+      margin-bottom: 1em;
+    }
+  } 
+  &:last-child {
+    margin-right: 0;  
+  }
+  @include larger-than(medium) {
+    height: 300px;
+  }
+  @include smaller-than(extra-large) {
+    padding: 1.5em;
+  }
+  @include smaller-than(mid-large) {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  @include smaller-than(small) {
+    width: 100%;
+  }
+}
+
