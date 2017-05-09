@@ -1,0 +1,105 @@
+// Main Nav
+.mlts-nav {
+  background: $dark-blue !important;
+  font-size: 15px !important;
+  a {
+    font-family: $sans-light !important;
+    color: white !important;
+    @extend .transition;
+    &:hover {
+      opacity: 0.7 !important;
+    }
+  }
+}
+
+.icon-home {
+  font-size: 2em !important;
+  padding-top: 10px !important;
+}
+
+.navbar-brand {
+  margin-left: 0px !important;
+}
+
+.navbar-right {
+  margin-right: 0px !important;
+}
+
+
+.header-nav{
+  font-size: 0;
+  font-family: $sans-light;
+  display: inline-block;
+}
+
+// Sub Nav (Used on Moving Forward)
+.sub-nav{
+  position: fixed;
+  top: $nav-height;
+  display: table;
+  height: 70px;
+  width: 100%;
+  background-color: $form-grey;
+  z-index: 1;
+}
+
+.sub-nav-list {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.sub-nav-list-item {
+  position: relative;
+  display: inline-block;
+  float: none;
+  margin-left: 1.2em;
+  font-family: $sans-light;
+  @include smaller-than(medium) {
+    padding-top: 5px;
+  }
+  &.active a {
+    font-family: $sans-bold;
+  }
+}
+
+@include  larger-than(small) {
+  .separator:before{
+    content: '\00B7';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.5em;
+    margin: auto;
+    height: 1.5em;
+    font-size: 30px;
+  }
+}
+
+// Footer
+.main-footer{
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-align: center;
+  color: $text-grey;
+  background-color: $form-grey;
+  margin-top: -3px;
+
+  @include smaller-than(small){
+    .nav-items{
+      margin: 0.2em 0;
+      display: block;
+      float: none;
+    }
+  }
+}
+
+.footer-nav-links{
+  text-align: center;
+  @include larger-than(small) {
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+}

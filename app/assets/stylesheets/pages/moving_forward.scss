@@ -159,64 +159,6 @@ strong {
   padding-bottom: 0 !important;
 }
 
-// ========
-// Sub nav
-// ========
-.sub-nav{
-  position: fixed;
-  top: $nav-height;
-  display: table;
-  height: 70px;
-  width: 100%;
-  background-color: $form-grey;
-  z-index: 1;
-  @include smaller-than(extra-large) {
-    display: none;
-  }
-}
-
-.sub-nav-list {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.sub-nav-list-item {
-  display: inline-block;
-  position: relative;
-  margin-left: 1.5em;
-  font-family: $sans;
-  &:before {
-    bottom: 0.1em;
-    left: -0.65em;
-  }
-  &.active a {
-    font-family: $sans-bold;
-  }
-}
-
-.sub-nav-mobile {
-  @include transition(opacity 0.2s);
-  top: 50px;
-  height: 50px;
-  left: 0;
-  &.mobile-form-expanded {
-    opacity: 0;
-  }
-  @include larger-than(extra-large) {
-    display: none;
-  }
-  @include smaller-than(extra-large) {
-    display: table;
-  }
-  .sub-nav-list-item {
-    color: black;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
-
 // =============================
 // Global Moving Forward Styles
 // =============================
@@ -980,14 +922,14 @@ strong {
   }
   &:first-child {
     @include larger-than(huge) {
-      margin-right: 5em;  
+      margin-right: 5em;
     }
     @include smaller-than(mid-large) {
       margin-bottom: 1em;
     }
-  } 
+  }
   &:last-child {
-    margin-right: 0;  
+    margin-right: 0;
   }
   @include larger-than(medium) {
     height: 300px;
