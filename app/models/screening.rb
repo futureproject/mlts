@@ -1,5 +1,5 @@
 class Screening < ActiveRecord::Base
-  validates_uniqueness_of :identifier
+  validates_uniqueness_of :identifier, :allow_blank => true
   validates :street_address, :city, :state, presence: true
   after_validation :geocode, if: ->(screening){screening.street_address.present? && screening.city.present? && screening.state.present?}
   geocoded_by :full_street_address
