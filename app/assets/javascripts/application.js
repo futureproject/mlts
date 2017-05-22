@@ -25,6 +25,7 @@
 //= require the_team
 //= require video_grid
 //= require upcoming_screenings
+//= require moving_forward
 
 // Google analytics tracking with value
 function ganalytics(cat){
