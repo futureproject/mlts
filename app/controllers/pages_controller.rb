@@ -7,6 +7,7 @@ class PagesController < ApplicationController
       marker.lng screening.longitude
       marker.infowindow screening.map_label
     end
+    @education_facts = EducationFact.random_facts
 
     render template: "pages/#{params[:page]}"
   end
