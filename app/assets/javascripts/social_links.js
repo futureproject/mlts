@@ -3,14 +3,14 @@ function social_links() {
   // Video Grid social icons
   $('.facebook-grid-share').on('click', function(){
       var $this = $(this),
-      fact = $this.parents('.grid-text-container').find('p').html(),
+      fact = $this.parents('.grid-text-container').find('.grid-text-copy').text(),
       img = 'mobile-header-background.jpg';
       facebookShare(fact, img);
   });
 
   $('.twitter-grid-share').on('click', function(){
       var $this = $(this),
-      fact = $this.parents('.grid-text-container').find('p').html(),
+      fact = $this.parents('.grid-text-container').find('.grid-text-copy').text(),
       factGrab = fact.substring(0, 85);
       twitterShare(factGrab);
   });
