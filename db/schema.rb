@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522232806) do
+ActiveRecord::Schema.define(version: 20170627144954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,11 @@ ActiveRecord::Schema.define(version: 20170522232806) do
   end
 
   create_table "education_facts", force: :cascade do |t|
-    t.text   "quote"
-    t.string "source"
-    t.string "link"
-    t.string "category"
+    t.text    "quote"
+    t.string  "source"
+    t.string  "link"
+    t.string  "category"
+    t.boolean "hidden",   default: false
   end
 
   create_table "partners", force: :cascade do |t|
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(version: 20170522232806) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "state"
+    t.string   "identifier"
   end
 
   create_table "team_members", force: :cascade do |t|
