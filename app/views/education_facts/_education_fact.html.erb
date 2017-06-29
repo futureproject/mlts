@@ -1,0 +1,16 @@
+<%= link_to education_fact.link, target: "blank" do %>
+  <div class="grid-item-container">
+      <div class="grid-text-container">
+          <div class="grid-text-center">
+              <span class="grid-text-copy" data-image=""><%= simple_format(education_fact.quote) %></span>
+              <% unless education_fact.source.blank? %>
+              <span class="grid-text-source" data-image=""><%= education_fact.source %></span>
+              <% end %>
+              <ul class="social-icons">
+                  <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill grabmee twitter-grid-share"></span></li>
+                  <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+<% end %>

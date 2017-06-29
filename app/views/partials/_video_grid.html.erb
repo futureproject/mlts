@@ -15,20 +15,7 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-2">
-          <%= link_to @education_facts[0].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                      <p class="grid-text-copy fact1" data-image=""><%= simple_format(@education_facts[0].quote) %></span>
-                      <p class="grid-text-source fact1" data-image=""><%= @education_facts[0].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          <% end %>
+          <%= render @education_facts[0] %>
         </li>
         <li class="grid-item grid-image grid-3 video3 grid-play-video" data-id="">
             <div class="grid-shadow"></div>
@@ -45,20 +32,7 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-4">
-          <%= link_to @education_facts[1].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                        <span class="grid-text-copy fact2" data-image=""><%= simple_format(@education_facts[1].quote) %></span>
-                        <span class="grid-text-source fact2" data-image=""><%= @education_facts[1].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill grabmee twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          <% end %>
+          <%= render @education_facts[1] %>
         </li>
         <li class="grid-item grid-image grid-5">
             <div class="grid-item-container">
@@ -71,20 +45,7 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-6">
-          <%= link_to @education_facts[2].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                        <span class="grid-text-copy fact4" data-image=""><%= simple_format(@education_facts[2].quote) %></span>
-                        <span class="grid-text-source fact4" data-image=""><%= @education_facts[2].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section" data-label="Twitter Share Quote"><span class="icon icon-twitter-fill twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section" data-label="FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          <% end %>
+          <%= render @education_facts[2] %>
         </li>
         <li class="grid-item grid-image grid-9 video4 grid-play-video" data-id="">
             <div class="grid-shadow"></div>
@@ -101,20 +62,7 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-8">
-          <%= link_to @education_facts[3].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                        <span class="grid-text-copy fact3" data-image=""><%= simple_format(@education_facts[3].quote) %></span>
-                        <span class="grid-text-source fact3" data-image=""><%= @education_facts[3].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          <% end %>
+          <%= render @education_facts[3] %>
         </li>
         <li class="grid-item grid-image grid-7 video5 grid-play-video" data-id="">
             <div class="grid-shadow"></div>
@@ -131,20 +79,7 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-10">
-          <%= link_to @education_facts[4].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                        <span class="grid-text-copy fact5" data-image=""><%= simple_format(@education_facts[4].quote) %></span>
-                        <span class="grid-text-source fact5" data-image=""><%= @education_facts[4].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          <% end %>
+          <%= render @education_facts[4] %>
         </li>
         <li class="grid-item grid-image grid-11 video6 grid-play-video" data-id="">
             <div class="grid-shadow"></div>
@@ -161,21 +96,8 @@
             </div>
         </li>
         <li class="grid-item grid-text grid-12">
-          <%= link_to @education_facts[5].link, target: "blank" do %>
-            <div class="grid-item-container">
-                <div class="grid-text-container">
-                    <div class="grid-text-center">
-                        <span class="grid-text-copy fact6" data-image=""><%= simple_format(@education_facts[5].quote) %></span>
-                        <span class="grid-text-source fact6" data-image=""><%= @education_facts[5].source %></span>
-                        <ul class="social-icons">
-                            <li class="social-icon-items" data-category="Grid Section:Twitter Share Quote"><span class="icon icon-twitter-fill twitter-grid-share"></span></li>
-                            <li class="social-icon-items" data-category="Grid Section:FB Share Quote"><span class="icon icon-facebook-fill facebook-grid-share"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          <%= render "education_facts/education_fact", education_fact: @education_facts[5] %>
         </li>
-          <% end %>
     </ul>
 </section>
 <!-- End of Grid Container -->
