@@ -1,5 +1,5 @@
 class EducationFact < ActiveRecord::Base
-  validates_presence_of :quote, :source, :category
+  validates_presence_of :quote, :category
   scope :visible, -> {where(hidden: false)}
   def category_enum
     {
@@ -20,7 +20,7 @@ class EducationFact < ActiveRecord::Base
     if random_facts.length >= 6
       return random_facts
     else
-      return all_facts.first(6)
+      return all_facts.limit(6).order("RANDOM()")
     end
   end
 end
