@@ -83,21 +83,19 @@
   }
 
   // Speech bubble traingles
-  .change-agent-quote:after {
-    content:"";
-    position: absolute;
-    left: 50%;
-    top: 65px;
-    -webkit-transition: 1s;
-    @include larger-than(medium) {
-      top: 100px;
+  @include larger-than(ex-large) {
+    .change-agent-quote:after {
+      content:"";
+      position: absolute;
       left: 45%;
+      top: 100px;
+      -webkit-transition: 1s;
+      border:15px solid transparent;
+      border-bottom-color:#eee;
+      /* reduce the damage in FF3.0 */
+      display:block;
+      width:0;
     }
-    border:15px solid transparent;
-    border-bottom-color:#eee;
-    /* reduce the damage in FF3.0 */
-    display:block;
-    width:0;
   }
 }
 
