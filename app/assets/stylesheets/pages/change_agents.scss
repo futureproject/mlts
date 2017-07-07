@@ -14,14 +14,14 @@
   }
 
 .change-agent {
-  .change-agent-name, .change-agent-title {
+  .change-agent-name, .change-agent-title, .change-agent-quote-prompt {
     -webkit-transition: 1s;
   }
   margin-bottom: 15px;
   padding-bottom: 15px;
   -webkit-transition: 1s;
   &:hover {
-    .change-agent-name, .change-agent-title {
+    .change-agent-name, .change-agent-title, .change-agent-quote-prompt {
       color: $mlts-blue;
     }
     .change-agent-quote{
@@ -38,10 +38,17 @@
     font-size: 0.75em;
   }
 
+  .change-agent-quote-prompt {
+    text-align: center;
+    padding-top: 10px;
+    color: $dark-grey;
+    font-size: 0.9em;
+  }
+
   // Speech bubbles
   .change-agent-quote {
     display: block;
-    margin:30px 15px 0.5em;
+    margin:20px 15px 0.5em;
     padding:15px;
     color:#333;
     background:#eee;
@@ -49,6 +56,26 @@
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
+  }
+
+  .change-agent-quote-text:before {
+    font-family: Georgia, serif;
+    color: white;
+    content: "\201C";
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  .change-agent-quote-text:after {
+    font-family: Georgia, serif;
+    color: white;
+    content: "\201D";
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
   }
 
   // Speech bubble traingles
