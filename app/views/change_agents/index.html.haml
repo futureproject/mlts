@@ -8,12 +8,12 @@
 .change-agents-container
   .change-agents-wrapper
     - @change_agents.each.with_index do |change_agent, i|
-      - if i == 0 || i % 3 == 0
+      - if i == 0 || i % 2 == 0
         .row
-      .col-sm-4.change-agent
+      .col-sm-6.change-agent
         %h2.change-agent-name= link_to(change_agent.full_name, change_agent.link, target: "blank")
         %p.change-agent-title= change_agent.location
-        %p.change-agent-quote-prompt My goal in sharing the film and its message with my community is...
+        %p.change-agent-quote-prompt My goal in sharing the film and its message is...
         .change-agent-quote
           %p.change-agent-quote-text= change_agent.quote
 
