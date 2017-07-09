@@ -15,6 +15,6 @@
         %p.change-agent-title= change_agent.location
         %p.change-agent-quote-prompt My goal in sharing the film and its message is...
         .change-agent-quote
-          %p.change-agent-quote-text= change_agent.quote
+          %p.change-agent-quote-text= change_agent.quote.html_safe
 
 = render partial: "partials/change_agent_form"
