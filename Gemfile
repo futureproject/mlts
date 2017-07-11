@@ -43,6 +43,7 @@ gem 'rails_admin'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
+gem 'rails_admin_import', '~> 1.2'
 
 # Google Maps
 gem 'geocoder'
