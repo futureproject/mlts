@@ -5,7 +5,6 @@
 
 .change-agents-wrapper {
   @extend .clearfix;
-  color: black;
   max-width: 1100px;
   margin: 0 auto;
   h2 {
@@ -41,28 +40,30 @@
   }
 
   .change-agent-name {
+    color: $dark-grey;
     font-size: 1.4em;
   }
 
   .change-agent-title {
-    text-align: center;
     color: $dark-grey;
-    font-size: 0.8em;
+    text-align: center;
+    font-size: 0.85em;
   }
 
   .change-agent-quote-prompt {
+    color: $dark-grey;
     text-align: center;
     padding-top: 10px;
-    color: $dark-grey;
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 
   // Speech bubbles
   .change-agent-quote {
+    font-family: "Helvetica Neue", helvetica, sans-serif;
+    color: $dark-grey;
     display: block;
     margin:20px 15px 0.5em;
     padding:15px;
-    color:#333;
     background:#eee;
     -webkit-transition: 1s;
     -webkit-border-radius:10px;
