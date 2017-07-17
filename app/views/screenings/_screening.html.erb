@@ -17,7 +17,7 @@
     at
     <%= a = screening.screening_time.strftime('%l:%M %p') %>
   </td>
-  <% if screening.link != "" %>
+  <% unless screening.link.blank? %>
     <td class="icon icon-arrow-right-circle"></td>
   <% else %>
     <td class="icon"></td>
