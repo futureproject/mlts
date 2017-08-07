@@ -125,3 +125,22 @@ td{
   }
 }
 
+.tugg-button {
+    @extend .transition;
+    display: block;
+    text-align: center;
+    font-family: $sans-light;
+    border-radius: 5px;
+    border: 1px solid $mlts-blue;
+    color: $mlts-blue;
+    outline: none;
+    padding: 10px;
+    -webkit-appearance: none;
+    height: 50px;
+    width: 50%;
+
+    &:hover{
+        color: white;
+        background-color: $mlts-blue;
+    }
+}
