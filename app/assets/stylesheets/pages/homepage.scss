@@ -317,12 +317,12 @@ a.mlts-blue {
 
 .award-show-laurel{
   display: inline-block;
-  width: 23%;
+  width: 18%;
   margin-top: 1em;
   position: relative;
 
   @include larger-than(large) {
-    width: 13%;
+    width: 10%;
   }
 
   a{
