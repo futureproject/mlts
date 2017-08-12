@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: "pages#show", page: 'homepage'
+  root to: "pages#show", page: 'landing'
 
 
   # Example of regular route:

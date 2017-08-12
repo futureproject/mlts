@@ -1,0 +1,9 @@
+// Screening section
+.see-the-film-container {
+  color: black;
+  display: block;
+}
+
+.see-the-film-wrapper {
+  @extend .expert-list-wrapper;
+}
