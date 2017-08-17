@@ -8,9 +8,10 @@
   .copy-social-icons &{
     padding-bottom: 1em;
     &:after{
-      font-size: 14px;
+      font-size: 1.2em;
       padding: 0.5em;
-      border: 1px solid $light-grey;
+      margin-bottom: 20px;
+      border: 1px solid white;
       border-radius: 50%;
     }
   }
@@ -26,8 +27,6 @@
   }
 }
 
-
-
 .no-touch{
   .social-icons {
     &:hover{
@@ -40,7 +39,7 @@
   .copy-social-icons .icon{
     &:hover{
       &:after{
-        background: $light-grey;
+        background: $mlts-blue;
         color: white;
       }
     }

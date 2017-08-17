@@ -3,7 +3,6 @@
 .header-container{
   display: inline-block;
   width: 100%;
-  padding-top: $nav-height;
   position: relative;
   overflow: hidden;
 }
@@ -62,7 +61,7 @@
   display: block;
   background: black;
   position: absolute;
-  top: 415px;
+  top: 360px;
   left: 50%;
   background-size: cover;
   background: black;
@@ -291,10 +290,6 @@ a.mlts-blue {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.copy-social-icons{
-  display: inline-block;
-}
-
 .award-show-laurels{
   // @extend .clearfix;
   margin: 1em auto 4em;
@@ -322,7 +317,7 @@ a.mlts-blue {
   position: relative;
 
   @include larger-than(large) {
-    width: 13%;
+    width: 7%;
   }
 
   a{
