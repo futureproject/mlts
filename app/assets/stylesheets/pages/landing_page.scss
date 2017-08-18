@@ -23,11 +23,6 @@
   margin-bottom:50px;
 }
 
-.faqs h2 {
-  text-align:left !important;
-  padding-bottom:10px;
-
-}
 
 
 .screening-option-box{
@@ -62,5 +57,33 @@
     a:not(.always-visible) {
       display: none;
     }
+  }
+}
+
+// Screening FAQ
+.screening-faq-wrapper {
+  h2 {
+    font-size: 1.7em;
+    text-align:left !important;
+    padding: 0 !important;
+    margin-bottom:10px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  color: black;
+  display: block;
+
+  p, li {
+    font-size: 1em;
+  }
+
+  p, ol {
+    padding-bottom: 10px;
+  }
+
+  ol {
+    list-style-position: inside;
   }
 }
