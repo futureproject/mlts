@@ -51,8 +51,10 @@
 }
 
 .transparent {
-  background: transparent !important;
-  a:not(.always-visible) {
-    display: none;
+  @include larger-than(ex-large) {
+    background: transparent !important;
+    a:not(.always-visible) {
+      display: none;
+    }
   }
 }
