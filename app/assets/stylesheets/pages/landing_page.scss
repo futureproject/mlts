@@ -1,10 +1,31 @@
 .see-the-film-container {
-  color: black;
+  background-color: $grey;
   display: block;
 }
 
 .see-the-film-wrapper {
   @extend .expert-list-wrapper;
+  color: white;
+  h1,h2,h3,p,li,a{
+    color: white !important;
+  }
+}
+
+.tugg-logo {
+  display: inline;
+  width: 60px;
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
+.see-the-film-copy {
+  padding-bottom:50px;
+}
+
+.faqs h2 {
+  text-align:left !important;
+  padding-bottom:10px;
+
 }
 
 .screening-option-box{

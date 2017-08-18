@@ -6,11 +6,11 @@
   position: relative;
 
   .copy-social-icons &{
-    padding-bottom: 1em;
+    margin-top: 10px;
+    float: right;
     &:after{
-      font-size: 1.2em;
+      font-size: 1em;
       padding: 0.5em;
-      margin-bottom: 20px;
       border: 1px solid white;
       border-radius: 50%;
     }
@@ -28,19 +28,11 @@
 }
 
 .no-touch{
-  .social-icons {
-    &:hover{
-      &:after{
-        opacity: 0.4;
-      }
-    }
-  }
-
   .copy-social-icons .icon{
     &:hover{
       &:after{
-        background: $mlts-blue;
-        color: white;
+        color: $mlts-blue;
+        background: white;
       }
     }
   }
@@ -55,8 +47,6 @@
     opacity: 1;
   }
 }
-
-
 
 .icon:after {
   @extend .transition;
