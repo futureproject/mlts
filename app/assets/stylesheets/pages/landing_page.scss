@@ -19,7 +19,8 @@
 }
 
 .see-the-film-copy {
-  padding-bottom:50px;
+  font-size:1.2em;
+  margin-bottom:50px;
 }
 
 .faqs h2 {
@@ -27,6 +28,7 @@
   padding-bottom:10px;
 
 }
+
 
 .screening-option-box{
   @extend .transition;
@@ -36,6 +38,10 @@
   position: relative;
   border: 1px solid $mlts-blue;
   margin-top: -1px;
+
+  .card-header {
+    padding:10px;
+  }
 
   @include smaller-than(medium){
     width: 100%;
