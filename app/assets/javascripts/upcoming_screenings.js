@@ -28,5 +28,16 @@ var upcoming_screenings = function() {
     $(this).parent().find(".fsLabel").hide();
   });
 
+  // fade in .navbar
+  $(function () {
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+              $('.navbar').removeClass('transparent');
+          } else {
+              $('.navbar').addClass('transparent');
+          }
+      });
+  });
+
 }
 $(document).ready(upcoming_screenings);

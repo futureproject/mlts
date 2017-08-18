@@ -105,6 +105,7 @@
 
 .header-copy{
   display: none;
+  margin-top: 7em;
   @include smaller-than(mid-large) {
     padding-top: 2em;
     h1 {
