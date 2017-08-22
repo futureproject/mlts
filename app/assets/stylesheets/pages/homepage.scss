@@ -50,6 +50,7 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
+  padding-bottom: 1em;
 
   @include larger-than(extra-large) {
     background: none;
@@ -261,7 +262,7 @@
 
   .film-description {
     font-size:1em;
-    padding: 4em 0;
+    padding: 4em 0 1em 0;
     display: block;
   }
 
