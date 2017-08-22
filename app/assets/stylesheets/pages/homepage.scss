@@ -179,18 +179,6 @@
       }
     }
 
-    &:nth-child(2) {
-      @include larger-than(mid-large){
-        border-radius: 0;
-      }
-      @include smaller-than(medium) {
-        border-right: 1px solid $transwhite;
-        border-left: 1px solid $transwhite;
-        border-top: 0;
-        border-bottom: 0;
-        border-radius: 0;
-      }
-    }
     &:last-child{
       @include larger-than(mid-large) {
         border-radius: 0 5px 5px 0;
