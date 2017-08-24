@@ -1,28 +1,23 @@
 var video_grid = function() {
 
-  // Trailer play button
-  $('.no-touch .play-trailer').on('click', function(){
-      var $this = $(this),
-          videoID = $this.data('id'),
-          iframeLink = '<iframe class="vimeo-trailer" id="trailerplayer" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?autoplay=1&api=1&player_id=trailerplayer" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
-      $('.trailer-video-container').append(iframeLink);
-      var iframe = 'trailerplayer';
-      var player = $f(iframe);
-      $('html').addClass('trailer-open');
-      $('.trailer-video-container').fadeIn(1000);
-  });
+  // Hash link for trailer overlay
+  if (window.location.hash == "#trailer") {
+    loadTrailer();
+  }
 
-  // Trailer play button (touch)
-  $('.touch .play-trailer').on('click', function(){
-      var $this = $(this),
-          videoID = $this.data('id'),
-          iframeLink = '<iframe class="vimeo-trailer" id="trailerplayer" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?autoplay=1&api=1&player_id=trailerplayer" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
-      $('.trailer-video-container').append(iframeLink);
-      var iframe = 'trailerplayer';
-      var player = $f(iframe);
-      $('html').addClass('trailer-open');
-      $('.trailer-video-container').fadeIn(1000);
-  });
+  function loadTrailer() {
+    var $this = $('.play-trailer'),
+        videoID = $this.data('id'),
+        iframeLink = '<iframe class="vimeo-trailer" id="trailerplayer" width="600" height="350" src="https://player.vimeo.com/video/' + videoID + '?autoplay=1&api=1&player_id=trailerplayer" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' ;
+    $('.trailer-video-container').append(iframeLink);
+    var iframe = 'trailerplayer';
+    var player = $f(iframe);
+    $('html').addClass('trailer-open');
+    $('.trailer-video-container').fadeIn(1000);
+  }
+
+  // Trailer play button
+  $('.play-trailer').on('click', loadTrailer);
 
   // Trailer close
   $('.trailer-close').on('click',function(){
