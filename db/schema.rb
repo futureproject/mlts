@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707022831) do
+ActiveRecord::Schema.define(version: 20170923022247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,25 @@ ActiveRecord::Schema.define(version: 20170707022831) do
     t.string   "headshot_content_type"
     t.integer  "headshot_file_size"
     t.datetime "headshot_updated_at"
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.string   "description"
+    t.string   "video_embed"
+    t.string   "video_title"
+    t.string   "video_description"
+    t.string   "take_action_title"
+    t.string   "audio_embed"
+    t.string   "audio_title"
+    t.string   "audio_description"
+    t.text     "take_action_text"
+    t.string   "targeted_location"
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
 end
