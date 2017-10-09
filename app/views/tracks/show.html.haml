@@ -1,22 +1,32 @@
 %section.playlist-container
-  .wrapper.playlist-wrapper
-    %p Innovation Playlist
-    %h1.playlist-title= @track.title
-    %p.track-number= @track.position
+  %h2 Innovation Playlist
+  %h1.playlist-title= @track.title
 
-    %p= @track.video_title
-    %p= @track.video_description
-    = @track.video_embed.html_safe
+  .playlist-tab-container
+    .playlist-tab.playlist-tab-watch
+      %p= @track.video_title
+    .playlist-tab.playlist-tab-listen
+      %p= @track.audio_title
+    .playlist-tab.playlist-tab-act
+      %p Take Action
 
 
-    %p= @track.audio_title
-    %p= @track.audio_description
-    = @track.audio_embed.html_safe
+  .playlist-content-container
+    .playlist-content.playlist-content-watch
+      %h2= @track.video_title
+      %p= @track.video_description
+      = @track.video_embed.html_safe
 
-    %p Take Action
-    = @track.take_action_text
+    .playlist-content.playlist-content-listen
+      %h2= @track.audio_title
+      %p= @track.audio_description
+      = @track.audio_embed.html_safe
 
-    %br
+    .playlist-content.playlist-content-act
+      %h2 Take Action
+      = @track.take_action_text
+
+  %br
 
 
 .row.playlist-nav

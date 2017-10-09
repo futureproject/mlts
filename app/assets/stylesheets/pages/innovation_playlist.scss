@@ -3,13 +3,43 @@
   text-align: left;
 }
 
+.playlist-tab-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.playlist-tab {
+  flex: 1;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  h2 {
+    text-overflow: ellipsis;
+  }
+  height: 50px;
+  background: #2b353b;
+  padding: 20px 0;
+  &:hover {
+    background: #3e4956;
+  }
+  &.selected {
+    background: LightenDarkenColor(#2b353b, 30);
+  }
+}
+
+
 .playlist-wrapper {
   text-align: left;
 }
+
 .playlist-title {
   padding-top: 20px;
+  margin: 20px;
   color: white;
 }
+
+.playlist-content
 
 .playlist-description {
   font-size: 1.2em;
@@ -24,10 +54,12 @@
   width: 100%;
   background: #2b353b;
 }
+
 .playlist-nav-item {
   display: inline-block;
   padding: 10px 50px;
 }
+
 
 .playlist-track {
   display: inline-block;
