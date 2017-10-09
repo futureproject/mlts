@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :quotes
   resources :partners
   resources :team_members
+  resources :tracks
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :screenings
 
@@ -16,8 +17,8 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get ':page' => 'pages#show'
   get 'moving-forward/:page' => 'moving_forward#show'
+  get 'playlist' => 'tracks#index'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

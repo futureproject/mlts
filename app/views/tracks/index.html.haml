@@ -1,0 +1,19 @@
+%section.copy-container.partners-copy
+  .wrapper
+    %h1.playlist-title Innovation Playlist
+    %h2.playlist-description
+      Explore any topic below to get started.
+
+
+%center
+  = render partial: "partials/innovation_playlist_welcome"
+
+%section.the-team-container
+  .the-team-wrapper
+
+    .row
+    - @tracks.each.with_index do |track, i|
+      %a{href: track_path(track)}
+        %div{:class => "col-4 playlist-track #{" selected" if i==0}"}
+          = image_tag track.main_image, class: "playlist-grid-image"
+          %p.playlist-track-title= track.title

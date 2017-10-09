@@ -1,0 +1,37 @@
+body {
+  background-color: #1e2428;
+}
+.playlist-title {
+  padding-top: 20px;
+  color: white;
+}
+
+.playlist-description {
+  font-size: 1.2em;
+  padding-top: 20px;
+}
+
+.playlist-track-title {
+  color: white;
+}
+
+.playlist-track {
+  display: inline-block;
+  cursor: pointer;
+  margin: 20px;
+  -webkit-transition: 1s;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  .playlist-grid-image {
+    width: 250px;
+  }
+
+  .playlist-description {
+    font-size: 1.2em;
+    padding: 10px 0;
+  }
+
+}
+

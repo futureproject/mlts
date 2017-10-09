@@ -26,6 +26,7 @@
 //= require video_grid
 //= require upcoming_screenings
 //= require moving_forward
+//= require innovation_playlist
 
 // Google analytics tracking with value
 function ganalytics(cat){

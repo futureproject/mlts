@@ -9,6 +9,10 @@ class PagesController < ApplicationController
     end
     @education_facts = EducationFact.random_facts
 
+    if params[:page] == "playlist"
+      render template: "pages/#{params[:page]}"
+    end
+
     render template: "pages/#{params[:page]}"
   end
 

@@ -1,0 +1,31 @@
+%section.copy-container.partners-copy
+  .wrapper
+    %p Innovation Playlist
+    %h1.playlist-title= @track.title
+    %p.track-number= @track.position
+
+    %p= @track.video_title
+    %p= @track.video_description
+    = @track.video_embed.html_safe
+
+
+    %p= @track.audio_title
+    %p= @track.audio_description
+    = @track.audio_embed.html_safe
+
+    %p Take Action
+    = @track.take_action_text
+
+    %br
+
+
+    - if @previous_track
+      %p Previous
+      = link_to @previous_track.title, track_path(@previous_track)
+
+    - if @next_track
+      %p Next
+      = link_to @next_track.title, track_path(@next_track)
+
+    %br
+    = link_to "View All Chapters", tracks_path
