@@ -1,21 +1,23 @@
 %section.playlist-container
   %h2 Innovation Playlist
   %h1.playlist-title= @track.title
+  %p= @track.description
 
   .playlist-tab-container
-    .playlist-tab.playlist-tab-watch
+    .playlist-tab.playlist-tab-watch.selected{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
+
       %p= @track.video_title
-    .playlist-tab.playlist-tab-listen
+    .playlist-tab.playlist-tab-listen{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
+
       %p= @track.audio_title
-    .playlist-tab.playlist-tab-act
+    .playlist-tab.playlist-tab-act{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
       %p Take Action
 
-
-  .playlist-content-container
+  .playlist-content-container{style: "background:#{@darker_color}"}
     .playlist-content.playlist-content-watch
+      = @track.video_embed.html_safe
       %h2= @track.video_title
       %p= @track.video_description
-      = @track.video_embed.html_safe
 
     .playlist-content.playlist-content-listen
       %h2= @track.audio_title
@@ -29,16 +31,17 @@
   %br
 
 
-.row.playlist-nav
-  .col-4.playlist-nav-item
+.playlist-transport-container
+  .playlist-transport-item
     - if @previous_track
       %p Previous
       = link_to @previous_track.title, track_path(@previous_track, location: @location)
 
-  .col-4.playlist-nav-item
-    = link_to "View All Chapters", tracks_path(location: @location)
+  .playlist-transport-item
+    = link_to "Explore All Chapters", tracks_path(location: @location)
 
-  .col-4.playlist-nav-item
+  .playlist-transport-item
     - if @next_track
-      %p Next
-      = link_to @next_track.title, track_path(@next_track, location: @location)
+      %a{href: track_path(@next_track, location: @location)}
+        %p Next
+        %p= @next_track.title

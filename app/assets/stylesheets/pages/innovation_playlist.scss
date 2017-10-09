@@ -11,21 +11,29 @@
 
 .playlist-tab {
   flex: 1;
+  margin-left: -1px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
-  h2 {
-    text-overflow: ellipsis;
-  }
+  text-overflow: ellipsis;
   height: 50px;
   background: #2b353b;
   padding: 20px 0;
   &:hover {
-    background: #3e4956;
+    background: darken(#3e4956, 20% );
   }
   &.selected {
-    background: LightenDarkenColor(#2b353b, 30);
+    background: darken(#3e4956, 20% );
+    border-bottom: none !important;
   }
+}
+
+.playlist-transport-container {
+
+}
+
+.playlist-content-listen, .playlist-content-act {
+  display: none;
 }
 
 
@@ -39,8 +47,9 @@
   color: white;
 }
 
-.playlist-content
-
+.playlist-content-container {
+  padding: 20px;
+}
 .playlist-description {
   font-size: 1.2em;
   padding-top: 20px;
@@ -50,14 +59,22 @@
   color: white;
 }
 
-.playlist-nav {
+.playlist-transport-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
   width: 100%;
   background: #2b353b;
 }
 
-.playlist-nav-item {
+.playlist-transport-item {
+  flex: 1;
   display: inline-block;
-  padding: 10px 50px;
+  text-align: center;
+  padding: 10px 0;
+  &:hover {
+    background: #3e4956;
+  }
 }
 
 
