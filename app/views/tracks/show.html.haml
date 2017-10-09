@@ -23,12 +23,12 @@
   .col-4.playlist-nav-item
     - if @previous_track
       %p Previous
-      = link_to @previous_track.title, track_path(@previous_track)
+      = link_to @previous_track.title, track_path(@previous_track, location: @location)
 
   .col-4.playlist-nav-item
-    = link_to "View All Chapters", tracks_path
+    = link_to "View All Chapters", tracks_path(location: @location)
 
   .col-4.playlist-nav-item
     - if @next_track
       %p Next
-      = link_to @next_track.title, track_path(@next_track)
+      = link_to @next_track.title, track_path(@next_track, location: @location)

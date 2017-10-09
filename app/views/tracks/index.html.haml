@@ -6,7 +6,7 @@
     = render partial: "partials/innovation_playlist_welcome"
     .row
     - @tracks.each.with_index do |track, i|
-      %a{href: track_path(track)}
+      %a{href: track_path(track, location: @location)}
         %div{:class => "col-4 playlist-track #{" selected" if i==0}"}
           = image_tag track.main_image, class: "playlist-grid-image"
           %p.playlist-track-title{style: "color: #{track.color}"}

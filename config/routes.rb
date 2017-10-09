@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   resources :quotes
   resources :partners
   resources :team_members
-  resources :tracks
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :screenings
+
+  scope '/playlist' do
+    resources :tracks
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'moving-forward/:page' => 'moving_forward#show'
   get 'playlist' => 'tracks#index'
+  get 'nd_playlist' => 'tracks#index', location: "ND"
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
