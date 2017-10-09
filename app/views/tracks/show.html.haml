@@ -15,7 +15,7 @@
 
   .playlist-content-container{style: "background:#{@darker_color}"}
     .playlist-content.playlist-content-watch
-      = @track.video_embed.html_safe
+      = render "partials/embedded_vimeo_player", vimeo_id: @track.video_embed
       %h2= @track.video_title
       %p= @track.video_description
 
@@ -38,7 +38,7 @@
       = link_to @previous_track.title, track_path(@previous_track, location: @location)
 
   .playlist-transport-item
-    = link_to "Explore All Chapters", tracks_path(location: @location)
+    = link_to "View All Chapters", tracks_path(location: @location)
 
   .playlist-transport-item
     - if @next_track
