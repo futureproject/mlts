@@ -1,5 +1,10 @@
-body {
-  background-color: #1e2428;
+.playlist-container {
+  background: #1e2428;
+  text-align: left;
+}
+
+.playlist-wrapper {
+  text-align: left;
 }
 .playlist-title {
   padding-top: 20px;
@@ -13,6 +18,15 @@ body {
 
 .playlist-track-title {
   color: white;
+}
+
+.playlist-nav {
+  width: 100%;
+  background: #2b353b;
+}
+.playlist-nav-item {
+  display: inline-block;
+  padding: 10px 50px;
 }
 
 .playlist-track {
