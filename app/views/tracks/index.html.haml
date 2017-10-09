@@ -9,4 +9,5 @@
       %a{href: track_path(track)}
         %div{:class => "col-4 playlist-track #{" selected" if i==0}"}
           = image_tag track.main_image, class: "playlist-grid-image"
-          %p.playlist-track-title= track.title
+          %p.playlist-track-title{style: "color: #{track.color}"}
+            = track.title
