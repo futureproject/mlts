@@ -17,6 +17,7 @@
 //= require bootstrap.min
 //= require bootstrap_carousel
 //= require underscore
+//= require lity.min
 //= require markerclusterer.min
 //= require gmaps/google
 //= require join_us

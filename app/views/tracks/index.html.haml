@@ -3,7 +3,6 @@
     %h1.playlist-title Innovation Playlist
     %h2.playlist-description
       Explore any topic below to get started.
-    = render partial: "partials/innovation_playlist_welcome"
     .row
     - @tracks.each.with_index do |track, i|
       %a{href: track_path(track, location: @location)}

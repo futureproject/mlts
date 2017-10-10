@@ -1,7 +1,9 @@
 %section.playlist-container
-  %h2 Innovation Playlist
-  %h1.playlist-title= @track.title
-  %p= @track.description
+  .playlist-chapter-header
+    = render "partials/playlist_top_buttons", vimeo_id: @track.video_embed
+    %h4.playlist-caps-text Innovation Playlist
+    %h1.playlist-chapter-title= @track.title
+    %p= @track.description
 
   .playlist-tab-container
     .playlist-tab.playlist-tab-watch.selected{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}

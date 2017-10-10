@@ -15,6 +15,9 @@
 // Bootstrap (custom build defined in vendor/assets/stylesheets/_bootstrap.scss)
 @import "bootstrap";
 
+// Lity for lightbox video overlays
+@import "lity.min";
+
 // Base styles
 @import "base/variables";
 @import "base/media-queries";

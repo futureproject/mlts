@@ -1,6 +1,41 @@
 .playlist-container {
+  padding-top: $nav-height;
   background: #1e2428;
   text-align: left;
+}
+
+.playlist-caps-text {
+  text-transform: uppercase;
+  color: #b0d4ed;
+}
+
+.playlist-chapter-title {
+  font-size: 3em;
+}
+
+.playlist-chapter-header {
+  padding: 30px;
+}
+
+.playlist-top-button-container {
+  position: absolute;
+  right: 40px;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.playlist-top-button {
+  flex-basis: 100%;
+  color: white;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1.2em;
+  border: 3px solid white;
+  a {
+    text-decoration: none !important;
+  }
 }
 
 .playlist-tab-container {
