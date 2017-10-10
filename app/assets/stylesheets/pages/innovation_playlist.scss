@@ -55,13 +55,27 @@
   background: #2b353b;
   padding: 20px 0;
   &:hover {
-    background: darken(#3e4956, 20% );
+    background: black;
+    p {
+      color: white !important;
+    }
   }
   &.selected {
     background: darken(#3e4956, 20% );
     border-bottom: none !important;
+    p {
+      color: white;
+    }
+  }
+  p {
+    display: inline;
+  }
+  img {
+    width: 30px;
+    display: inline;
   }
 }
+
 
 .playlist-transport-container {
 
@@ -133,3 +147,10 @@
 
 }
 
+.icon-watch {
+  background-image:
+  url("/playlist/icons/watch.png");
+}
+
+.watch-image {
+}

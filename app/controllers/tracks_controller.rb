@@ -10,6 +10,7 @@ class TracksController < ApplicationController
 
   def show
     @track = Track.find(params[:id])
+    @medium_color = darken_color(@track.color, 0.35)
     @darker_color = darken_color(@track.color, 0.2)
     @location = params[:location]
     if @location == "ND"

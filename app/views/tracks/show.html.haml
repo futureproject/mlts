@@ -6,14 +6,16 @@
     %p= @track.description
 
   .playlist-tab-container
-    .playlist-tab.playlist-tab-watch.selected{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
-
-      %p= @track.video_title
-    .playlist-tab.playlist-tab-listen{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
-
-      %p= @track.audio_title
-    .playlist-tab.playlist-tab-act{style: "background:#{@darker_color}; border: 1px solid #{@track.color}"}
-      %p Take Action
+    .playlist-tab.playlist-tab-watch.selected{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
+      -# %img{src: "/playlist/icons/watch.png", style: "color: #{@track.color}"}
+      %p{style: "color:#{@track.color}"}= @track.video_title
+    - unless @track.audio_embed.empty?
+      .playlist-tab.playlist-tab-listen{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
+        -# %img{src: "/playlist/icons/listen.png"}
+        %p{style: "color:#{@track.color}"}= @track.audio_title
+    .playlist-tab.playlist-tab-act{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
+      -# %img{src: "/playlist/icons/act.png"}
+      %p{style: "color:#{@track.color}"} Take Action
 
   .playlist-content-container{style: "background:#{@darker_color}"}
     .playlist-content.playlist-content-watch
@@ -22,9 +24,9 @@
       %p= @track.video_description
 
     .playlist-content.playlist-content-listen
+      = render "partials/embedded_bandcamp_player", track_id: @track.audio_embed
       %h2= @track.audio_title
       %p= @track.audio_description
-      = @track.audio_embed.html_safe
 
     .playlist-content.playlist-content-act
       %h2 Take Action
@@ -36,11 +38,13 @@
 .playlist-transport-container
   .playlist-transport-item
     - if @previous_track
-      %p Previous
-      = link_to @previous_track.title, track_path(@previous_track, location: @location)
+      %a{href: track_path(@previous_track, location: @location)}
+        %p Previous
+        %p= @previous_track.title
 
   .playlist-transport-item
-    = link_to "View All Chapters", tracks_path(location: @location)
+    %a{href: tracks_path(location: @location)}
+      %p View All Chapters
 
   .playlist-transport-item
     - if @next_track
