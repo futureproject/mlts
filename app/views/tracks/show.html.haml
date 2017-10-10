@@ -8,14 +8,14 @@
 
     .playlist-tab-container
       .playlist-tab.playlist-tab-watch.selected{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
-        %img{src: "/playlist/icons/watch.png", style: "color: #{@track.color}"}
+        %img{src: "/icons/watch.png", style: "color: #{@track.color}"}
         %p{style: "color:#{@track.color}"}= @track.video_title
       - unless @track.audio_embed.empty?
         .playlist-tab.playlist-tab-listen{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
-          %img{src: "/playlist/icons/listen.png"}
+          %img{src: "/icons/listen.png"}
           %p{style: "color:#{@track.color}"}= @track.audio_title
       .playlist-tab.playlist-tab-act{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
-        %img{src: "/playlist/icons/act.png"}
+        %img{src: "/icons/act.png"}
         %p{style: "color:#{@track.color}"} Take Action
 
     .playlist-content-container{style: "background:#{@darker_color}"}
