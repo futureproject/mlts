@@ -2,11 +2,35 @@
   padding-top: $nav-height;
   background: #1e2428;
   text-align: left;
+  height: 100%;
+}
+
+body {
+}
+
+.playlist-index-wrapper {
+  text-align: left;
+  padding: 40px;
+}
+
+.playlist-title {
+  font-family: "Montserrat Regular", montserrat, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3em;
+}
+
+.playlist-description {
+  font-family: "Montserrat Light Italic", montserrat, sans-serif;
+  font-size: 1.2em;
+  color: #d2d2d2;
 }
 
 .playlist-caps-text {
+  font-family: "Montserrat Medium", montserrat, sans-serif;
   text-transform: uppercase;
   color: #b0d4ed;
+  font-size: 1em;
 }
 
 .playlist-chapter-title {
@@ -15,24 +39,36 @@
 
 .playlist-chapter-header {
   padding: 30px;
+  p {
+    font-family: "Montserrat Light", montserrat, sans-serif;
+    color: #d2d2d2
+  }
 }
 
-.playlist-top-button-container {
-  position: absolute;
-  right: 40px;
-  top: 70px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.playlist-chapter-wrapper {
+  .playlist-top-button-container {
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.playlist-index-wrapper {
+  .playlist-top-button-container {
+    padding-top: 50px;
+  }
 }
 
 .playlist-top-button {
   flex-basis: 100%;
-  color: white;
+  color: #d2d2d2 !important;
   text-align: center;
   padding: 5px 15px;
   font-size: 1.2em;
-  border: 3px solid white;
+  border: 3px solid #d2d2d2 !important;
   a {
     text-decoration: none !important;
   }
@@ -64,7 +100,7 @@
     background: darken(#3e4956, 20% );
     border-bottom: none !important;
     p {
-      color: white;
+      color: white !important;
     }
   }
   p {
