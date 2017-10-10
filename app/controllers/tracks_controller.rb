@@ -9,6 +9,7 @@ class TracksController < ApplicationController
   end
 
   def show
+    @disable_footer = true
     @track = Track.find(params[:id])
     @medium_color = darken_color(@track.color, 0.35)
     @darker_color = darken_color(@track.color, 0.2)

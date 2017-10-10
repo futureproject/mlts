@@ -2,7 +2,7 @@
   padding-top: $nav-height;
   background: #1e2428;
   text-align: left;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -46,19 +46,21 @@ body {
 }
 
 .playlist-chapter-wrapper {
-  .playlist-top-button-container {
-    position: absolute;
-    right: 40px;
-    top: 70px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  @include larger-than(large) {
+    .playlist-top-button-container {
+      position: absolute;
+      right: 40px;
+      top: 70px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
   }
 }
 
 .playlist-index-wrapper {
   .playlist-top-button-container {
-    padding-top: 50px;
+    padding: 50px;
   }
 }
 
@@ -81,6 +83,11 @@ body {
 }
 
 .playlist-tab {
+  @include smaller-than(medium) {
+    p {
+      display: none !important;
+    }
+  }
   flex: 1;
   margin-left: -1px;
   text-align: center;
@@ -108,46 +115,29 @@ body {
   }
   img {
     width: 30px;
-    display: inline;
   }
 }
 
-
-.playlist-transport-container {
-
-}
 
 .playlist-content-listen, .playlist-content-act {
   display: none;
 }
 
 
-.playlist-wrapper {
-  text-align: left;
-}
-
-.playlist-title {
-  padding-top: 20px;
-  margin: 20px;
-  color: white;
-}
-
 .playlist-content-container {
-  padding: 20px;
-}
-.playlist-description {
-  font-size: 1.2em;
-  padding-top: 20px;
+  height: 100%;
+  padding: 30px;
 }
 
-.playlist-track-title {
+.playlist-chapter-title {
+  font-family: "Montserrat Medium", montserrat, sans-serif;
+  font-size: 2em;
   color: white;
 }
 
 .playlist-transport-container {
   display: flex;
   align-items: stretch;
-  width: 100%;
   width: 100%;
   background: #2b353b;
 }
@@ -162,18 +152,24 @@ body {
   }
 }
 
+.playist-chapters-container {
+  overflow: auto;
+}
 
 .playlist-track {
-  display: inline-block;
+  display: block;
+  margin-bottom: 20px;
   cursor: pointer;
-  margin: 20px;
   -webkit-transition: 1s;
   &:hover {
     opacity: 0.5;
   }
+  p {
+    font-family: "Montserrat Regular", montserrat, sans-serif;
+  }
 
   .playlist-grid-image {
-    width: 250px;
+    width: 100%;
   }
 
   .playlist-description {

@@ -1,12 +1,15 @@
 %section.playlist-container
-  .wrapper.playlist-wrapper
+  .playlist-index-wrapper
     %h1.playlist-title Innovation Playlist
     %h2.playlist-description
-      Explore any topic below to get started.
-    .row
-    - @tracks.each.with_index do |track, i|
-      %a{href: track_path(track, location: @location)}
-        %div{:class => "col-4 playlist-track #{" selected" if i==0}"}
-          = image_tag track.main_image, class: "playlist-grid-image"
-          %p.playlist-track-title{style: "color: #{track.color}"}
-            = track.title
+      Explore any topic to get started.
+    = render "partials/playlist_top_buttons"
+    .container.playlist-chapters-container
+      .row.text-center.text-lg-left
+        - @tracks.each.with_index do |track, i|
+          %a{class: "d-block mb-4 h-100", href: track_path(track, location: @location)}
+            %div{:class => "col-lg-3 col-md-4 col-xs-6 playlist-track #{" selected" if i==0}"}
+              = image_tag track.main_image, class: "img-fluid img-thumbnail playlist-grid-image"
+              %p{style: "color: #{track.color}"}
+                = track.title
+
