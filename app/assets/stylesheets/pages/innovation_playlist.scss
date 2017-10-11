@@ -56,26 +56,41 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      .playlist-top-button {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }
 
 .playlist-index-wrapper {
   .playlist-top-button-container {
-    padding: 50px;
   }
 }
 
+.playlist-top-button-container {
+  display: block;
+  margin: 35px 0;
+}
+
 .playlist-top-button {
+  display: block;
+  min-width: 200px;
+  margin-bottom: 20px;
+  @include larger-than(medium) {
+    display: inline;
+  }
   flex-basis: 100%;
+  margin-right: 10px;
   color: #d2d2d2 !important;
   text-align: center;
   padding: 5px 15px;
-  font-size: 1.2em;
-  border: 3px solid #d2d2d2 !important;
-  a {
-    text-decoration: none !important;
-  }
+  font-family: "Montserrat Light", montserrat, sans-serif;
+  width: 20%;
+  font-size: 1.1em !important;
+  border: 3px solid #d2d2d2;
+  text-decoration: none !important;
 }
 
 .playlist-tab-container {
@@ -190,7 +205,7 @@ body {
 
 .playlist-track {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   cursor: pointer;
   -webkit-transition: 1s;
   &:hover {
