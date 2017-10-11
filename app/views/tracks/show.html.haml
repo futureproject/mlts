@@ -46,18 +46,22 @@
 
 
 .playlist-transport-container
-  .playlist-transport-item
-    - if @previous_track
+  - if @previous_track
+    .playlist-transport-item
       %a{href: track_path(@previous_track, location: @location)}
-        %p Previous
-        %p= @previous_track.title
+        .navigation-text
+          %p Previous
+          %p= @previous_track.title
+        %img.nav-arrow.nav-arrow-left{src: "/icons/leftarrow.svg"}
 
   .playlist-transport-item
     %a{href: tracks_path(location: @location)}
       %p View All Chapters
 
-  .playlist-transport-item
-    - if @next_track
+  - if @next_track
+    .playlist-transport-item
       %a{href: track_path(@next_track, location: @location)}
-        %p Next
-        %p= @next_track.title
+        .navigation-text
+          %p Next
+          %p= @next_track.title
+        %img.nav-arrow.nav-arrow-right{src: "/icons/rightarrow.svg"}
