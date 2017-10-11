@@ -31,6 +31,7 @@ body {
   text-transform: uppercase;
   color: #b0d4ed;
   font-size: 1em;
+  margin: 10px 0;
 }
 
 .playlist-chapter-title {
@@ -145,6 +146,16 @@ body {
   background: #2C353C;
   height: 100%;
   padding: 30px;
+}
+
+.playlist-content {
+  h2 {
+    font-family: "Montserrat Regular", montserrat, sans-serif;
+    margin: 20px 0;
+  }
+  p {
+    font-family: "Montserrat Light", montserrat, sans-serif;
+  }
 }
 
 .playlist-chapter-title {
