@@ -54,8 +54,8 @@
         %p= @previous_track.title
       %img.nav-arrow.nav-arrow-left{src: "/icons/leftarrow.svg"}
 
-    %a.playlist-transport-item{href: tracks_path(location: @location)}
-      %p View All Chapters
+  %a.playlist-transport-item{href: tracks_path(location: @location)}
+    %p View All Chapters
 
   - if @next_track
     %a.playlist-transport-item{href: track_path(@next_track, location: @location)}
