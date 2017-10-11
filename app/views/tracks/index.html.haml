@@ -10,7 +10,7 @@
       .row.text-center.text-lg-left
         - @tracks.each.with_index do |track, i|
           %a{class: "d-block mb-4 h-100", href: track_path(track, location: @location)}
-            %div{:class => "col-lg-3 col-md-4 col-xs-6 playlist-track #{" selected" if i==0}"}
+            %div{:class => "col-lg-4 col-md-4 col-xs-6 playlist-track #{" selected" if i==0}"}
               = image_tag track.main_image, class: "img-fluid img-thumbnail playlist-grid-image"
               %p{style: "color: #{track.color}"}
                 = track.title
