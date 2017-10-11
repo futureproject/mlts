@@ -20,7 +20,8 @@
 
     .playlist-content-container
       .playlist-content.playlist-content-watch
-        = render "partials/embedded_vimeo_player", vimeo_id: @track.video_embed
+        .bandcamp-embed
+          = render "partials/embedded_vimeo_player", vimeo_id: @track.video_embed
         %h2= @track.video_title
         %p= @track.video_description
 

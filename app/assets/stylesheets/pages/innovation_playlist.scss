@@ -139,6 +139,10 @@
   }
 }
 
+.playlist-content-act, .playlist-content-listen {
+  display: none;
+}
+
 .playlist-content-act {
   a {
     color: #b0d4ed;
@@ -149,7 +153,6 @@
       opacity: 0.8;
     }
   }
-  display: none;
 }
 
 .act-image {
