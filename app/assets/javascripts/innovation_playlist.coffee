@@ -1,4 +1,5 @@
 $ ->
+  $('.playlist-content-listen').hide();
   $('.playlist-track').click ->
     $('.playlist-track').removeClass('selected')
     $(this).addClass('selected')

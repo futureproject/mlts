@@ -122,8 +122,16 @@ body {
   }
 }
 
-
-.playlist-content-listen, .playlist-content-act {
+.playlist-content-act {
+  a {
+    color: #b0d4ed;
+    text-decoration: underline;
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   display: none;
 }
 
