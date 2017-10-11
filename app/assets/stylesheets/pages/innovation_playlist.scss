@@ -188,6 +188,7 @@
   align-items: stretch;
   width: 100%;
   background: #1e2428;
+  border-top: 2px solid white;
 }
 
 .nav-arrow {
@@ -220,7 +221,7 @@
   flex: 1;
   display: inline-block;
   text-align: center;
-  padding: 10px 0;
+  padding: 12px;
   &:hover {
     background: #3e4956;
   }
