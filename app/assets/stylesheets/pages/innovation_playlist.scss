@@ -85,8 +85,11 @@ body {
 }
 
 .playlist-tab {
+  white-space: nowrap;
+  overflow: hidden;
   border: 1px solid #4C778F;
   p {
+    text-overflow: ellipsis;
     font-family: "Montserrat Medium", montserrat, sans-serif;
     display: inline;
     color: #b0d4ed;
