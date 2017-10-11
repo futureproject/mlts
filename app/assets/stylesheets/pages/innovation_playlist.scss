@@ -84,6 +84,16 @@ body {
 }
 
 .playlist-tab {
+  border: 1px solid #4C778F;
+  p {
+    font-family: "Montserrat Medium", montserrat, sans-serif;
+    display: inline;
+    color: #b0d4ed;
+  }
+  img {
+    width: 20px;
+    margin-right: 10px;
+  }
   @include smaller-than(medium) {
     p {
       display: none !important;
@@ -109,13 +119,6 @@ body {
     p {
       color: white !important;
     }
-  }
-  p {
-    display: inline;
-  }
-  img {
-    width: 20px;
-    margin-right: 10px;
   }
 }
 

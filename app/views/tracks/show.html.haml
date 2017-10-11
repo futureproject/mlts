@@ -7,16 +7,16 @@
       = render "partials/playlist_top_buttons"
 
     .playlist-tab-container
-      .playlist-tab.playlist-tab-watch.selected{style: "border: 1px solid #{@color}"}
-        %img{src: "/icons/watch.png", style: "color: #{@color}"}
-        %p{style: "color:#{@color}"}= @track.video_title
+      .playlist-tab.playlist-tab-watch.selected
+        %img{src: "/icons/watch.png"}
+        %p= @track.video_title
       - unless @track.audio_embed.empty?
-        .playlist-tab.playlist-tab-listen{style: "border: 1px solid #{@color}"}
+        .playlist-tab.playlist-tab-listen
           %img{src: "/icons/listen.png"}
-          %p{style: "color:#{@color}"}= @track.audio_title
-      .playlist-tab.playlist-tab-act{style: "border: 1px solid #{@color}"}
+          %p= @track.audio_title
+      .playlist-tab.playlist-tab-act
         %img{src: "/icons/act.png"}
-        %p{style: "color:#{@color}"} Take Action
+        %p Take Action
 
     .playlist-content-container
       .playlist-content.playlist-content-watch
@@ -31,7 +31,7 @@
 
       .playlist-content.playlist-content-act
         %h2 Take Action
-        = @track.take_action_text
+        = @track.take_action_text.html_safe
 
     %br
 
