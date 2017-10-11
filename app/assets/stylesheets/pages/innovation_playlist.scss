@@ -253,10 +253,10 @@
 
 }
 
-.icon-watch {
-  background-image:
-  url("/playlist/icons/watch.png");
-}
 
-.watch-image {
+#bandcamp-iframe {
+  @include smaller-than(medium) {
+    width: 80% !important;
+  }
+
 }
