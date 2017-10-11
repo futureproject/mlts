@@ -7,18 +7,18 @@
       = render "partials/playlist_top_buttons"
 
     .playlist-tab-container
-      .playlist-tab.playlist-tab-watch.selected{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
-        %img{src: "/icons/watch.png", style: "color: #{@track.color}"}
-        %p{style: "color:#{@track.color}"}= @track.video_title
+      .playlist-tab.playlist-tab-watch.selected{style: "border: 1px solid #{@color}"}
+        %img{src: "/icons/watch.png", style: "color: #{@color}"}
+        %p{style: "color:#{@color}"}= @track.video_title
       - unless @track.audio_embed.empty?
-        .playlist-tab.playlist-tab-listen{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
+        .playlist-tab.playlist-tab-listen{style: "border: 1px solid #{@color}"}
           %img{src: "/icons/listen.png"}
-          %p{style: "color:#{@track.color}"}= @track.audio_title
-      .playlist-tab.playlist-tab-act{style: "background:#{@medium_color}; border: 1px solid #{@track.color}"}
+          %p{style: "color:#{@color}"}= @track.audio_title
+      .playlist-tab.playlist-tab-act{style: "border: 1px solid #{@color}"}
         %img{src: "/icons/act.png"}
-        %p{style: "color:#{@track.color}"} Take Action
+        %p{style: "color:#{@color}"} Take Action
 
-    .playlist-content-container{style: "background:#{@darker_color}"}
+    .playlist-content-container
       .playlist-content.playlist-content-watch
         = render "partials/embedded_vimeo_player", vimeo_id: @track.video_embed
         %h2= @track.video_title

@@ -96,16 +96,15 @@ body {
   cursor: pointer;
   text-overflow: ellipsis;
   height: 50px;
-  background: #2b353b;
+  background: #3F4856;
   padding: 20px 0;
   &:hover {
-    background: black;
     p {
       color: white !important;
     }
   }
   &.selected {
-    background: darken(#3e4956, 20% );
+    background: #2b353b;
     border-bottom: none !important;
     p {
       color: white !important;
@@ -127,6 +126,7 @@ body {
 
 
 .playlist-content-container {
+  background: #2C353C;
   height: 100%;
   padding: 30px;
 }
@@ -141,7 +141,7 @@ body {
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: #2b353b;
+  background: #1e2428;
 }
 
 .playlist-transport-item {

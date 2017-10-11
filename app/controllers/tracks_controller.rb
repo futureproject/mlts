@@ -11,8 +11,7 @@ class TracksController < ApplicationController
   def show
     @disable_footer = true
     @track = Track.find(params[:id])
-    @medium_color = darken_color(@track.color, 0.35)
-    @darker_color = darken_color(@track.color, 0.2)
+    @color = @track.color
     @location = params[:location]
     if @location == "ND"
       @previous_track = Track.find_by_position(@track.position-1)
