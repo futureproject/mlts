@@ -45,7 +45,6 @@
         %a.icon.icon-facebook{:href => "https://www.facebook.com/sharer/sharer.php?u=#{request.original_url}", :target => "blank"}
       %br
 
-
 .playlist-transport-container
   - if @previous_track
     %a.playlist-transport-item{href: track_path(@previous_track, location: @location)}
@@ -53,6 +52,8 @@
         %p Previous
         %p= @previous_track.title
       %img.nav-arrow.nav-arrow-left{src: "/icons/leftarrow.svg"}
+  - else
+    %a.playlist-transport-item
 
   %a.playlist-transport-item{href: tracks_path(location: @location)}
     %p View All Chapters
@@ -63,3 +64,5 @@
         %p Next
         %p= @next_track.title
       %img.nav-arrow.nav-arrow-right{src: "/icons/rightarrow.svg"}
+  - else
+    %a.playlist-transport-item.inactive
