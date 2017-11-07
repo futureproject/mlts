@@ -18,12 +18,16 @@
   padding-bottom: 10px;
 }
 
+.upcoming-screenings-wrapper {
+  width: 90%;
+  color: white;
+  padding-top: 1em;
+}
+
 .see-the-film-copy {
   font-size:1.2em;
   margin-bottom:50px;
 }
-
-
 
 .screening-option-box{
   @extend .transition;

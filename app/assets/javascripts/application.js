@@ -25,7 +25,6 @@
 //= require quote_carousel
 //= require the_team
 //= require video_grid
-//= require upcoming_screenings
 //= require moving_forward
 //= require innovation_playlist
 
