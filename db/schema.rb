@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011042417) do
+ActiveRecord::Schema.define(version: 20171126054609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,52 @@ ActiveRecord::Schema.define(version: 20171011042417) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "blog_posts", force: :cascade do |t|
+    t.integer  "user_id",          null: false
+    t.string   "permalink",        null: false
+    t.string   "title",            null: false
+    t.boolean  "published",        null: false
+    t.datetime "published_at",     null: false
+    t.string   "markup_lang",      null: false
+    t.text     "raw_content",      null: false
+    t.text     "html_content",     null: false
+    t.text     "html_overview"
+    t.string   "tags_string"
+    t.string   "meta_description", null: false
+    t.string   "meta_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_posts", ["permalink"], name: "index_blog_posts_on_permalink", unique: true, using: :btree
+  add_index "blog_posts", ["published_at"], name: "index_blog_posts_on_published_at", using: :btree
+  add_index "blog_posts", ["user_id"], name: "index_blog_posts_on_user_id", using: :btree
+
+  create_table "blog_taggings", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "tag_id",  null: false
+  end
+
+  add_index "blog_taggings", ["tag_id", "post_id"], name: "index_blog_taggings_on_tag_id_and_post_id", unique: true, using: :btree
+
+  create_table "blog_tags", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_tags", ["name"], name: "index_blog_tags_on_name", unique: true, using: :btree
+
+  create_table "blog_users", force: :cascade do |t|
+    t.string   "name",            null: false
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_users", ["email"], name: "index_blog_users_on_email", unique: true, using: :btree
 
   create_table "change_agents", force: :cascade do |t|
     t.string   "name"

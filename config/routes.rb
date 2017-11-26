@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   get 'playlist' => 'tracks#index'
   get 'nd_playlist' => 'tracks#index', location: "ND"
 
+  # Blog
+  Blogo::Routes.mount_to(self, at: '/blog')
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

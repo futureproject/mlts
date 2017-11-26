@@ -38,12 +38,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Rails Admin
+# Rails Admin & Blog
 gem 'rails_admin'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
 gem 'rails_admin_import', '~> 1.2'
+gem 'blogo'
 
 # Google Maps
 gem 'geocoder'
