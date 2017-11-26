@@ -1,7 +1,7 @@
 Blogo.configure do |config|
   # Edit this to match the subject of your blog
   config.site_title    = 'MLTS Blog'
-  config.site_subtitle = 'Join the movement to innovate and improve education.'
+  config.site_subtitle = ''
 
   # Supported languages: :html, :markdown
   config.markup_lang = :html
