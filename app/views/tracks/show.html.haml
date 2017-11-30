@@ -32,6 +32,9 @@
 
       .playlist-content.playlist-content-act
         .row.text-center.text-lg-left
+        - if @track.title == "Try Project Based Learning"
+          = render "partials/try_a_project"
+        - else
           .col-lg-4.col-md-4.col-xs-4
             = image_tag @track.act_image, class: "act-image"
           .col-lg-8.col-md-8.col-xs-8

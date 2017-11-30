@@ -24,3 +24,7 @@ $ ->
   $('.playlist-tab-act').click ->
     $('.playlist-content').hide()
     $('.playlist-content-act').show()
+
+  $('.project-item-container').click ->
+    $('.project-item-text').hide();
+    $(this).find('.project-item-text').show(duration: 200);
