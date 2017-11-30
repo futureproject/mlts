@@ -277,6 +277,7 @@
 
 }
 
+<<<<<<< HEAD
 .blue {
   --color: rgba(0, 168, 255, 0.4);
   --hovcolor: rgba(0, 168, 255, 0.7);
@@ -396,4 +397,22 @@
   }
 
   display: none;
+}
+
+p.project-intro {
+  margin: 15px 0;
+}
+.bulleted-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.project-item-container {
+  cursor: pointer;
+}
+
+.project-item-text {
+  color: white;
+  display: none;
+  margin-bottom: 10px;
 }
