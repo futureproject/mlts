@@ -48,6 +48,9 @@
 
 .playlist-chapter-wrapper {
   @include larger-than(large) {
+    .playlist-chapter-header {
+      min-height: 250px;
+    }
     .playlist-top-button-container {
       position: absolute;
       right: 40px;
