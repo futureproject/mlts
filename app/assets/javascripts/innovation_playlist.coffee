@@ -20,11 +20,17 @@ $ ->
     $('.playlist-content').hide()
     $('.playlist-content-listen').show()
 
-
   $('.playlist-tab-act').click ->
     $('.playlist-content').hide()
     $('.playlist-content-act').show()
 
+  # Try a Project section
   $('.project-item-container').click ->
-    $('.project-item-text').hide();
-    $(this).find('.project-item-text').show(duration: 200);
+    $('.project-item-container').not(this).removeClass('selected')
+    $(this).toggleClass('selected')
+    id = $(this).attr('data-related')
+    $(".project-content").each ->
+      if($(this).attr('id') == id)
+        $(this).toggle(300)
+      else
+        $(this).hide(300)
