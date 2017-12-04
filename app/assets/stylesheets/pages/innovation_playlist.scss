@@ -280,6 +280,48 @@
 
 }
 
+.blue {
+  --color: rgba(0, 168, 255, 0.4);
+  --hovcolor: rgba(0, 168, 255, 0.6);
+  --fullcolor: rgba(0, 168, 255, 0.8);
+}
+
+.green {
+  --color: rgba(0, 206, 63, 0.4);
+  --hovcolor: rgba(0, 206, 63, 0.6);
+  --fullcolor: rgba(0, 206, 63, 0.8);
+}
+
+.orange {
+  --color: rgba(238, 157, 0, 0.6);
+  --hovcolor: rgba(238, 157, 0, 0.8);
+  --fullcolor: rgba(238, 157, 0, 1);
+}
+
+.yellow {
+  --color: rgba(204, 211, 0, 0.6);
+  --hovcolor: rgba(204, 211, 0, 0.8);
+  --fullcolor: rgba(204, 211, 0, 1);
+}
+
+.red {
+  --color: rgba(254, 84, 0, 0.4);
+  --hovcolor: rgba(254, 84, 0, 0.6);
+  --fullcolor: rgba(254, 84, 0, 0.8);
+}
+
+.purple {
+  --color: rgba(167, 88, 255, 0.4);
+  --hovcolor: rgba(167, 88, 255, 0.6);
+  --fullcolor: rgba(167, 88, 255, 0.8);
+}
+
+.teal {
+  --color: rgba(3, 199, 187, 0.4);
+  --hovcolor: rgba(3, 199, 187, 0.6);
+  --fullcolor: rgba(3, 199, 187, 0.8);
+}
+
 p.project-intro {
   margin: 15px 0;
 }
@@ -288,12 +330,29 @@ p.project-intro {
   list-style-position: inside;
 }
 
-.project-item-container {
-  cursor: pointer;
+.project-item-wrapper {
+  display:block;
 }
 
-.project-item-text {
+.project-item-container {
+  height:120px;
   color: white;
+  background-color: var(--color);
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  &.selected {
+    background-color: var(--fullcolor);
+  }
+  &:hover {
+    background-color: var(--hovcolor);
+  }
+  p {
+    font-family: "Montserrat Regular", montserrat, sans-serif;
+  }
+}
+
+.project-content {
   display: none;
-  margin-bottom: 10px;
 }
