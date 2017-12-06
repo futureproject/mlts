@@ -25,8 +25,15 @@ $ ->
     $('.playlist-content-act').show()
 
   # Try a Project section
-  $('.project-item-container').click ->
-    $('.project-item-container').not(this).removeClass('selected')
+  $('.project-button').click ->
+    $('.project-button').removeClass('init')
+    $('.project-intro-container').hide(300)
+    $('.project-button').not(this).removeClass('selected')
+    if $(this).hasClass('selected')
+      $('.project-intro-container').show(300)
+      $('.project-button').addClass('init')
+    else
+      $('.project-intro-container').hide(300)
     $(this).toggleClass('selected')
     id = $(this).attr('data-related')
     $(".project-content").each ->
