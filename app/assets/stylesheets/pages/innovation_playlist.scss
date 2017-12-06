@@ -322,9 +322,6 @@
   --fullcolor: rgba(3, 199, 187, 1);
 }
 
-p.project-intro {
-  margin: 15px 0;
-}
 .bulleted-list {
   list-style-type: disc;
   list-style-position: inside;
@@ -332,6 +329,10 @@ p.project-intro {
 
 .try-a-project-buttons {
   margin-top: 40px;
+}
+
+.more-resources-button {
+  cursor: pointer;
 }
 
 .project-item-wrapper {
@@ -367,6 +368,18 @@ p.project-intro {
   }
 }
 
+.project-intro-container {
+  h2 {
+    margin: 0;
+  }
+}
+
 .project-content {
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin-bottom: 20px;
+  }
   display: none;
 }
