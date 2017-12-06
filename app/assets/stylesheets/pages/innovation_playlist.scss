@@ -340,6 +340,7 @@
 }
 
 .project-item-container {
+  background-clip:content-box;
   height:120px;
   color: white;
   background-color: var(--color);
@@ -348,6 +349,9 @@
   cursor: pointer;
   -webkit-transition: 1s;
   opacity: 0.6;
+  h2 {
+    padding:8px 12px;
+  }
   &.selected {
     background-color: var(--fullcolor);
     opacity: 1;
