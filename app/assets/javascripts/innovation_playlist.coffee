@@ -25,6 +25,10 @@ $ ->
     $('.playlist-content-act').show()
 
   # Try a Project section
+  $('.playlist-tab-act').click ->
+    tryProjectInit()
+    $('.project-intro-container').show(300)
+    $('.project-button').addClass('init')
   $('.project-button').click ->
     $('.project-button').removeClass('init')
     $('.project-intro-container').hide(300)
@@ -41,3 +45,9 @@ $ ->
         $(this).toggle(300)
       else
         $(this).hide(300)
+
+tryProjectInit = ->
+  $('.project-intro-container').show()
+  $('.project-button').addClass('init')
+  $('.project-button').removeClass('selected')
+  $(".project-content").hide()
