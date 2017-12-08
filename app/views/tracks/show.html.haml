@@ -1,7 +1,8 @@
 %section.playlist-container
   .playlist-chapter-wrapper
     .playlist-chapter-header
-      %h4.playlist-caps-text Innovation Playlist
+      %h4.playlist-caps-text
+        = @location == "ND" ? "North Dakota Innovation Playlist" : "Innovation Playlist"
       %h1.playlist-chapter-title= @track.title
       %p= @track.description
       = render "partials/playlist_top_buttons", location: @location
