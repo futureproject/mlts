@@ -275,3 +275,124 @@
   }
 
 }
+
+.blue {
+  --color: rgba(0, 168, 255, 0.4);
+  --hovcolor: rgba(0, 168, 255, 0.7);
+  --fullcolor: rgba(0, 168, 255, 1);
+}
+
+.green {
+  --color: rgba(0, 206, 63, 0.4);
+  --hovcolor: rgba(0, 206, 63, 0.7);
+  --fullcolor: rgba(0, 206, 63, 1);
+}
+
+.orange {
+  --color: rgba(238, 157, 0, 0.6);
+  --hovcolor: rgba(238, 157, 0, 0.8);
+  --fullcolor: rgba(238, 157, 0, 1);
+}
+
+.yellow {
+  --color: rgba(204, 211, 0, 0.8);
+  --hovcolor: rgba(204, 211, 0, 0.9);
+  --fullcolor: rgba(204, 211, 0, 1);
+}
+
+.red {
+  --color: rgba(254, 84, 0, 0.4);
+  --hovcolor: rgba(254, 84, 0, 0.7);
+  --fullcolor: rgba(254, 84, 0, 1);
+}
+
+.purple {
+  --color: rgba(167, 88, 255, 0.4);
+  --hovcolor: rgba(167, 88, 255, 0.6);
+  --fullcolor: rgba(167, 88, 255, 1);
+}
+
+.teal {
+  --color: rgba(3, 199, 187, 0.4);
+  --hovcolor: rgba(3, 199, 187, 0.6);
+  --fullcolor: rgba(3, 199, 187, 1);
+}
+
+.bulleted-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 2em;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.try-a-project-buttons {
+  margin-top: 40px;
+}
+
+.more-resources-button {
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-item-wrapper {
+  display:block;
+}
+
+.project-item-container {
+  background-clip:content-box;
+  height:120px;
+  color: white;
+  background-color: var(--color);
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  opacity: 0.6;
+  h2 {
+    padding:8px 12px;
+  }
+  &.selected {
+    background-color: var(--fullcolor);
+    opacity: 1;
+  }
+  &.init {
+    opacity: 1;
+  }
+  &:hover {
+    opacity: 1;
+    background-color: var(--hovcolor);
+  }
+  h2 {
+    text-align: center;
+    font-family: "Montserrat Regular", montserrat, sans-serif;
+    @include smaller-than(small) {
+      font-size: 14px;
+    }
+  }
+}
+
+.project-intro-container {
+  h2 {
+    margin: 0;
+  }
+}
+
+.project-heading {
+  font-size: 1.5em;
+  font-family: "Montserrat Regular", montserrat, sans-serif;
+  font-weight: 700;
+}
+
+.project-content {
+  h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+
+  display: none;
+}

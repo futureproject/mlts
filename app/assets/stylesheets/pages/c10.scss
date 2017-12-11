@@ -1,0 +1,44 @@
+.c10-container {
+  background-color: $grey;
+  display: block;
+  p {
+    text-align: left;
+    padding: 0;
+    font-size:1.1em;
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-left:3.5em;
+    margin-bottom:20px;
+  }
+  h2 {
+    margin: 15px 0;
+  }
+  h3 {
+    font-size: 2.6em;
+    line-height: 1.1;
+  }
+}
+
+.c10-wrapper {
+  @extend .expert-list-wrapper;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 90%;
+  color: white;
+  h1,h2,h3,p,li,a{
+    color: white !important;
+  }
+}
+
+.c10-faq {
+  margin-bottom: 20px;
+}
+
+.c10-image {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

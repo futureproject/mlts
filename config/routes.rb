@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'c10' => 'pages#show', page: 'c10'
   get 'moving-forward/:page' => 'moving_forward#show'
   get 'playlist' => 'tracks#index'
   get 'nd_playlist' => 'tracks#index', location: "ND"
