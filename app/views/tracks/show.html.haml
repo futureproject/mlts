@@ -4,7 +4,7 @@
       %h4.playlist-caps-text Innovation Playlist
       %h1.playlist-chapter-title= @track.title
       %p= @track.description
-      = render "partials/playlist_top_buttons"
+      = render "partials/playlist_top_buttons", location: @location
 
     .playlist-tab-container
       .playlist-tab.playlist-tab-watch.selected
