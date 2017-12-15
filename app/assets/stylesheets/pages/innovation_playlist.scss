@@ -48,6 +48,9 @@
 
 .playlist-chapter-wrapper {
   @include larger-than(large) {
+    .playlist-chapter-header {
+      min-height: 250px;
+    }
     .playlist-top-button-container {
       position: absolute;
       right: 40px;
@@ -178,7 +181,7 @@
     font-family: "Montserrat Regular", montserrat, sans-serif;
     margin: 20px 0;
   }
-  p {
+  p, li {
     font-family: "Montserrat Light", montserrat, sans-serif;
   }
 }
@@ -323,9 +326,6 @@
   list-style-type: disc;
   list-style-position: outside;
   margin-left: 2em;
-  a {
-    text-decoration: underline;
-  }
 }
 
 .try-a-project-buttons {
@@ -377,6 +377,9 @@
 .project-intro-container {
   h2 {
     margin: 0;
+  }
+  p {
+    margin-bottom: 10px;
   }
 }
 
