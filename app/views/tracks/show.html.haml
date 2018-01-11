@@ -1,7 +1,8 @@
 %section.playlist-container
   .playlist-chapter-wrapper
     .playlist-chapter-header
-      %h4.playlist-caps-text Innovation Playlist
+      %h4.playlist-caps-text
+        = @location == "ND" ? "North Dakota Innovation Playlist" : "Innovation Playlist"
       %h1.playlist-chapter-title= @track.title
       %p= @track.description
       = render "partials/playlist_top_buttons", location: @location
@@ -32,6 +33,9 @@
 
       .playlist-content.playlist-content-act
         .row.text-center.text-lg-left
+        - if @track.title == "Try a Project"
+          = render "partials/try_a_project"
+        - else
           .col-lg-4.col-md-4.col-xs-4
             = image_tag @track.act_image, class: "act-image"
           .col-lg-8.col-md-8.col-xs-8

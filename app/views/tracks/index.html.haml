@@ -1,8 +1,12 @@
 %section.playlist-container
   .playlist-index-wrapper
-    %h1.playlist-title Innovation Playlist
+    %h1.playlist-title
+      = @location == "ND" ? "North Dakota Innovation Playlist" : "Innovation Playlist"
     %h2.playlist-description
-      Join the growing ranks of schools creating cultures of innovation.
+      Join the growing ranks of
+      - if @location == "ND"
+        North Dakota
+      schools creating cultures of innovation.
     %h2.playlist-description
       Small steps lead to big change!
     = render "partials/playlist_top_buttons"
