@@ -281,45 +281,38 @@
 }
 
 .blue {
-  --color: rgba(0, 168, 255, 0.4);
-  --hovcolor: rgba(0, 168, 255, 0.7);
-  --fullcolor: rgba(0, 168, 255, 1);
+  --color: #97ADD9;
+  --topbarcolor: #7694C6;
 }
 
 .green {
-  --color: rgba(0, 206, 63, 0.4);
-  --hovcolor: rgba(0, 206, 63, 0.7);
-  --fullcolor: rgba(0, 206, 63, 1);
+  --color: #C3E663;
+  --topbarcolor: #AED252;
 }
 
 .orange {
-  --color: rgba(238, 157, 0, 0.6);
-  --hovcolor: rgba(238, 157, 0, 0.8);
-  --fullcolor: rgba(238, 157, 0, 1);
+  --color: #FCAD59;
+  --topbarcolor: #EF9B44;
 }
 
 .yellow {
-  --color: rgba(204, 211, 0, 0.8);
-  --hovcolor: rgba(204, 211, 0, 0.9);
-  --fullcolor: rgba(204, 211, 0, 1);
+  --color: rgba(248, 251, 112, 1);
+  --topbarcolor: #E3E45D;
 }
 
 .red {
   --color: rgba(254, 84, 0, 0.4);
-  --hovcolor: rgba(254, 84, 0, 0.7);
-  --fullcolor: rgba(254, 84, 0, 1);
+  --topbarcolor: rgba(254, 84, 0, 0.7);
 }
 
-.purple {
-  --color: rgba(167, 88, 255, 0.4);
-  --hovcolor: rgba(167, 88, 255, 0.6);
-  --fullcolor: rgba(167, 88, 255, 1);
+.pink {
+  --color: #F8A6F8;
+  --topbarcolor: #EF88F1;
 }
 
 .teal {
-  --color: rgba(3, 199, 187, 0.4);
-  --hovcolor: rgba(3, 199, 187, 0.6);
-  --fullcolor: rgba(3, 199, 187, 1);
+  --color: #66FBCC;
+  --topbarcolor: #68DDB9;
 }
 
 .bulleted-list {
@@ -347,10 +340,11 @@
 
 .project-item-container {
   background-clip:content-box;
-  height:120px;
+  height:180px;
   color: white;
   background-color: var(--color);
   display: block;
+  color: black;
   margin-bottom: 20px;
   cursor: pointer;
   -webkit-transition: 1s;
@@ -359,7 +353,6 @@
     padding:8px 12px;
   }
   &.selected {
-    background-color: var(--fullcolor);
     opacity: 1;
   }
   &.init {
@@ -367,14 +360,31 @@
   }
   &:hover {
     opacity: 1;
-    background-color: var(--hovcolor);
+    h2 {
+      display: none;
+    }
+    p {
+      display: block;
+    }
   }
   h2 {
+    -webkit-transition: 1s;
     text-align: center;
     font-family: "Montserrat Regular", montserrat, sans-serif;
     @include smaller-than(small) {
       font-size: 14px;
     }
+  }
+  p {
+    -webkit-transition: 1s;
+    font-family: "Montserrat Regular", montserrat, sans-serif;
+    padding: 20px;
+    display: none;
+  }
+  .sticky-note-topbar {
+    height:20px;
+    width:100%;
+    background-color: var(--topbarcolor);
   }
 }
 
