@@ -36,4 +36,10 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  config.model Track do
+    edit do
+      include_all_fields
+      field :audio_transcript, :froala
+    end
+  end
 end

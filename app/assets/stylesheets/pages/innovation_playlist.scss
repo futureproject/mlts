@@ -167,6 +167,13 @@
   width: 100%;
 }
 
+.audio-transcript-container {
+  overflow:scroll;
+  height:400px;
+  p {
+    margin-bottom:6px;
+  }
+}
 
 .playlist-content-container {
   background: #2C353C;
