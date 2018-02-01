@@ -311,7 +311,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   underscore-rails
   web-console (~> 2.0)
-  wysiwyg-rails (~> 1.2.7)
+  wysiwyg-rails
 
 BUNDLED WITH
    1.11.2
