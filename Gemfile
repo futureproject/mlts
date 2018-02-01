@@ -40,7 +40,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Rails Admin
 gem 'rails_admin'
-gem 'wysiwyg-rails', '~> 1.2.7'
+gem 'wysiwyg-rails'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
