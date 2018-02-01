@@ -27,9 +27,14 @@
         %p= @track.video_description
 
       .playlist-content.playlist-content-listen
-        = render "partials/embedded_bandcamp_player", track_id: @track.audio_embed
-        %h2= @track.audio_title
-        %p= @track.audio_description
+        .row.text-lg-left
+          .col-lg-4.col-md-4.col-xs-12
+            = render "partials/embedded_bandcamp_player", track_id: @track.audio_embed
+            %h2= @track.audio_title
+            %p= @track.audio_description
+          .col-md-7.col-xs-12.col-md-offset-1
+            %div{style:"overflow:scroll; height:400px;"}
+              %p= @track.audio_transcript
 
       .playlist-content.playlist-content-act
         .row.text-center.text-lg-left
